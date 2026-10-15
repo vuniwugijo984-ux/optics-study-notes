@@ -1,0 +1,2058 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>光学自学讲义｜教材 × 课堂 × 做题</title>
+  <style>
+    :root {
+      --ink:#172033; --muted:#627087; --paper:#fbfcff; --panel:#ffffff;
+      --line:#dce3ee; --blue:#2457d6; --blue-soft:#eaf0ff;
+      --green:#087f5b; --green-soft:#e9f8f2; --amber:#9a5b00;
+      --amber-soft:#fff5df; --red:#b42318; --red-soft:#fff0ee;
+      --shadow:0 10px 30px rgba(31,49,81,.08); --radius:16px;
+    }
+    * { box-sizing:border-box; }
+    html { scroll-behavior:smooth; }
+    body { margin:0; color:var(--ink); background:var(--paper); font-family:"Microsoft YaHei","Noto Sans SC",system-ui,sans-serif; line-height:1.78; }
+    a { color:var(--blue); text-decoration:none; }
+    a:hover { text-decoration:underline; }
+    .layout { display:grid; grid-template-columns:270px minmax(0,850px); gap:40px; max-width:1200px; margin:auto; padding:24px; }
+    aside { position:sticky; top:18px; align-self:start; max-height:calc(100vh - 36px); overflow:auto; padding:20px; background:var(--panel); border:1px solid var(--line); border-radius:var(--radius); box-shadow:var(--shadow); }
+    aside h2 { margin:0 0 10px; font-size:1.05rem; }
+    aside a { display:block; padding:7px 9px; margin:2px 0; border-radius:8px; color:#31405a; font-size:.92rem; }
+    aside a:hover { background:var(--blue-soft); text-decoration:none; }
+    main { min-width:0; }
+    header { padding:42px; border-radius:22px; color:white; background:linear-gradient(135deg,#173ea5,#3974ea); box-shadow:var(--shadow); }
+    header h1 { margin:0 0 8px; font-size:clamp(2rem,5vw,3.4rem); line-height:1.15; }
+    header p { margin:8px 0; max-width:720px; color:#edf3ff; }
+    .tag { display:inline-block; margin:14px 8px 0 0; padding:5px 10px; border:1px solid rgba(255,255,255,.35); border-radius:999px; font-size:.84rem; }
+    .toolbar { display:flex; flex-wrap:wrap; gap:8px; margin:20px 0; }
+    button { cursor:pointer; border:1px solid var(--line); border-radius:10px; padding:9px 13px; background:white; color:var(--ink); font:inherit; }
+    button:hover, button.active { border-color:var(--blue); background:var(--blue-soft); color:var(--blue); }
+    section { margin:28px 0; padding:32px; background:var(--panel); border:1px solid var(--line); border-radius:var(--radius); box-shadow:var(--shadow); }
+    h2 { margin-top:0; font-size:1.65rem; line-height:1.3; }
+    h3 { margin-top:1.8em; font-size:1.2rem; }
+    .lead { font-size:1.08rem; color:#34425a; }
+    .grid { display:grid; grid-template-columns:repeat(2,minmax(0,1fr)); gap:14px; }
+    .card { padding:18px; border:1px solid var(--line); border-radius:12px; background:#fff; }
+    .card h3 { margin:0 0 7px; }
+    .callout { margin:18px 0; padding:15px 18px; border-left:5px solid var(--blue); border-radius:10px; background:var(--blue-soft); }
+    .callout.tip { border-color:var(--green); background:var(--green-soft); }
+    .callout.warn { border-color:#e99a18; background:var(--amber-soft); }
+    .callout.danger { border-color:var(--red); background:var(--red-soft); }
+    .math { display:block; margin:16px 0; padding:12px; overflow:auto; text-align:center; font-family:Cambria,"Times New Roman",serif; font-size:1.18rem; background:#f7f9fd; border-radius:10px; }
+    figure { margin:22px 0; padding:12px; border:1px solid var(--line); border-radius:12px; background:#f8faff; }
+    figure img { display:block; width:100%; height:auto; border-radius:7px; }
+    figcaption { margin-top:9px; color:var(--muted); font-size:.88rem; text-align:center; }
+    .figure-pair { display:grid; grid-template-columns:repeat(2,minmax(0,1fr)); gap:14px; }
+    .figure-pair figure { margin:0; }
+    table { width:100%; border-collapse:collapse; margin:16px 0; font-size:.95rem; }
+    th,td { padding:10px; border:1px solid var(--line); vertical-align:top; text-align:left; }
+    th { background:#f2f5fa; }
+    .path { display:flex; flex-wrap:wrap; gap:8px; align-items:center; }
+    .node { padding:8px 11px; border-radius:9px; background:var(--blue-soft); color:#173ea5; font-weight:600; }
+    .arrow { color:#8792a5; }
+    details { margin:10px 0; padding:10px 14px; border:1px solid var(--line); border-radius:10px; background:#fbfcff; }
+    summary { cursor:pointer; font-weight:700; }
+    .checklist label { display:block; margin:8px 0; }
+    textarea { width:100%; min-height:90px; padding:12px; border:1px solid var(--line); border-radius:10px; font:inherit; resize:vertical; }
+    .new-lesson img { max-width:100%; height:auto; }
+    .answer-field { margin:18px 0; }
+    .answer-field label { font-weight:700; }
+    .new-lesson table { display:block; overflow-x:auto; }
+    .small { color:var(--muted); font-size:.9rem; }
+    .exam { border-top:4px solid var(--green); }
+    .deep-badge { color:var(--amber); font-weight:700; }
+    body.sprint .deep { display:none; }
+    footer { padding:24px 6px 50px; color:var(--muted); text-align:center; font-size:.9rem; }
+    @media (max-width:900px) { .layout { display:block; padding:12px; } aside { position:static; max-height:none; margin-bottom:16px; } header,section { padding:24px; } .grid,.figure-pair { grid-template-columns:1fr; } }
+    @media print { aside,.toolbar,.interactive { display:none!important; } body { background:white; } .layout { display:block; max-width:none; padding:0; } header,section { box-shadow:none; break-inside:avoid; } body.sprint .deep { display:block; } }
+  </style>
+  <script>
+    window.MathJax = {
+      tex: { inlineMath: [['\\(', '\\)']], displayMath: [['\\[', '\\]']] },
+      svg: { fontCache: 'global' },
+      options: { enableMenu: false }
+    };
+  </script>
+  <script defer src="assets/vendor/mathjax/tex-svg.js"></script>
+</head>
+<body>
+  <div class="layout">
+    <aside>
+      <h2>目录</h2>
+      <a href="#start">如何使用</a>
+      <a href="#map">完整课程地图</a>
+      <a href="#homework">作业布置逻辑</a>
+      <a href="#lesson1">第 01 课：统一语言</a>
+      <a href="#lesson2">第 02 课：全反射和棱镜</a>
+      <a href="#lesson3">第 03 课：球面折射成像</a>
+      <a href="#lesson4">第 04 课：球面反射成像</a>
+      <a href="#lesson5">第 05 课：薄透镜</a>
+      <a href="#lesson6">第 06 课：共轴球面组成像</a>
+      <a href="#lesson7">第 07 课：基点与镜像法</a>
+      <a href="#lesson8">第 08 课：一般光具组作图</a>
+      <a href="#method">做题时的五步检查</a>
+      <a href="#memory">最低记忆表</a>
+      <a href="#quiz">快速自测</a>
+      <a href="#feedback">学习记录</a>
+      <a href="#sources">材料与边界</a>
+    </aside>
+
+    <main>
+      <header>
+        <h1>光学自学讲义</h1>
+        <p>姚启钧《光学教程》 × 老师课件 × 作业意图分析</p>
+        <p>先把光路看懂，再把公式用稳；最后练到看到题就知道从哪里下手。</p>
+        <span class="tag">当前：几何光学第 3 章</span>
+        <span class="tag">第 01–08 课 · 几何光学</span>
+        <span class="tag">不含布置题完整答案</span>
+      </header>
+
+      <div class="callout warn" id="exam-update"><strong>期中（10月15日更新）</strong>：十月最后一周课内考试，第三、四章为主；已讲内容均可能考，物理学史除外。按课表推算为10月27日或29日，具体课次待定，先按27日准备。现有八课以第三章为主，第四章待补；第四章约讲至第9节，待核对。</div>
+
+      <div class="toolbar interactive">
+        <button id="fullBtn" class="active" onclick="setMode('full')">正常阅读</button>
+        <button id="sprintBtn" onclick="setMode('sprint')">考前冲刺模式</button>
+        <button onclick="window.print()">打印 / 存为 PDF</button>
+        <button onclick="exportNotes()">导出学习记录</button>
+      </div>
+
+      <section id="start">
+        <h2>如何使用这份讲义</h2>
+        <p class="lead">先读正文，再独立完成自测。答案可折叠；笔记保存在当前浏览器，可导出。</p>
+        <div class="grid">
+          <div class="card"><h3>第一次学习</h3><p>选择“正常阅读”。先看光线到底怎么走，再看概念、公式条件和例子。</p></div>
+          <div class="card"><h3>考前集中复习</h3><p>选择“考前冲刺模式”，页面会隐藏部分推导背景，只保留考点、流程、误区和自测。</p></div>
+        </div>
+      </section>
+
+      <section id="map">
+        <h2>完整课程地图</h2>
+        <p class="lead">这一章看上去公式很多，其实一直在做同一件事：已知光从哪里来、经过什么元件，判断它最后往哪里去、在哪里成像。</p>
+        <div class="path">
+          <span class="node">光程与费马原理</span><span class="arrow">→</span>
+          <span class="node">反射、折射</span><span class="arrow">→</span>
+          <span class="node">近轴近似</span><span class="arrow">→</span>
+          <span class="node">单球面成像</span><span class="arrow">→</span>
+          <span class="node">薄透镜</span><span class="arrow">→</span>
+          <span class="node">共轴系统</span><span class="arrow">→</span>
+          <span class="node">逐次成像与实验反演</span>
+        </div>
+        <table>
+          <thead><tr><th>课次</th><th>核心问题</th><th>考试产出</th><th>对应材料</th></tr></thead>
+          <tbody>
+            <tr><td>01 统一语言</td><td>实虚、物像空间和符号由什么决定？</td><td>不靠口诀判符号</td><td>3-3 PPT；教材 3.5.3、3.6</td></tr>
+            <tr><td>02 全反射与棱镜</td><td>界面怎样改变光线方向？</td><td>临界角、最小偏向角、色散</td><td>3-2 PPT；教材 3.1–3.5</td></tr>
+            <tr><td>03 球面折射</td><td>近轴条件怎样产生物像公式？</td><td>球面、平面、视深、多界面</td><td>3-4 PPT；作业 3、10、12*、13、14</td></tr>
+            <tr><td>04 球面反射</td><td>反射能否纳入同一体系？</td><td>球面镜、平面镜、镜像法</td><td>3-5 PPT；作业 6–9*</td></tr>
+            <tr><td>05 薄透镜</td><td>怎样合并两个折射面？</td><td>焦距、放大率、作图、反求</td><td>3-6 PPT；作业 15、17–19、25*</td></tr>
+            <tr><td>06 共轴系统</td><td>怎样用主点和基面压缩复杂系统？</td><td>厚透镜、等效焦距、主平面</td><td>3-7 PPT</td></tr>
+            <tr><td>07 基点与镜像法</td><td>怎样保持方向、压缩折射反射系统？</td><td>节点、复合主点、镀银半球三种解法</td><td>完整3-7第19–27页；教材148–153页</td></tr>
+<tr><td>08 一般光具组作图</td><td>不同介质时怎样作图、选公式？</td><td>三条特殊线、一般高斯与牛顿公式、3.26和3.29*入口</td><td>3-9全6页；教材150、164页</td></tr>
+<tr><td>09 综合与实验（待编）</td><td>怎样处理多次成像与反演？</td><td>21*–23*、28*类题和实验反演</td><td>作业与习题课</td></tr>
+<tr><td>第四章（待补）</td><td>哪些已讲概念与方法需纳入？</td><td>根据课堂材料逐节补齐考点与方法</td><td>教材已有，第四章PPT尚缺；约第9节待核对</td></tr>
+<tr><td>10 期中冲刺（待编）</td><td>怎样在限时条件下稳定调用？</td><td>三四章为主，检查其他已讲内容，排除物理学史</td><td>已有大致范围；题型、分值和时长待补</td></tr>
+          </tbody>
+        </table>
+      </section>
+
+      <section id="homework">
+        <h2>老师的作业布置逻辑</h2>
+        <p>从题号的安排来看，老师在把难度一层层往上推：</p>
+        <div class="grid">
+          <div class="card"><h3>第一层：会描述</h3><p>3、10、12*、13、14：把真实装置翻译成界面、传播方向、物距、像距和曲率半径。</p></div>
+          <div class="card"><h3>第二层：会转换</h3><p>6–9*、15、17–19、25*：在反射镜、平行结构和薄透镜间切换，并让公式与作图互证。</p></div>
+          <div class="card"><h3>第三层：会反推</h3><p>21*–23*、28*：处理多次成像、反射—折射耦合、未知参数和实验可测量量。</p></div>
+          <div class="card"><h3>思考题信号</h3><p>正透镜最小物像间距考函数极值；负透镜能否成实像考条件分类和口诀边界。</p></div>
+        </div>
+        <div class="callout"><strong>复习顺序：</strong>先练实虚和符号 → 单界面公式 → 作图与公式互证 → 逐次成像 → 极值和实验反演。</div>
+      </section>
+
+      <section id="lesson1">
+        <h2>第 01 课：几何光学的统一语言</h2>
+        <p class="lead">很多题不是公式不会，而是一开始就把实虚、方向或正负号判错了。本课先把这些最容易出错的地方讲清楚。</p>
+
+        <h3>1. 从镜中的虚像开始</h3>
+        <p>照镜子时，你看到脸“在镜后”。镜后并没有光线真实会聚。眼睛接收到的是镜面反射后发散的光线；把它们反向延长，延长线似乎来自镜后一点。</p>
+        <div class="callout"><strong>判断时先别背“左实右虚”之类的口诀。</strong>先沿箭头看实际光线；实际光线不相交时，再看它们的延长线。</div>
+
+        <h3>2. 课件所说的“成像”究竟是什么</h3>
+        <p>【课件】许多光线如果交于同一点，就组成单心光束。交点可以是光线真正通过的点，也可以是光线延长后得到的点。成像系统做的事，就是把和物点 <i>P</i> 对应的一束入射光，变成和像点 <i>P′</i> 对应的一束出射光。</p>
+        <figure>
+          <img src="assets/第01课/01-单心光束.png" alt="课件中的发散单心光束和会聚单心光束">
+          <figcaption>课件《3-3 成像的基本概念》第 1 页：发散光束和会聚光束都可以是单心光束。</figcaption>
+        </figure>
+        <div class="path"><span class="node">物点 P</span><span class="arrow">—入射光束→</span><span class="node">光学系统</span><span class="arrow">—出射光束→</span><span class="node">像点 P′</span></div>
+        <figure>
+          <img src="assets/第01课/02-理想成像系统.png" alt="物点经过理想成像系统成为像点">
+          <figcaption>课件第 3 页：理想成像要求物点与像点一一对应、彼此共轭。</figcaption>
+        </figure>
+        <p class="deep"><span class="deep-badge">再往下追一层：</span>教材用费马原理讨论这个问题。要成一个清楚的点像，从同一物点发出的不同光线，经过系统后应当给出同一个像点。如果不同光线算出的交点不同，屏上看到的就不是一个点，而是一小团光斑，这就是像差的来源之一。</p>
+
+        <h3>2.1 “共轭”不是一个额外公式</h3>
+        <p>物点 <i>P</i> 经过某个光学系统成像于 <i>P′</i>，就称 <i>P</i> 和 <i>P′</i> 是一对共轭点。它表达的是同一条物像关系。利用光路可逆性，把光的传播方向完全反过来，原来的像点也可以作为物点，原来的物点成为像点。</p>
+        <p>这件事在题里很有用：有些题正着算很麻烦，反过来看却正好是熟悉的平行光、焦点或已知像距关系。不过，反转传播方向以后，必须重新确定当前的入射方向和符号，不能把原式中的正负号原样照搬。</p>
+
+        <h3>3. 实物、虚物、实像、虚像怎么分</h3>
+        <table>
+          <thead><tr><th>概念</th><th>看哪束光</th><th>操作性定义</th></tr></thead>
+          <tbody>
+            <tr><td>实物</td><td>入射光</td><td>入射光确实从该点发出或发散。</td></tr>
+            <tr><td>虚物</td><td>入射光</td><td>入射光正朝该点会聚，但在到达前先遇到当前系统。</td></tr>
+            <tr><td>实像</td><td>出射光</td><td>出射光真实会聚于该点。</td></tr>
+            <tr><td>虚像</td><td>出射光</td><td>出射光发散，其反向延长线交于该点。</td></tr>
+          </tbody>
+        </table>
+        <p><strong>实际判断顺序：</strong>先把当前元件两侧的光线箭头画出来。元件之前的是入射光，元件之后的是出射光；入射光决定物的实虚，出射光决定像的实虚。不要一眼看图上点的位置就下结论。</p>
+        <div class="callout tip"><strong>一个很重要的例子：</strong>第一块透镜本来要在 Q 点成像。如果光还没走到 Q，就先碰到第二块透镜，那么对第二块透镜来说，入射光正在向 Q 会聚，所以 Q 是它的虚物。后面的多次成像题一直会用到这件事。</div>
+
+        <h3>3.1 四种情况放在一起比较</h3>
+        <table>
+          <thead><tr><th>光线在当前元件附近的样子</th><th>结论</th><th>理由</th></tr></thead>
+          <tbody>
+            <tr><td>入射光从左侧某点向外发散</td><td>实物</td><td>光确实从这个点来到元件</td></tr>
+            <tr><td>入射光正向右侧某点会聚，但途中先碰到元件</td><td>虚物</td><td>这个点只是入射光原本要到达的位置</td></tr>
+            <tr><td>出射光在某点真正相交</td><td>实像</td><td>该点有实际光线通过，可以用屏承接</td></tr>
+            <tr><td>出射光彼此发散，但反向延长线相交</td><td>虚像</td><td>该点只有延长线，没有实际出射光通过</td></tr>
+          </tbody>
+        </table>
+
+        <h3>4. 物空间与像空间</h3>
+        <p>【课件】入射光线所在的空间叫物空间，出射光线所在的空间叫像空间。注意，名称是按光线分的，不是看物点和像点画在哪一边。</p>
+        <figure>
+          <img src="assets/第01课/03-物空间与像空间.png" alt="课件对物空间和像空间的定义">
+          <figcaption>课件第 8 页：物空间、像空间按入射光和出射光来命名。</figcaption>
+        </figure>
+        <ul>
+          <li>折射时，入射光和出射光通常分居界面两侧。</li>
+          <li>反射时，两者可以处在同一几何区域，但传播方向相反。</li>
+          <li>虚物点可以落在像空间一侧，虚像点也可以落在物空间一侧。</li>
+        </ul>
+
+        <h3>5. 近轴条件为什么不可省略</h3>
+        <p>如果让离轴很远、倾角很大的光线都参加成像，它们一般不会刚好交在同一点。教材先限制到靠近光轴、倾角很小的光线，也就是近轴光线。这时可以用：</p>
+        <figure>
+          <img src="assets/第01课/04-近轴光线.png" alt="课件对光轴、近轴光线和非近轴光线的区分">
+          <figcaption>课件第 9 页：红线满足近轴条件，绿线用于说明“平行”或“经过元件”不自动等于近轴。</figcaption>
+        </figure>
+        <div class="math">\[\sin\theta \approx \tan\theta \approx \theta\]</div>
+        <p class="deep">【教材】作了小角度近似以后，推导中的高次项可以略去，所得像距在一级近似下不再随光线入射高度改变。孔径变大或物点离轴较远时，这些被略去的项不能再忽略，于是会出现球差、彗差等像差。</p>
+        <div class="callout warn"><strong>别混淆：</strong>与光轴平行不等于近轴。平行光可能离轴很远；近轴同时要求靠轴和小角。</div>
+
+        <h3>5.1 教材为什么能从光程推出成像公式</h3>
+        <p class="deep">教材第 142 页以球面反射为例：在轴上物点 <i>P</i> 附近取一个离轴小物点 <i>Q</i>，再在像点附近取 <i>Q′</i>。光线经过球面上不同高度 <i>h</i> 的点 <i>A</i> 反射。把光程 <i>QA + AQ′</i> 按小量展开，如果要使所有近轴光线都到达同一个 <i>Q′</i>，展开式中随 <i>h</i> 改变的项必须消失。</p>
+        <div class="math">\[\frac{1}{s'}+\frac{1}{s}-\frac{2}{r}=0\]</div>
+        <div class="math">\[\frac{y}{s}+\frac{y'}{s'}=0\]</div>
+        <p class="deep">第一式决定轴上物点和像点的位置关系，第二式决定物高与像高的关系。也就是说，成像公式和横向放大率并不是两条互不相干的经验公式；它们来自同一个要求：物体上邻近各点发出的近轴光线，反射后仍能分别成像于确定的点。</p>
+        <div class="figure-pair deep">
+          <figure>
+            <a href="assets/第01课/08-教材近轴反射推导-p142.jpg"><img src="assets/第01课/08-教材近轴反射推导-p142.jpg" alt="教材第142页近轴物球面反射推导"></a>
+            <figcaption>教材第 142 页：用光程展开得到轴上位置关系和横向关系。点击可看大图。</figcaption>
+          </figure>
+          <figure>
+            <a href="assets/第01课/09-教材近轴条件-p143.jpg"><img src="assets/第01课/09-教材近轴条件-p143.jpg" alt="教材第143页近轴和小物体条件"></a>
+            <figcaption>教材第 143 页：近轴条件与小物体条件为何不可省略。点击可看大图。</figcaption>
+          </figure>
+        </div>
+        <div class="callout"><strong>这里需要达到的难度：</strong>现在不要求你复现整段泰勒展开，但要知道公式的来源和被略去的量。学到球面反射、折射时，再把推导逐行补全。</div>
+
+        <h3>6. 本课程的笛卡尔符号法则</h3>
+        <figure>
+          <img src="assets/第01课/05-笛卡尔符号法则.png" alt="课件中的笛卡尔符号法则总览">
+          <figcaption>课件第 11 页：本课程采用的坐标和角度正负约定。</figcaption>
+        </figure>
+        <ol>
+          <li>默认光从左侧进入当前光学系统。</li>
+          <li>原点取当前界面顶点或薄元件中心。</li>
+          <li>向右为正、向左为负；主轴上方为正、下方为负。</li>
+          <li>角度按课件约定：从法线或光轴转过小于 90° 的角，顺时针为正、逆时针为负。</li>
+          <li>公式中使用代数量；图上标注的长度通常只是几何正值。</li>
+        </ol>
+        <figure>
+          <img src="assets/第01课/06-轴上量符号.png" alt="课件中的物距像距曲率半径和焦距符号">
+          <figcaption>课件第 12 页：物距、像距、曲率半径和焦距都按对应点的坐标定义。</figcaption>
+        </figure>
+        <table>
+          <thead><tr><th>符号</th><th>含义</th><th>代数定义</th></tr></thead>
+          <tbody>
+            <tr><td><i>s</i></td><td>物距</td><td>物点坐标</td></tr>
+            <tr><td>\(s'\)</td><td>像距</td><td>像点坐标</td></tr>
+            <tr><td><i>r</i></td><td>球面半径</td><td>球心坐标</td></tr>
+            <tr><td>\(f,f'\)</td><td>物方、像方焦距</td><td>相应焦点坐标</td></tr>
+            <tr><td><i>y, y′</i></td><td>物高、像高</td><td>相对主轴的纵坐标</td></tr>
+          </tbody>
+        </table>
+        <figure>
+          <img src="assets/第01课/07-图中几何量标注.png" alt="课件说明光路图标注几何正值而公式使用代数量">
+          <figcaption>课件第 16 页：图上标出的通常是几何量的正值；代入公式时再按坐标写成 \(-s,s',-u,u'\)。</figcaption>
+        </figure>
+        <div class="callout danger"><strong>必须拆开：</strong>实/虚是光线关系；正/负是坐标关系。反射光若在镜前左侧真实会聚，像仍是实像，只是 \(s'\lt0\)。</div>
+
+        <h3>6.1 为什么课件还要规定角度正负</h3>
+        <p>只做轴上成像时，似乎只管距离符号就够了；一旦推导横向放大率、拉格朗日—亥姆霍兹定理或多面系统，就会同时出现光线倾角 <i>u</i>、<i>u′</i>。如果角度没有统一正负，同一条光线在不同公式里会得到互相矛盾的结果。</p>
+        <p>本课件规定顺时针转角为正、逆时针为负。读图时可以这样做：先选定基准方向（主轴或界面法线），再看从基准转到光线需要顺时针还是逆时针。不要凭“光线向上”或“向下”直接判断角度符号。</p>
+
+        <h3>7. 这些定义后面怎么用</h3>
+        <p>以后每学一个界面，都会得到一个物像公式。计算本身通常不难；真正容易错的是：这一面的物是谁、光往哪边走、距离应带什么符号。</p>
+        <div class="math">\[\text{球面折射：}\quad \frac{n'}{s'}-\frac{n}{s}=\frac{n'-n}{r}\]</div>
+        <div class="math">\[\text{薄透镜：}\quad \frac{1}{s'}-\frac{1}{s}=\frac{1}{f'}\]</div>
+        <p>遇到多个元件时，就一面一面算：前一面得到的像，拿到下一面重新判断它是实物还是虚物，再继续计算。</p>
+
+        <h3>7.1 这一课与作业的关系</h3>
+        <p>作业 3、10、12*、13、14 看似装置不同，第一步都一样：先确定当前界面的入射光方向，再确定物点、像点和球心在坐标轴上的位置。第二组中的反射镜题更能检验这一点，因为反射后的实像可能落在坐标负侧。如果仍用“实像为正”的口诀，公式会从第一行就错。</p>
+        <p>因此这一课的目标不是背完术语，而是做到：给你一张光路图，即使暂时不会算，也能把每个界面的实物/虚物、实像/虚像以及 \(s,s',r\) 的符号标对。</p>
+      </section>
+
+      <section id="lesson2">
+        <h2>第 02 课：全反射和棱镜</h2>
+        <p class="lead">这节课有三条线：折射角增大到极限时为什么会出现全反射；三棱镜怎样改变光的方向；折射率随波长变化后为什么会分光。</p>
+
+        <h3>1. 全反射从折射定律里自然出现</h3>
+        <p>设光从折射率为 \(n_1\) 的介质射向折射率为 \(n_2\) 的介质。折射定律是</p>
+        <div class="math">\[n_1\sin i=n_2\sin r\]</div>
+        <p>如果 \(n_1\gt n_2\)，增大入射角 \(i\) 时，折射角 \(r\) 增大得更快。当折射光恰好贴着界面传播，即 \(r=90^\circ\)，对应的入射角叫临界角 \(i_c\)：</p>
+        <div class="math">\[\sin i_c=\frac{n_2}{n_1}\]</div>
+        <p>再增大入射角，折射定律要求 \(\sin r\gt1\)，已经没有实数折射角。此时没有传播到第二种介质中的折射光，能量全部返回第一种介质，发生全反射。</p>
+        <figure>
+          <img src="assets/第02课/01-全反射条件.png" alt="全反射条件与临界角">
+          <figcaption>课件《3-2 全反射和棱镜》第 1 页：全反射必须同时满足从光密介质射向光疏介质，以及入射角达到临界角。</figcaption>
+        </figure>
+        <div class="callout warn"><strong>两项条件缺一不可：</strong>① \(n_1\gt n_2\)；② \(i\ge i_c\)。光从空气进入玻璃时，无论入射角多大都不会发生全反射。</div>
+
+        <h3>1.1 临界角处到底算不算全反射</h3>
+        <p>在 \(i=i_c\) 时，几何光学给出折射光沿界面传播。课件把“入射角≥临界角”作为全反射的起点；做计算题时应说明临界状态下 \(r=90^\circ\)。真正讨论能量分配时，临界附近还涉及倏逝场，不能只靠一条几何光线描述。</p>
+
+        <h3>2. 全反射棱镜为什么能替代平面镜</h3>
+        <p>玻璃的折射率若约为 1.5，从玻璃射向空气的临界角约为</p>
+        <div class="math">\[i_c=\arcsin\!\left(\frac{1}{1.5}\right)\approx 41.8^\circ\]</div>
+        <p>光从等腰直角棱镜的直角面垂直入射，到斜面时入射角为 45°，大于临界角，所以在斜面发生全反射。根据入射方式不同，它可以让光偏转 90°，也可以让光路折回 180°。</p>
+        <figure>
+          <img src="assets/第02课/02-全反射棱镜.png" alt="全反射棱镜使光偏转90度或180度">
+          <figcaption>课件第 3 页：直角棱镜的两种常见用法。</figcaption>
+        </figure>
+        <p>和镀银反射镜相比，全反射面不依赖金属膜，反射损耗小，也不容易因镀层老化而变差。但它的前提是内部入射角始终超过临界角。</p>
+
+        <h3>3. 光纤并不是“光进去就一定出不来”</h3>
+        <p>阶跃型光纤由高折射率芯层和较低折射率包层组成，满足 \(n_1\gt n_2\)。能够在芯层—包层界面满足全反射条件的光线，会在芯层中反复传播。</p>
+        <figure>
+          <img src="assets/第02课/03-光学纤维.png" alt="光纤芯层包层与全反射传播">
+          <figcaption>课件第 4 页：芯层、包层与外界折射率满足 \(n_1\gt n_2\gt n_0\)。</figcaption>
+        </figure>
+        <p>入射角太大的外界光线进入芯层后，未必能在芯层—包层界面达到临界角。因此光纤有一个允许入射的锥角。对阶跃型光纤的子午光线，若外界折射率为 \(n_0\)，最大入射半角 \(\alpha_{\max}\) 满足</p>
+        <div class="math">\[n_0\sin\alpha_{\max}=\sqrt{n_1^2-n_2^2}\]</div>
+        <p>右边称为数值孔径 NA。它越大，光纤越容易接收入射光；但模式数、色散和成像质量也会随之变化。光纤可以弯曲，不表示可以任意急弯：弯曲过强会使局部入射角低于临界角，光就会泄漏到包层。</p>
+
+        <h3>4. 分层介质变成连续介质：光路会弯</h3>
+        <p>把折射率逐层变化的介质想成许多很薄的平行层，每经过一层都按折射定律轻微改变方向；当层厚趋于零，折线路径就变成平滑曲线。光线总是向折射率较大的一侧弯曲。</p>
+        <figure>
+          <img src="assets/第02课/04-渐变介质光路.png" alt="光在渐变折射率介质中的弯曲路径">
+          <figcaption>课件第 7 页：分层模型与连续渐变介质中的曲线光路。</figcaption>
+        </figure>
+        <p>海市蜃楼并不是空中真的出现了另一件物体，而是大气温度导致折射率随高度变化，光线弯曲后进入眼睛。观察者仍按“光沿直线传播”的经验反向追踪，于是看到移位或倒置的虚像。</p>
+
+        <h3>5. 三棱镜的偏向角怎么写</h3>
+        <p>设棱镜顶角为 \(A\)，光在第一面入射角为 \(i\)，折射角为 \(r_1\)；在第二面的内部入射角为 \(r_2\)，出射角为 \(e\)。由三角形几何关系和偏向角定义：</p>
+        <div class="math">\[r_1+r_2=A\]</div>
+        <div class="math">\[\delta=(i-r_1)+(e-r_2)=i+e-A\]</div>
+        <figure>
+          <img src="assets/第02课/05-棱镜偏向角.png" alt="棱镜偏向角的角度关系">
+          <figcaption>课件第 12 页。课件用 \(i_1,i_2,i_1',i_2'\) 标角；这里改用 \(i,r_1,r_2,e\)，关系完全相同。</figcaption>
+        </figure>
+        <p>计算一般不能只靠上面两条几何关系，还要在两个表面分别使用折射定律。给定 \(A\)、折射率和 \(i\) 后，依次算 \(r_1,r_2,e\)，最后得到 \(\delta\)。</p>
+
+        <h3>6. 为什么偏向角会有最小值</h3>
+        <p>入射角很小时，光在第二面可能以很大的内部入射角到达，偏向角较大，甚至无法从第二面出射；入射角很大时，第一面的折转本身又很大。两种趋势之间存在一个最低点。</p>
+        <figure>
+          <img src="assets/第02课/06-偏向角曲线.png" alt="棱镜偏向角随入射角变化的曲线">
+          <figcaption>课件第 14 页：\(\delta(i)\) 先减小后增大，最低点对应最小偏向角。</figcaption>
+        </figure>
+        <p>在最小偏向位置，光路关于棱镜中截面对称：</p>
+        <div class="math">\[i=e,\qquad r_1=r_2=\frac{A}{2}\]</div>
+        <p>若棱镜折射率为 \(n\)，外界介质折射率为 \(n_0\)，最小偏向角为 \(\delta_{\min}\)，则</p>
+        <div class="math">\[\frac{n}{n_0}=\frac{\sin\!\left[(A+\delta_{\min})/2\right]}{\sin(A/2)}\]</div>
+        <figure>
+          <img src="assets/第02课/07-最小偏向角.png" alt="最小偏向角时的对称光路与公式">
+          <figcaption>课件第 16 页：实验中可由 \(A\) 和 \(\delta_{\min}\) 测折射率。</figcaption>
+        </figure>
+        <p>“最小值时光路对称”不仅是需要记住的结论，也可以由光路可逆性理解：如果入射角 <i>i</i> 和出射角 <i>e</i> 不等，反向传播会给出同一偏向角的另一个入射状态；这两个状态在曲线最低点合并，因此最低点满足 <i>i=e</i>。</p>
+
+        <div class="callout danger"><strong>还要检查能否出射：</strong>在第二表面必须有 \(n\sin r_2\le n_0\)。若 \(r_2\) 大于棱镜到外界的临界角，第二面发生全反射，前面的出射角公式没有实数解。</div>
+
+        <h3>6.1 教材习题放在这里做</h3>
+        <p class="small">这两题没有出现在你发来的两次作业清单中，这里把它们作为本节的配套练习，不标记为已布置作业。</p>
+        <figure>
+          <img src="assets/第02课/12-教材习题3.4与3.5.jpg" alt="教材习题3.4和3.5">
+          <figcaption>《光学教程》第 160–161 页交界处：习题 3.4、3.5。它们分别训练最小偏向角与恒偏向棱镜。</figcaption>
+        </figure>
+        <details><summary>习题 3.4：只看入手提示</summary>
+          <p>第（1）（2）问直接使用最小偏向条件 \(i=e\)、\(r_1=r_2=A/2\)。第（3）问不是再求一次最小偏向角，而是找“还能从第二面出射”的边界：先令第二面的出射角达到 \(90^\circ\)，由临界条件求内部角，再倒推第一面的入射角。</p>
+        </details>
+        <details><summary>习题 3.5：只看入手提示</summary>
+          <p>沿图依次写每个表面的法线、入射角和折射角。30°–60°–90° 与 45°–45°–90° 的几何关系会把多个角联系起来。先证明 θ₂=θ₁，再由最后一面“出射方向与入射方向垂直”得到所需条件。不要从目标式反推。</p>
+        </details>
+
+        <h3>7. 薄棱镜近似</h3>
+        <p>当棱镜顶角和所有入射、折射角都很小时，可用 \(\sin\theta\approx\theta\)。两次折射定律线性化后得到</p>
+        <div class="math">\[\delta\approx\left(\frac{n}{n_0}-1\right)A\]</div>
+        <p>棱镜放在空气中时 \(n_0\approx1\)，于是 \(\delta\approx(n-1)A\)。在一级近似中，偏向角与入射角无关；这不表示精确结果完全无关，只表示入射角的影响落在被略去的高阶项里。</p>
+        <figure>
+          <img src="assets/第02课/08-薄棱镜近似.png" alt="薄棱镜偏向角近似推导">
+          <figcaption>课件第 19 页：\(\delta\approx(n-1)A\) 的条件是顶角和相关角度都足够小。</figcaption>
+        </figure>
+
+        <h3>8. 棱镜为什么能把白光分开</h3>
+        <p>折射率不是固定常数，而是波长的函数 \(n(\lambda)\)。在普通玻璃的可见光范围内通常有 \(\mathrm dn/\mathrm d\lambda\lt0\)，即波长越短，折射率越大。紫光的偏向通常大于红光，因此白光通过棱镜后展开成光谱。</p>
+        <figure>
+          <img src="assets/第02课/09-棱镜色散.png" alt="棱镜把白光分解成不同颜色">
+          <figcaption>课件第 23 页。图中英文的意思是：折射程度取决于光的颜色或频率；红光偏折较小，频率较高的光偏折较大；白光含有各种颜色，通过棱镜后被分开，这叫色散。</figcaption>
+        </figure>
+        <p>分光系统先用透镜 L₁ 把狭缝发出的光变成平行光，再由棱镜使不同波长获得不同偏向角，最后由透镜 L₂ 把各个方向的平行光会聚到焦平面上的不同位置。</p>
+        <figure>
+          <img src="assets/第02课/10-棱镜分光系统.png" alt="棱镜分光系统的构造">
+          <figcaption>课件第 26 页：准直—色散—会聚是棱镜分光仪器的基本结构。</figcaption>
+        </figure>
+
+        <h3>8.1 角色散</h3>
+        <p>若用最小偏向角工作，定义角色散</p>
+        <div class="math">\[D_\delta=\frac{\mathrm d\delta_{\min}}{\mathrm d\lambda}\]</div>
+        <p>它表示波长改变一个单位时，最小偏向角改变多少。在薄棱镜近似下，\(\delta\approx[n(\lambda)-1]A\)，所以</p>
+        <div class="math">\[D_\delta\approx A\frac{\mathrm dn}{\mathrm d\lambda}\]</div>
+        <p>绝对值越大，不同波长分开的角度越大。正常色散区 \(\mathrm dn/\mathrm d\lambda\lt0\)，负号表示偏向角随波长增大而减小；比较分光能力时常看其绝对值。</p>
+        <figure>
+          <img src="assets/第02课/11-角色散.png" alt="棱镜角色散的定义">
+          <figcaption>课件第 30 页：角色散是最小偏向角对波长的变化率。</figcaption>
+        </figure>
+
+        <h3>9. 这一课做题时的顺序</h3>
+        <div class="grid">
+          <div class="card"><h3>全反射题</h3><p>先确认传播方向和两侧折射率；再算临界角；最后比较实际入射角与临界角。不要只看到“大角度”三个字就判全反射。</p></div>
+          <div class="card"><h3>一般棱镜题</h3><p>第一面折射 → 用 \(r_1+r_2=A\) 转到第二面 → 检查第二面能否出射 → 第二面折射 → 用 \(\delta=i+e-A\) 求偏向角。</p></div>
+          <div class="card"><h3>最小偏向题</h3><p>先写 \(i=e\)、\(r_1=r_2=A/2\)，再使用一次折射定律；不要把一般状态误当成对称状态。</p></div>
+          <div class="card"><h3>色散题</h3><p>先判断 \(\mathrm dn/\mathrm d\lambda\) 的符号，再判断哪种颜色折射率更大；最后比较偏向角或求 \(\mathrm d\delta/\mathrm d\lambda\)。</p></div>
+        </div>
+
+        <h3>10. 第 02 课自测</h3>
+        <ol>
+          <li>为什么光从空气射入玻璃不可能发生全反射？<details><summary>答案</summary>全反射要求光从高折射率介质射向低折射率介质；空气到玻璃不满足 \(n_1\gt n_2\)。</details></li>
+          <li>玻璃折射率为 1.5，玻璃—空气界面的临界角约为多少？<details><summary>答案</summary>\(\arcsin(1/1.5)\approx41.8^\circ\)。</details></li>
+          <li>直角棱镜中光以 45° 入射到斜面，为什么通常会全反射？<details><summary>答案</summary>普通玻璃到空气的临界角约 42°，45° 大于临界角。</details></li>
+          <li>光纤弯得过急为什么会漏光？<details><summary>答案</summary>弯曲改变了光在芯层—包层界面的局部入射角，某些光线会降到临界角以下。</details></li>
+          <li>写出棱镜内部角与顶角的关系，以及偏向角公式。<details><summary>答案</summary>\(r_1+r_2=A\)；\(\delta=i+e-A\)。</details></li>
+          <li>最小偏向时光路有什么对称关系？<details><summary>答案</summary>\(i=e\)，\(r_1=r_2=A/2\)。</details></li>
+          <li>最小偏向角法为什么可以测折射率？<details><summary>答案</summary>\(A\) 和 \(\delta_{\min}\) 可测，对称条件把两个表面的未知角合并，代入折射定律即可解出 \(n/n_0\)。</details></li>
+          <li>薄棱镜公式 \(\delta\approx(n-1)A\) 的适用条件是什么？<details><summary>答案</summary>棱镜在空气中，顶角及相关入射、折射角都足够小，只保留一级小量。</details></li>
+          <li>正常色散中红光和紫光谁偏折更大？<details><summary>答案</summary>紫光。正常色散时短波长折射率较大。</details></li>
+          <li>一般棱镜计算中，为什么在求第二面出射角前要检查全反射？<details><summary>答案</summary>若第二面的内部入射角超过临界角，根本没有传播到外界的折射光，出射角没有实数解。</details></li>
+        </ol>
+      </section>
+
+      <section id="lesson3">
+        <h2>第 03 课：球面折射成像</h2>
+        <p class="lead">这一课研究的不是“背一个新公式”，而是一个折射球面怎样把入射光束重新组织成另一束光。先把一条光线写清楚，再用近轴条件让同一物点发出的许多光线得到共同像点，球面成像公式就出来了。</p>
+
+        <h3>1. 先把装置和符号钉住</h3>
+        <p>球面顶点记为 \(O\)，球心为 \(C\)，曲率半径为 \(r=OC\)。左侧介质折射率为 \(n\)，右侧为 \(n'\)；光从左向右传播。物点 \(P\)、像点 \(P'\) 到顶点的有向距离分别是 \(s\)、\(s'\)。</p>
+        <figure>
+          <img src="assets/第03课/01-球面折射光路.png" alt="球面折射的顶点球心物点像点和光线">
+          <figcaption>课件《3-4 球面折射成像》第 2 页：顶点 O 是距离的原点，球心 C 决定 r 的符号。</figcaption>
+        </figure>
+        <div class="callout"><strong>本讲义继续使用课件的笛卡尔符号：</strong>取光轴向右为正。图中实物在左侧，所以 \(s\lt0\)；若球心在右侧，则 \(r\gt0\)；像点在哪一侧由计算决定。实、虚是光束性质，不直接决定正负号。</div>
+        <table>
+          <thead><tr><th>量</th><th>从哪里量</th><th>正负怎样定</th><th>最常见的误写</th></tr></thead>
+          <tbody>
+            <tr><td><i>s</i></td><td>当前折射面顶点 O 到物点 P</td><td>P 在 O 右边为正，左边为负</td><td>把题目给的正长度直接代入</td></tr>
+            <tr><td>\(s'\)</td><td>\(O\) 到像点 \(P'\)</td><td>\(P'\) 在 \(O\) 右边为正，左边为负</td><td>先假定实像一定取正</td></tr>
+            <tr><td><i>r</i></td><td>O 到球心 C</td><td>C 在 O 右边为正，左边为负</td><td>把半径永远写成正数</td></tr>
+          </tbody>
+        </table>
+
+        <h3>2. 为什么必须加“近轴”条件</h3>
+        <p>从轴上物点 \(P\) 发出一条光线，在球面上高度为 \(h\) 的 \(A\) 点折射。法线就是 \(AC\)。几何关系把物距、像距、半径与三个角联系起来，再和折射定律 \(n\sin i=n'\sin i'\) 联立。</p>
+        <figure>
+          <img src="assets/第03课/02-物像关系推导起点.png" alt="球面折射物像关系的角度定义">
+          <figcaption>课件第 4 页：推导的起点只有折射定律和三角形几何。</figcaption>
+        </figure>
+        <p>若保留精确的正弦和正切，所得像点位置会随光线高度 <i>h</i> 改变：从同一物点出发、打在球面不同位置的光线，并不严格交在同一点。这就是球差出现的根源。所谓理想成像，只能在限定范围内成立。</p>
+        <p>当光线靠近光轴，且各角都足够小时，可以用 \(\sin\theta\approx\tan\theta\approx\theta\)。于是每个角都能写成“高度除以轴向距离”，并且共同的 \(h\) 被约去，像点位置不再依赖选了哪一条近轴光线。</p>
+        <figure>
+          <img src="assets/第03课/03-近轴近似.png" alt="近轴条件下的球面折射推导">
+          <figcaption>课件第 7 页：近轴近似把三角函数关系线性化；它不是可有可无的计算技巧，而是高斯成像成立的条件。</figcaption>
+        </figure>
+        <div class="callout warn"><strong>“与光轴平行”不等于“近轴”。</strong>一条平行光若离轴很高，仍可能落在球面的非近轴区域。近轴同时要求光线倾角小、入射高度相对曲率半径也小。</div>
+
+        <h3>3. 球面折射公式：每一项在说什么</h3>
+        <p>把小角关系代入折射定律并整理，得到单个球面的近轴成像公式：</p>
+        <div class="math">\[\frac{n'}{s'}-\frac{n}{s}=\frac{n'-n}{r}=\Phi\]</div>
+        <figure>
+          <img src="assets/第03课/04-球面折射公式与光焦度.png" alt="球面折射成像公式和光焦度">
+          <figcaption>课件第 8 页。\(\Phi\) 是这个折射面的光焦度；SI 单位为 \(\mathrm{m^{-1}}\)，也叫屈光度 \(\mathrm D\)。</figcaption>
+        </figure>
+        <p>左边的 \(n/s\) 与 \(n'/s'\) 可看成物方、像方的近轴会聚程度；右边只由两侧介质和球面形状决定。因而这条式子可以读成：</p>
+        <div class="math">\[\text{出射光束的会聚程度}-\text{入射光束的会聚程度}=\text{折射面提供的光焦度}\]</div>
+        <p>光焦度</p>
+        <div class="math">\[\Phi=\frac{n'-n}{r}\]</div>
+        <p>既可能为正，也可能为负。以向右为正：若 \(n'\gt n\) 且球心在右侧，\(\Phi\gt0\)，球面对近轴光束有会聚作用；若改变折射率次序或曲率方向，作用可能变成发散。</p>
+        <div class="grid">
+          <div class="card"><h3>同种介质</h3><p>\(n'=n\) 时 \(\Phi=0\)，公式给出 \(s'=s\)。没有折射率突变，球面边界不改变光束。</p></div>
+          <div class="card"><h3>平面极限</h3><p>\(r\to\infty\) 时 \(\Phi\to0\)，得到 \(n'/s'=n/s\)。平面折射是球面折射的极限，不是另一套理论。</p></div>
+        </div>
+        <div class="deep">
+          <figure>
+            <img src="assets/第03课/14-教材球面折射公式-p131.jpg" alt="教材第131页球面折射公式">
+            <figcaption>姚启钧《光学教程》第 131 页：球面折射物像公式、光焦度和共轭关系。正常阅读时可对照教材原推导。</figcaption>
+          </figure>
+        </div>
+
+        <h3>4. 焦点与焦距不是额外定义出来的公式</h3>
+        <p>让物点移到无穷远，\(1/s\to0\)，平行近轴光经折射后会聚或看似发散自像方焦点 \(F'\)。像方焦距为</p>
+        <div class="math">\[f'=\frac{n'r}{n'-n}=\frac{n'}{\Phi}\]</div>
+        <figure>
+          <img src="assets/第03课/05-像方焦点.png" alt="像方焦点和像方焦距">
+          <figcaption>课件第 9 页：轴上无穷远物点对应像方焦点 \(F'\)。</figcaption>
+        </figure>
+        <p>反过来，若物点放在物方焦点 \(F\)，折射后的近轴光平行，像在无穷远。令 \(1/s'\to0\)，得到</p>
+        <div class="math">\[f=-\frac{nr}{n'-n}=-\frac{n}{\Phi}\]</div>
+        <figure>
+          <img src="assets/第03课/06-物方焦点.png" alt="物方焦点和物方焦距">
+          <figcaption>课件第 10 页：从物方焦点 F 发出的近轴光，折射后平行于光轴。</figcaption>
+        </figure>
+        <p>因此单折射球面的两焦距一般不等长：</p>
+        <div class="math">\[\frac{f'}{f}=-\frac{n'}{n}\]</div>
+        <p>这和空气中的薄透镜不同。两侧介质折射率不同时，只记“左右各一个等长焦距”会出错。</p>
+
+        <h3>4.1 高斯公式与牛顿公式</h3>
+        <p>把光焦度分别写成 \(n'/f'\) 或 \(-n/f\)，球面折射公式可改写为高斯形式：</p>
+        <div class="math">\[\frac{f'}{s'}+\frac{f}{s}=1\]</div>
+        <p>高斯公式从顶点 \(O\) 量距离。若改从焦点量，定义 \(x=s-f\)、\(x'=s'-f'\)，便得到牛顿形式：</p>
+        <div class="math">\[xx'=ff'\]</div>
+        <figure>
+          <img src="assets/第03课/07-高斯与牛顿公式.png" alt="球面折射的高斯公式与牛顿公式">
+          <figcaption>课件第 12 页：顶点坐标适合高斯公式，焦点坐标适合牛顿公式；二者描述同一对共轭点。</figcaption>
+        </figure>
+        <div class="callout tip"><strong>选式原则：</strong>题目给物距、曲率半径和折射率时，直接用基本公式；题目围绕两焦点给距离时，用牛顿公式通常更短；不要在同一行里把“从顶点量的 s”与“从焦点量的 x”混用。</div>
+        <div class="deep">
+          <figure>
+            <img src="assets/第03课/15-教材焦距高斯公式-p132.jpg" alt="教材第132页焦点焦距与高斯公式">
+            <figcaption>教材第 132 页：物方、像方焦距与高斯公式。这里能看到符号关系并非凭口诀规定，而是由球面折射公式取极限得到。</figcaption>
+          </figure>
+        </div>
+
+        <h3>4.2 已布置习题 3.10：把“像在第二面顶点”翻译成条件</h3>
+        <figure>
+          <img src="assets/第03课/17-教材习题3.10.jpg" alt="教材习题3.10">
+          <figcaption>教材第 162 页，习题 3.10。它考的不是单面焦距，而是透明球的两次折射。</figcaption>
+        </figure>
+        <details><summary>只看入手提示</summary>
+          <p>先看一个容易忽略的特殊性：目标像点恰好是第二个表面的顶点。平行光经过第一面后，若已经在距第一面一个直径的位置会聚，它到达第二面时光束高度正好缩为零；第二面不再构成一次普通的有限孔径成像。因此先对第一面令物在无穷远，求其像方焦距，再令它等于球的直径 \(2R\)。不要把 \(s_2'=0\) 硬代入含 \(1/s_2'\) 的公式。</p>
+        </details>
+
+        <h3>5. 横向放大率：像的位置还不够</h3>
+        <p>轴上公式只能给出像点位置。对垂直于光轴的小物 <i>y</i>，近轴条件下横向放大率为</p>
+        <div class="math">\[\beta=\frac{y'}{y}=\frac{ns'}{n's}\]</div>
+        <figure>
+          <img src="assets/第03课/08-横向放大率.png" alt="球面折射横向放大率">
+          <figcaption>课件第 15 页：由近轴光线的几何关系可得横向放大率。</figcaption>
+        </figure>
+        <p>\(|\beta|\) 表示大小比例；\(\beta\gt0\) 表示正立，\(\beta\lt0\) 表示倒立。这里的正负仍来自统一的坐标和高度约定，而不是另背一套“实像倒立、虚像正立”的口诀。</p>
+        <p>若关心光束倾角变化，可定义近轴角放大率</p>
+        <div class="math">\[\gamma=\frac{u'}{u}=\frac{s}{s'},\qquad \beta\gamma=\frac{n}{n'}\]</div>
+        <figure class="deep">
+          <img src="assets/第03课/13-角度放大率.png" alt="球面折射角放大率">
+          <figcaption>课件第 33 页：横向尺寸放大与角度放大相互制约。</figcaption>
+        </figure>
+
+        <h3>6. 连续折射：前一面的像就是后一面的物</h3>
+        <p>厚元件、玻璃球和多面系统没有新的总口诀，可靠做法是逐面成像。设第一、第二面顶点间距为 \(d\)，第一面算得像距 \(s_1'\)。把原点移到第二面后，第二面的物距是</p>
+        <div class="math">\[s_2=s_1'-d\]</div>
+        <p>这条式子只是坐标平移。关键不是结果正负本身，而是第二面看到的入射光究竟正在发散，还是正准备会聚：若中间像位于第二面之后，入射到第二面的光正在向它会聚，它就是第二面的虚物。</p>
+        <figure>
+          <img src="assets/第03课/09-两次折射与虚物.png" alt="两次球面折射中中间像成为第二面的虚物">
+          <figcaption>课件第 20 页：第一面得到的中间像位于第二面之后，因此对第二面是虚物。每一面都要重设原点、重判 \(s,r,n,n'\)。</figcaption>
+        </figure>
+        <p>每一面求得横向放大率 \(\beta_1,\beta_2\) 后，总放大率是乘积：</p>
+        <div class="math">\[\beta_{\text{总}}=\beta_1\beta_2\cdots\]</div>
+        <div class="callout danger"><strong>最容易错的地方：</strong>直接把第一面的 \(s_1'\) 抄成第二面的 \(s_2\)。两个量使用不同顶点作原点，相差面间距 \(d\)；第二面的 \(r_2\) 也必须按新的球心位置重新判号。</div>
+
+        <h3>6.1 已布置习题 3.12、3.13、3.14</h3>
+        <figure>
+          <img src="assets/第03课/18-教材习题3.12至3.14.jpg" alt="教材习题3.12到3.14">
+          <figcaption>教材第 162 页：习题 3.12*、3.13、3.14。三题都在考“观察方向决定当前折射面和符号”。</figcaption>
+        </figure>
+        <details><summary>习题 3.12*：只看入手提示</summary>
+          <p>观察者只通过离自己最近的球面看两个气泡。把每个气泡分别当作物点，用同一个表面、同一个顶点和同一观察方向计算表观像。题目给的是两个表观像重合，不是两个实际位置重合；把两个 \(s'\) 相等，分别反求两个实际物距。</p>
+        </details>
+        <details><summary>习题 3.13：只看入手提示</summary>
+          <p>先利用“鱼在球心”判断入射到球面的光线与法线是什么关系，再用球面折射公式核对表观位置。横向放大率不能只凭直觉写 1，应把求得的 \(s,s',n,n'\) 代入 \(\beta\) 公式检查。</p>
+        </details>
+        <details><summary>习题 3.14：只看入手提示</summary>
+          <p>先画出水、玻璃棒和半球球心，光从水进入玻璃，所以物方折射率是 1.33，像方是玻璃折射率。按光行方向建立坐标后再判 <i>r</i> 的正负。计算法与作图法应得到同一像区；作图优先用平行光、过物方焦点的光和过球心的光。</p>
+        </details>
+
+        <h3>7. 平面折射：令 \(r\to\infty\)</h3>
+        <p>平面可以看作曲率半径无穷大的球面。令 \(r\to\infty\)，球面折射公式变成</p>
+        <div class="math">\[\frac{n'}{s'}=\frac{n}{s},\qquad s'=\frac{n'}{n}s,\qquad \beta=1\]</div>
+        <figure>
+          <img src="assets/第03课/10-平面折射.png" alt="平面折射的物像关系">
+          <figcaption>课件第 22 页：单个平面折射面在近轴条件下只改变轴向表观深度，横向放大率为 1。</figcaption>
+        </figure>
+        <p>因为 \(n,n'\) 都为正，\(s\) 与 \(s'\) 同号。真实物体在界面物方时，单平面折射得到的仍是同侧虚像。物在水中、观察者在空气中时，光从水射向空气，\(|s'|=(n_{\text{空气}}/n_{\text{水}})|s|\)，所以看起来变浅。</p>
+        <div class="callout warn"><strong>先按光走的方向分 \(n\) 与 \(n'\)：</strong>“人站在哪边”只帮助你确定出射光方向，不能直接套“实际深度除以折射率”。若外界不是空气，或光从空气进入液体，必须回到 \(s'=(n'/n)s\)。</div>
+
+        <h3>7.1 玻璃平板为何使物体发生表观平移</h3>
+        <p>平板有两个平行界面。第一面产生中间虚像，第二面再以它为物；逐面使用平面折射关系，外界介质相同时，最终横向大小不变，但轴向位置发生平移。近轴条件下，厚度为 \(d\)、平板折射率为 \(n\)、外界折射率为 \(n_0\) 时，向观察者一侧的位移量为</p>
+        <div class="math">\[\Delta=d\left(1-\frac{n_0}{n}\right)\]</div>
+        <figure>
+          <img src="assets/第03课/11-玻璃平板两次折射.png" alt="玻璃平板的两次平面折射">
+          <figcaption>课件第 30 页：平板问题仍按“第一面成像 → 坐标平移 → 第二面成像”处理。</figcaption>
+        </figure>
+
+        <h3>7.2 已布置习题 3.3</h3>
+        <figure>
+          <img src="assets/第03课/16-教材习题3.3.jpg" alt="教材习题3.3">
+          <figcaption>教材第 160–161 页：习题 3.3。眼睛与物体之间插入平板，求的是物与最终表观像的距离。</figcaption>
+        </figure>
+        <details><summary>只看入手提示</summary>
+          <p>光从物体到眼睛，依次通过空气→玻璃、玻璃→空气两个平面。任选一个界面作第一步都要和实际光行方向一致。先求第一面的中间像，再把它相对第二面重新量物距；最后比较物点与最终虚像的坐标。可以用上面的平板位移式复核，但第一次最好逐面算。</p>
+        </details>
+
+        <h3>7.3 水下观察的“斯涅耳窗”</h3>
+        <p>水下观察者向上看时，空气中来自整个上半空间的光进入水后都向法线偏折，压缩在以竖直方向为轴的一只圆锥内。圆锥半角等于水到空气的临界角：</p>
+        <div class="math">\[\theta_{\text{window}}=\arcsin\!\left(\frac{n_{\text{air}}}{n_{\text{water}}}\right)\approx48.8^\circ\]</div>
+        <p>圆锥之外看到的不是更多天空，而主要是水下景物在水面的全反射像。它把本课的平面折射和上一课的全反射连在了一起。</p>
+
+        <h3>8. 作图法：三条特殊光线</h3>
+        <p>近轴理想条件下，球面折射可以用三条特殊光线定位像点：</p>
+        <ol>
+          <li>平行于光轴入射的光，折射后通过像方焦点 \(F'\)；</li>
+          <li>通过物方焦点 F 的入射光，折射后平行于光轴；</li>
+          <li>通过球心 C 的光沿法线入射，方向不变。</li>
+        </ol>
+        <figure>
+          <img src="assets/第03课/12-三条特殊光线.png" alt="球面折射作图的三条特殊光线">
+          <figcaption>课件第 31 页：任选两条特殊光线即可定像，第三条用来检查。</figcaption>
+        </figure>
+        <p>若算出的像是虚像，图上应把折射后的发散光反向延长；不要为了让线相交而改变真实光线方向。作图只能给出几何位置和正倒、放缩趋势，数值仍由公式确定。</p>
+
+        <h3>9. 这类题的固定做法</h3>
+        <ol>
+          <li><strong>画箭头：</strong>先确定光从哪种介质射向哪种介质。</li>
+          <li><strong>圈当前面：</strong>只看正在计算的那个顶点，并令它为原点。</li>
+          <li><strong>列数据：</strong>写出 \(n,n',s,r\)，所有距离先带符号。</li>
+          <li><strong>求像距：</strong>用 \(n'/s'-n/s=(n'-n)/r\)；必要时再求 \(\beta\)。</li>
+          <li><strong>解释结果：</strong>把 \(s'\) 放回图中，结合出射光判断实像或虚像。</li>
+          <li><strong>有下一面就平移原点：</strong>通常 \(s_2=s_1'-d\)，然后从第 2 步重新来。</li>
+        </ol>
+        <div class="callout tip"><strong>三个快速自检：</strong>量纲是否都是 \(\mathrm{m^{-1}}\)；令 \(r\to\infty\) 能否回到平面折射；画一条靠轴光线后，计算出的像侧是否符合折射方向。</div>
+
+        <h3>10. 第 03 课自测</h3>
+        <ol>
+          <li>球面折射公式成立为什么要限定近轴光线？<details><summary>答案</summary>精确关系中像点随光线高度和角度改变；近轴小角近似把关系线性化并消去共同的光线高度，使一阶像点与所选近轴光线无关。</details></li>
+          <li>写出单球面折射公式，并说明 \(r\) 的符号由什么决定。<details><summary>答案</summary>\(n'/s'-n/s=(n'-n)/r\)。球心位于顶点右侧时 \(r\gt0\)，左侧时 \(r\lt0\)。</details></li>
+          <li>\(n'=n\) 时公式应给出什么？物理意义是什么？<details><summary>答案</summary>得到 \(s'=s\)；没有折射率突变，边界不改变光束会聚状态。</details></li>
+          <li>为什么单折射球面的 \(f\) 与 \(f'\) 通常不等长？<details><summary>答案</summary>\(f=-nr/(n'-n)\)，\(f'=n'r/(n'-n)\)，且 \(f'/f=-n'/n\)；两侧介质折射率不同。</details></li>
+          <li>高斯公式和牛顿公式分别从哪里量距离？<details><summary>答案</summary>高斯公式用从顶点量的 \(s,s'\)；牛顿公式用从焦点量的 \(x=s-f\)、\(x'=s'-f'\)。</details></li>
+          <li>第一面像距为 \(16\,\mathrm{cm}\)，第二面顶点在第一面右侧 \(12\,\mathrm{cm}\)，第二面的物距是多少？它一定是实物吗？<details><summary>答案</summary>\(s_2=16-12=+4\,\mathrm{cm}\)。正号只表示中间像在第二面右侧；入射光正向该点会聚，所以它是虚物。</details></li>
+          <li>物在水中、人在空气中近轴观察，为什么看起来变浅？<details><summary>答案</summary>光从水中 \(n\) 射向空气 \(n'\)，有 \(s'=(n'/n)s\)。因 \(n'\lt n\)，所以虚像到界面的距离绝对值较小。</details></li>
+          <li>平面折射为什么有 \(\beta=1\)，却仍会使物体看起来位置改变？<details><summary>答案</summary>\(\beta=1\) 只表示横向尺寸不变；轴向像距仍按 \(s'=(n'/n)s\) 改变。</details></li>
+          <li>两面系统总横向放大率怎样求？<details><summary>答案</summary>逐面计算 \(\beta_1,\beta_2\)，总放大率 \(\beta_{\text{总}}=\beta_1\beta_2\)；更多表面继续相乘。</details></li>
+          <li>球面折射作图可优先选哪三条特殊光线？<details><summary>答案</summary>平行轴线后过 \(F'\)；过 \(F\) 后平行轴线；过球心 \(C\) 沿法线不偏折。</details></li>
+        </ol>
+      </section>
+
+      <section id="lesson4">
+        <h2>第 04 课：球面反射成像</h2>
+        <p class="lead">反射并不是另起一套公式。老师课件最重要的处理是：把反射看成球面折射在 \(n'=-n\) 时的形式。这样，上一课的符号、焦点、放大率和作图法都能直接迁移；真正要重新适应的，是反射光回到了入射一侧。</p>
+
+        <h3>1. 先看光束发生了什么</h3>
+        <p>轴上物点 \(P\) 发出的近轴光射到球面镜。每一点的法线都经过球心 \(C\)，反射角等于入射角。若反射光真实会聚，交点是实像；若反射光发散，其反向延长线的交点是虚像。</p>
+        <figure>
+          <img src="assets/第04课/01-球面反射光路.png" alt="球面反射中的物点像点顶点和球心">
+          <figcaption>课件《3-5 球面反射成像》第 2 页：球面反射同样是在研究入射单心光束能否变成出射单心光束。</figcaption>
+        </figure>
+        <div class="callout"><strong>继续沿用同一个坐标系：</strong>以镜面顶点 \(O\) 为原点，向右为正。课件图中光从左向右入射，反射光向左返回。若反射光在镜前左侧真实会聚，则 \(s'&lt;0\)，但它仍是实像。</div>
+
+        <h3>2. 为什么令 \(n'=-n\) 就能从折射得到反射</h3>
+        <p>折射定律写成 \(n\sin i=n'\sin i'\)。在同一套角度正负约定下，反射定律要求 \(i'=-i\)。形式上令 \(n'=-n\)，便有</p>
+        <div class="math">\[n\sin i=(-n)\sin i'\quad\Longrightarrow\quad i'=-i\]</div>
+        <p>把 \(n'=-n\) 代入上一课的球面折射公式</p>
+        <div class="math">\[\frac{n'}{s'}-\frac{n}{s}=\frac{n'-n}{r}\]</div>
+        <p>约去 \(-n\) 后得到球面反射物像公式：</p>
+        <div class="math">\[\boxed{\frac{1}{s'}+\frac{1}{s}=\frac{2}{r}}\]</div>
+        <figure>
+          <img src="assets/第04课/02-由折射统一到反射.png" alt="令像方折射率等于负的物方折射率得到反射公式">
+          <figcaption>课件第 3 页：用 \(n'=-n\) 统一反射与折射。</figcaption>
+        </figure>
+        <div class="callout warn"><strong>这里的 \(n'=-n\) 是数学代换，不是在说镜后真的存在负折射率介质。</strong>它用折射公式的符号结构记录“出射光反向传播”。推导完成后，直接使用球面反射公式即可。</div>
+
+        <h3>2.1 从公式本身读出凹、凸面镜</h3>
+        <p>在本讲义的“向右为正”坐标中，镜面朝向左侧入射光：</p>
+        <table>
+          <thead><tr><th>镜面</th><th>球心位置</th><th>半径与焦距</th><th>对平行近轴光的作用</th></tr></thead>
+          <tbody>
+            <tr><td>凹面镜</td><td>球心在镜前左侧</td><td>\(r&lt;0,\ f'=r/2&lt;0\)</td><td>反射光在镜前真实会聚</td></tr>
+            <tr><td>凸面镜</td><td>球心在镜后右侧</td><td>\(r&gt;0,\ f'=r/2&gt;0\)</td><td>反射光发散，反向延长线交于镜后</td></tr>
+          </tbody>
+        </table>
+        <p>这与高中常见的“凹面镜焦距取正”并不冲突，只是符号约定不同。高中有些教材把实物距、实像距当正长度；本课件使用的是统一坐标。做题时最危险的是把两套符号混在同一行。</p>
+
+        <h3>3. 焦点与焦距</h3>
+        <p>令物点在无穷远，即 \(1/s\to0\)，球面反射公式给出</p>
+        <div class="math">\[s'=\frac{r}{2}\]</div>
+        <p>因此像方焦距为 \(f'=r/2\)。由光路可逆性，从同一点发出的光反射后成为平行光，所以物方焦点与像方焦点在物理空间重合：</p>
+        <div class="math">\[F=F',\qquad f=f'=\frac{r}{2}\]</div>
+        <figure>
+          <img src="assets/第04课/03-焦点与焦距.png" alt="球面镜物方像方焦点重合">
+          <figcaption>课件第 4 页：球面镜只有一个物理焦点，焦距等于曲率半径的一半。</figcaption>
+        </figure>
+        <figure>
+          <img src="assets/第04课/04-凹面镜与凸面镜平行光.png" alt="凹面镜与凸面镜对平行光的作用">
+          <figcaption>课件第 5 页：凹面镜的焦点在镜前，凸面镜的焦点在镜后；虚焦点用反向延长线表示。</figcaption>
+        </figure>
+
+        <h3>4. 高斯公式、牛顿公式与横向放大率</h3>
+        <p>利用 \(f=f'=r/2\)，物像公式可写成高斯形式：</p>
+        <div class="math">\[\boxed{\frac{1}{s'}+\frac{1}{s}=\frac{1}{f'}}\]</div>
+        <p>若从焦点量距离，定义 \(x=s-f\)、\(x'=s'-f'\)，则牛顿公式为</p>
+        <div class="math">\[xx'=ff'=f'^2\]</div>
+        <figure>
+          <img src="assets/第04课/06-高斯与牛顿公式.png" alt="球面镜的高斯公式与牛顿公式">
+          <figcaption>课件第 10 页：高斯距离从顶点量，牛顿距离从焦点量。</figcaption>
+        </figure>
+        <p>上一课球面折射的横向放大率是 \(\beta=ns'/(n's)\)。代入 \(n'=-n\)，得到球面镜的横向放大率：</p>
+        <div class="math">\[\boxed{\beta=\frac{y'}{y}=-\frac{s'}{s}}\]</div>
+        <figure>
+          <img src="assets/第04课/07-横向放大率.png" alt="球面镜横向放大率">
+          <figcaption>课件第 11 页：\(\beta\) 的符号决定正倒，绝对值决定放缩。</figcaption>
+        </figure>
+        <p>公式之间可以互相检查。若算得 \(s\) 与 \(s'\) 同号，则 \(\beta&lt;0\)，像倒立；若二者异号，则 \(\beta&gt;0\)，像正立。</p>
+
+        <div class="deep">
+          <figure>
+            <img src="assets/第04课/11-教材球面反射公式-p129.jpg" alt="教材第129页球面反射物像公式">
+            <figcaption>姚启钧《光学教程》第 129 页：近轴条件下的球面反射公式、焦点和焦距。</figcaption>
+          </figure>
+        </div>
+
+        <h3>5. 凹面镜五种位置，不靠图表死背</h3>
+        <p>对镜前实物，凹面镜有 \(s&lt;0\)、\(f'<0\)。把物点从远处逐渐移向镜面，直接观察</p>
+        <div class="math">\[s'=\frac{f's}{s-f'}\]</div>
+        <p>的符号和绝对值即可得到全部情形：</p>
+        <table>
+          <thead><tr><th>物的位置</th><th>像的位置与性质</th><th>放大率</th></tr></thead>
+          <tbody>
+            <tr><td>\(|s|&gt;|r|\)，球心外</td><td>镜前 \(F\) 与 \(C\) 之间的实像，倒立</td><td>\(|\beta|&lt;1\)</td></tr>
+            <tr><td>\(|s|=|r|\)，位于球心</td><td>像也在球心，实像，倒立</td><td>\(|\beta|=1\)</td></tr>
+            <tr><td>\(|f'|&lt;|s|&lt;|r|\)</td><td>镜前球心外的实像，倒立</td><td>\(|\beta|&gt;1\)</td></tr>
+            <tr><td>\(|s|=|f'|\)</td><td>反射光平行，像在无穷远</td><td>不取有限值</td></tr>
+            <tr><td>\(|s|&lt;|f'|\)，焦点内</td><td>镜后虚像，正立</td><td>\(|\beta|&gt;1\)</td></tr>
+          </tbody>
+        </table>
+        <p>凸面镜对镜前实物有 \(s&lt;0\)、\(f'&gt;0\)。代入公式必得 \(s'&gt;0\) 且 \(0&lt;\beta&lt;1\)，所以总是形成镜后的正立、缩小虚像。这是公式的结果，不必另背。</p>
+
+        <h3>5.1 作图时仍用三条特殊光线</h3>
+        <ol>
+          <li>平行于主轴的入射光，反射后通过焦点 \(F\)，或其反向延长线通过虚焦点；</li>
+          <li>通过焦点 \(F\) 的入射光，反射后平行于主轴；</li>
+          <li>通过球心 \(C\) 的光沿法线入射，沿原路返回。</li>
+        </ol>
+        <p>任选两条定像，第三条检查。虚像作图必须延长反射光，不能把延长线误画成真实传播方向。</p>
+
+        <h3>6. 近轴公式为何不能直接管大口径聚光</h3>
+        <p>球面镜严格说会破坏单心光束：离轴高度不同的光线不在同一点会聚，近轴公式只保留最低阶结果。镜面口径相对曲率半径越大，球差越明显。太阳炉等装置若追求高能量密度，除了收集面积，还要考虑太阳的有限角直径、反射率、球差和焦斑大小。</p>
+        <figure>
+          <img src="assets/第04课/05-聚光能力思考.png" alt="课件关于球面镜聚集太阳能的思考题">
+          <figcaption>课件第 7 页：直径增大能收集更多能量，但不能据此假定所有能量集中在数学上的一个点。</figcaption>
+        </figure>
+        <div class="callout tip"><strong>尺度判断：</strong>收集功率大致随口径面积 \(D^2\) 增长；理想几何点焦并不存在，实际焦斑与太阳角直径、像差和加工误差有关。若题目只给口径却要求“焦点温度”，信息通常不够。</div>
+
+        <h3>7. 平面镜是 \(r\to\infty\) 的极限</h3>
+        <p>令球面曲率半径趋于无穷：</p>
+        <div class="math">\[\frac{1}{s'}+\frac{1}{s}=0\quad\Longrightarrow\quad s'=-s\]</div>
+        <p>再代入放大率公式：</p>
+        <div class="math">\[\beta=-\frac{s'}{s}=1\]</div>
+        <p>因此平面镜像与物关于镜面对称，大小相等、正立。对镜前实物 \(s&lt;0\)，有 \(s'&gt;0\)，像在镜后，是虚像。</p>
+        <figure>
+          <img src="assets/第04课/09-平面镜成像.png" alt="平面镜物像关系">
+          <figcaption>课件第 16 页：负号表示物和像在平面镜两侧，不表示像倒立。</figcaption>
+        </figure>
+
+        <h3>7.1 镜像法：把折线路径拉直</h3>
+        <p>平面镜反射题可以把物点关于镜面对称到镜后得到像点 \(P'\)。从观察点向 \(P'\) 画直线，它与镜面的交点就是反射点。这样，原来的“物点 → 镜面 → 观察点”折线路径，被化成一条直线。</p>
+        <p>镜像法不仅用于画像，也适合求最短光程、反射点位置和可见范围。要注意：镜后的像点只是构造点，真实光仍停留在镜前。</p>
+        <figure class="deep">
+          <img src="assets/第04课/10-四十五度投影.png" alt="四十五度玻璃板反射投影">
+          <figcaption>课件第 19 页：倾斜玻璃板把屏幕的镜像送入观察方向。所谓“悬浮 3D”在这里本质上仍是平面反射和镜像法。</figcaption>
+        </figure>
+
+        <h3>8. 已布置习题 3.6、3.7</h3>
+        <figure>
+          <img src="assets/第04课/13-教材习题3.6与3.7.jpg" alt="教材习题3.6和3.7">
+          <figcaption>教材第 161 页：习题 3.6、3.7。前者训练公式与作图互证，后者训练从放大率反推镜面参数。</figcaption>
+        </figure>
+        <details><summary>习题 3.6：只看入手提示</summary>
+          <p>光从物体射向凹面镜，先按统一坐标写 \(s\) 与 \(f'\) 的符号，再由高斯公式求 \(s'\)，最后用 \(\beta=-s'/s\) 求像高。作图时用平行光、过焦点光、过球心光中的两条；计算和作图必须给出相同像区及正倒关系。</p>
+        </details>
+        <details><summary>习题 3.7：先检查信息是否充分</summary>
+          <p>题目只给物高和像高，先得到 \(|\beta|=1/5\)，但没有说明像正立还是倒立。分别令 \(\beta=+1/5\) 与 \(\beta=-1/5\)，由 \(\beta=-s'/s\) 得两种可能的 \(s'\)，再反求 \(r\)。检查是否出现一组凸面镜解和一组凹面镜解；若是，就应明确说明缺少哪项观测才能唯一确定。</p>
+        </details>
+
+        <h3>8.1 已布置习题 3.8</h3>
+        <figure>
+          <img src="assets/第04课/14-教材习题3.8.jpg" alt="教材习题3.8">
+          <figcaption>教材第 161 页：眼睛在凸面镜中的像与玻璃板反射像重合。</figcaption>
+        </figure>
+        <details><summary>只看入手提示</summary>
+          <p>先以凸面镜顶点为原点，求眼睛经凸面镜形成的虚像坐标。玻璃板的反射像则由平面镜对称关系得到：像到玻璃板的距离等于眼睛到玻璃板的距离。把两幅像写在同一条坐标轴上，再令坐标相等。不要把“玻璃板在眼睛与凸面镜之间”只当文字条件，它决定可接受的根。</p>
+        </details>
+
+        <h3>8.2 已布置习题 3.9*</h3>
+        <figure>
+          <img src="assets/第04课/15-教材习题3.9.jpg" alt="教材习题3.9">
+          <figcaption>教材第 161 页：在凹面镜前插入平行玻璃板，证明像移等效于移动物体。</figcaption>
+        </figure>
+        <details><summary>只看证明路线</summary>
+          <p>这是双程问题。把“未放玻璃板”和“放入玻璃板”画成两套轴向坐标：入射光穿过玻璃板一次，反射光返回时还要再穿过一次。每次平面折射都用上一课的 \(s'=(n'/n)s\) 或平板表观位移关系，但第二程要重新按光行方向判断。最后把玻璃板前后位置相减，再与球面镜物像公式的物距变化比较。只套一次单程位移会漏掉回程。</p>
+        </details>
+
+        <h3>9. 球面镜题的固定流程</h3>
+        <ol>
+          <li><strong>画入射箭头：</strong>明确光先向镜面走，反射后反向。</li>
+          <li><strong>以镜面顶点为原点：</strong>按位置写 \(s\)、\(r\)、\(f'=r/2\) 的符号。</li>
+          <li><strong>列球面反射公式：</strong>\(1/s'+1/s=2/r=1/f'\)。</li>
+          <li><strong>求放大率：</strong>\(\beta=-s'/s\)，同时判断正倒和放缩。</li>
+          <li><strong>回图解释：</strong>反射光是否真的经过像点？由此确认实像或虚像。</li>
+          <li><strong>若有玻璃板或第二镜面：</strong>按实际传播顺序分段，换原点、重判符号。</li>
+        </ol>
+        <div class="callout danger"><strong>不要混用两套镜公式：</strong>本讲义按课件取向右为正，凹面镜的 \(r\) 与 \(f'\) 为负。若你在别处看到 \(1/u+1/v=1/f\) 且凹面镜 \(f&gt;0\)，那是另一套正长度约定，结论可以相同，代数符号不能混抄。</div>
+
+        <h3>10. 第 04 课自测</h3>
+        <ol>
+          <li>形式上为什么可令 \(n'=-n\) 从折射公式得到反射公式？<details><summary>答案</summary>它使折射定律变为 \(\sin i=-\sin i'\)，在近轴及统一角度约定下给出 \(i'=-i\)，用代数方式表示出射光反向传播；并非真实负折射率介质。</details></li>
+          <li>写出本讲义符号下的球面反射公式。<details><summary>答案</summary>\(1/s'+1/s=2/r=1/f'\)，其中 \(f'=r/2\)。</details></li>
+          <li>光从左向右入射、镜面朝左时，凹面镜的 \(r\) 为什么为负？<details><summary>答案</summary>凹面镜球心位于顶点左侧，而坐标向右为正，所以球心坐标即 \(r&lt;0\)。</details></li>
+          <li>凹面镜形成的实像位于镜前左侧，为什么 \(s'&lt;0\) 却仍是实像？<details><summary>答案</summary>负号只表示坐标在原点左侧；反射光确实在那里会聚，所以是实像。</details></li>
+          <li>球面镜的两个焦点为何重合？<details><summary>答案</summary>光在同一介质中反射并沿反方向传播；由光路可逆性，平行光的会聚点与能产生平行反射光的物点是同一物理点。</details></li>
+          <li>凸面镜对镜前实物为何总成正立缩小虚像？<details><summary>答案</summary>对实物有 \(s&lt;0\)，凸面镜有 \(f'&gt;0\)；公式给出 \(s'&gt;0\)，而 \(\beta=-s'/s\) 满足 \(0&lt;\beta&lt;1\)。</details></li>
+          <li>平面镜公式怎样由球面镜公式得到？<details><summary>答案</summary>令 \(r\to\infty\)，得到 \(1/s'+1/s=0\)，即 \(s'=-s\)，再有 \(\beta=1\)。</details></li>
+          <li>镜像法为什么能把反射折线路径变成直线？<details><summary>答案</summary>把物点关于平面镜对称到镜后后，入射段与反射段的等角关系正好等价于观察点到镜像点的一条直线。</details></li>
+          <li>只知道物高、像高和物距，为什么可能不能唯一判断球面镜种类？<details><summary>答案</summary>若没有正倒或实虚信息，只知道 \(|\beta|\)，\(\beta\) 可正可负，对应的 \(s'\) 与 \(r\) 可能给出凸、凹两组解。</details></li>
+          <li>镜前玻璃板题为什么要特别警惕“双程”？<details><summary>答案</summary>光到镜面前穿过玻璃板一次，反射后返回又穿过一次；两程传播方向相反，必须分别判断，不能只套一次平板位移。</details></li>
+        </ol>
+      </section>
+
+      <section id="lesson5">
+        <h2>第 05 课：薄透镜</h2>
+        <p class="lead">薄透镜不是一个新的成像元件，而是两个折射球面靠得足够近时的近似。先逐面写两次球面折射，再利用“两个顶点几乎重合”消去中间像，就能得到薄透镜公式。这样焦距、放大率、作图和正负透镜的规律都能从前面的体系里推出。</p>
+
+        <h3>1. “薄”说的是轴向厚度可以忽略</h3>
+        <p>透镜由两个折射面围成；常见表面是球面，也可以有一面为平面。若两顶点间厚度 \(d\) 远小于曲率半径以及题目中的物像距离，可把两个顶点近似看成同一个光心平面，这才是薄透镜。</p>
+        <figure>
+          <img src="assets/第05课/01-薄透镜定义与分类.png" alt="薄透镜的定义、形状分类和功能分类">
+          <figcaption>课件《3-6 薄透镜成像》第 1 页：形状分类与功能分类不是同一件事。</figcaption>
+        </figure>
+        <div class="grid">
+          <div class="card"><h3>按形状</h3><p>凸透镜中间厚、边缘薄；凹透镜中间薄、边缘厚。这只描述几何外形。</p></div>
+          <div class="card"><h3>按功能</h3><p>正透镜有 \(\Phi\gt0\)，使近轴光束更会聚；负透镜有 \(\Phi\lt0\)，使近轴光束更发散。</p></div>
+        </div>
+        <p>在空气中，普通玻璃的折射率大于空气，因此凸透镜通常是正透镜、凹透镜通常是负透镜。但若把透镜浸入折射率更高的液体，功能可能反转。所以考试中若给了外界介质，不能只看外形判会聚或发散。</p>
+
+        <h3>2. 两次球面折射怎样合成一个公式</h3>
+        <p>物点 \(P\) 经第一面成中间像 \(P_1\)，这个中间像再作为第二面的物，最终成像于 \(P'\)。无论中间像是否真的落在玻璃内部，都按逐面成像处理。</p>
+        <figure>
+          <img src="assets/第05课/02-两次球面折射.png" alt="薄透镜可看作两次球面折射">
+          <figcaption>课件第 2 页：第一面成像以后，必须把中间像重新解释为第二面的物。</figcaption>
+        </figure>
+        <p>设透镜材料折射率为 \(n\)，左、右外界介质分别为 \(n_1,n_2\)，两面曲率半径为 \(r_1,r_2\)。第一面和第二面分别满足</p>
+        <div class="math">\[\frac{n}{s_1'}-\frac{n_1}{s}=\frac{n-n_1}{r_1}\]</div>
+        <div class="math">\[\frac{n_2}{s'}-\frac{n}{s_2}=\frac{n_2-n}{r_2}\]</div>
+        <figure>
+          <img src="assets/第05课/03-两面公式相加.png" alt="薄透镜两表面折射公式相加">
+          <figcaption>课件第 3 页：相加前仍保留中间像的两个坐标 \(s_1'\) 与 \(s_2\)。</figcaption>
+        </figure>
+        <p>若透镜足够薄，第二面顶点与第一面顶点近似重合，于是 \(s_2\approx s_1'\)，两式中关于中间像的项相消：</p>
+        <div class="math">\[\boxed{\frac{n_2}{s'}-\frac{n_1}{s}=\frac{n-n_1}{r_1}+\frac{n_2-n}{r_2}=\Phi}\]</div>
+        <figure>
+          <img src="assets/第05课/04-薄透镜近似与总光焦度.png" alt="薄透镜近似和总光焦度公式">
+          <figcaption>课件第 4 页：薄透镜把两次折射的光焦度合并，代价是忽略厚度。</figcaption>
+        </figure>
+        <p>这条式子可以继续读成“出射会聚度 − 入射会聚度 = 透镜总光焦度”。若厚度不可忽略，\(s_2=s_1'-d\) 不能近似成 \(s_1'\)，就要回到逐面成像或使用主平面。</p>
+
+        <div class="deep">
+          <figure>
+            <img src="assets/第05课/18-教材薄透镜公式-p137.jpg" alt="教材第137页薄透镜一般公式">
+            <figcaption>姚启钧《光学教程》第 137 页：一般介质中的薄透镜物像公式、焦距和高斯公式。</figcaption>
+          </figure>
+        </div>
+
+        <h3>3. 焦点、焦距与光焦度</h3>
+        <p>令物在无穷远得到像方焦距；令像在无穷远得到物方焦距：</p>
+        <div class="math">\[f'=\frac{n_2}{\Phi},\qquad f=-\frac{n_1}{\Phi}\]</div>
+        <p>所以一般情况下</p>
+        <div class="math">\[\frac{f'}{f}=-\frac{n_2}{n_1}\]</div>
+        <p>物方、像方介质不同，两焦距不必等长；但 \(f\) 与 \(f'\) 异号，表示两个焦点在透镜两侧。</p>
+        <figure>
+          <img src="assets/第05课/05-焦点与焦距.png" alt="薄透镜物方像方焦点和焦距">
+          <figcaption>课件第 5 页：焦距由总光焦度和两侧介质共同决定。</figcaption>
+        </figure>
+        <p>由 \(\Phi\) 的符号定义功能：</p>
+        <div class="math">\[\Phi\gt0\Longleftrightarrow f'\gt0\quad\text{正透镜},\qquad \Phi\lt0\Longleftrightarrow f'\lt0\quad\text{负透镜}\]</div>
+        <figure>
+          <img src="assets/第05课/06-正透镜与负透镜.png" alt="正透镜会聚与负透镜发散">
+          <figcaption>课件第 6 页：平行近轴光经正透镜会聚，经负透镜后发散。</figcaption>
+        </figure>
+
+        <h3>3.1 空气中的制镜者公式</h3>
+        <p>空气中 \(n_1=n_2=1\)，一般公式化为</p>
+        <div class="math">\[\boxed{\frac{1}{s'}-\frac{1}{s}=\frac{1}{f'}=(n-1)\left(\frac{1}{r_1}-\frac{1}{r_2}\right)}\]</div>
+        <p>这就是薄透镜物像公式与制镜者公式。对光从左向右通过的双凸玻璃透镜，通常 \(r_1\gt0\)、\(r_2\lt0\)，所以 \(1/f'\gt0\)。双凹透镜的曲率符号相反，通常 \(1/f'\lt0\)。</p>
+        <p>若透镜浸在同一种外界介质 \(n_0\) 中，则应使用相对折射率：</p>
+        <div class="math">\[\frac{1}{f'}=\left(\frac{n}{n_0}-1\right)\left(\frac{1}{r_1}-\frac{1}{r_2}\right)\]</div>
+        <figure>
+          <img src="assets/第05课/09-空气中的薄透镜.png" alt="空气中薄透镜的物像公式和制镜者公式">
+          <figcaption>课件第 9 页：空气中有 \(f=-f'\)，两个焦距等长、符号相反。</figcaption>
+        </figure>
+        <div class="callout warn"><strong>曲率半径必须带符号：</strong>先分别画出两面的球心，再写 \(r_1,r_2\)。“两个半径都是 10 cm”只说明绝对值相等，不表示代入时都写正号。</div>
+
+        <h3>4. 高斯公式、牛顿公式与横向放大率</h3>
+        <p>一般介质中的高斯公式和牛顿公式仍是</p>
+        <div class="math">\[\frac{f'}{s'}+\frac{f}{s}=1,\qquad xx'=ff'\]</div>
+        <figure>
+          <img src="assets/第05课/07-高斯与牛顿公式.png" alt="薄透镜高斯公式和牛顿公式">
+          <figcaption>课件第 7 页：\(s,s'\) 从光心平面量，\(x,x'\) 从两个焦点量。</figcaption>
+        </figure>
+        <p>横向放大率为</p>
+        <div class="math">\[\boxed{\beta=\frac{y'}{y}=\frac{n_1s'}{n_2s}}\]</div>
+        <p>空气中进一步简化为</p>
+        <div class="math">\[\boxed{\beta=\frac{s'}{s}}\]</div>
+        <figure>
+          <img src="assets/第05课/08-横向放大率.png" alt="薄透镜两次成像的横向放大率">
+          <figcaption>课件第 8 页：两面的放大率相乘，中间像量在薄透镜近似下相消。</figcaption>
+        </figure>
+        <div class="callout"><strong>注意反射镜与透镜的差别：</strong>空气薄透镜是 \(\beta=s'/s\)，球面镜是 \(\beta=-s'/s\)。实物经正透镜成实像时 \(s&lt;0,s'&gt;0\)，所以 \(\beta&lt;0\)，像倒立。</div>
+
+        <div class="deep">
+          <figure>
+            <img src="assets/第05课/19-教材空气薄透镜-p138.jpg" alt="教材第138页空气薄透镜公式与放大率">
+            <figcaption>教材第 138 页：空气中的制镜者公式、物像公式、牛顿公式和横向放大率。</figcaption>
+          </figure>
+        </div>
+
+        <h3>5. 正透镜成像：用 \(s'\) 和 \(\beta\) 统一判断</h3>
+        <p>空气中的正透镜有 \(f'\gt0\)、\(f=-f'\)。对镜前实物 \(s&lt0\)，令正长度物距 \(u=-s\)，则熟悉的形式是</p>
+        <div class="math">\[\frac{1}{u}+\frac{1}{v}=\frac{1}{f'},\qquad v=s'\]</div>
+        <table>
+          <thead><tr><th>物距</th><th>像的位置和性质</th><th>放大率</th></tr></thead>
+          <tbody>
+            <tr><td>\(u\gt2f'\)</td><td>像在 \(f'\) 与 \(2f'\) 之间，实像、倒立</td><td>\(|\beta|\lt1\)</td></tr>
+            <tr><td>\(u=2f'\)</td><td>像在 \(2f'\)，实像、倒立、等大</td><td>\(\beta=-1\)</td></tr>
+            <tr><td>\(f'\lt u\lt2f'\)</td><td>像在 \(2f'\) 外，实像、倒立</td><td>\(|\beta|\gt1\)</td></tr>
+            <tr><td>\(u=f'\)</td><td>出射光平行，像在无穷远</td><td>无有限值</td></tr>
+            <tr><td>\(0\lt u\lt f'\)</td><td>物侧虚像、正立、放大</td><td>\(\beta\gt1\)</td></tr>
+          </tbody>
+        </table>
+        <figure>
+          <img src="assets/第05课/14-正透镜实物成像分类.png" alt="正透镜实物在不同位置的成像分类">
+          <figcaption>课件第 17 页：五个位置不是五套规律，而是同一函数跨过 \(u=f'\) 和 \(u=2f'\) 后的不同区间。</figcaption>
+        </figure>
+        <figure class="deep">
+          <img src="assets/第05课/17-课件例题两次物距.png" alt="课件利用两次物距和放大率求焦距的例题">
+          <figcaption>课件第 21 页：像高条件先变成 \(\beta\)，再与两次物距关系联立；这是比死套物像公式更短的入口。</figcaption>
+        </figure>
+
+        <h3>5.1 “虚物”不等于不存在</h3>
+        <p>若入射到透镜的光本来就在向透镜右侧某点会聚，该点就是透镜的虚物，故 \(s\gt0\)。正透镜会进一步增强会聚，通常形成透镜右侧的实像，而且</p>
+        <div class="math">\[s'\gt0,\qquad \beta=\frac{s'}{s}\gt0\]</div>
+        <p>像与虚物同为正高度方向，且课件所示常见情形为正立、缩小实像。</p>
+        <figure>
+          <img src="assets/第05课/15-正透镜虚物成像.png" alt="正透镜对虚物成正立缩小实像">
+          <figcaption>课件第 18 页：虚物由正在会聚的入射光定义，不是屏幕上预先存在的物体。</figcaption>
+        </figure>
+
+        <h3>6. 负透镜：实物与虚物必须分开讨论</h3>
+        <p>空气中的负透镜有 \(f'\lt0\)。对实物 \(s\lt0\)，</p>
+        <div class="math">\[\frac{1}{s'}=\frac{1}{f'}+\frac{1}{s}\lt0\]</div>
+        <p>所以单个薄负透镜对实物只能形成物侧虚像；又因 \(\beta=s'/s\) 满足 \(0\lt\beta\lt1\)，像正立、缩小。</p>
+        <figure>
+          <img src="assets/第05课/16-负透镜实物成像.png" alt="负透镜对实物成正立缩小虚像">
+          <figcaption>课件第 19 页：这正是“虚像不一定放大”的反例。</figcaption>
+        </figure>
+        <p>但若物是虚物，即 \(s\gt0\)，负透镜并非绝不可能成实像。令 \(F=|f'|\)，则</p>
+        <div class="math">\[\frac{1}{s'}=-\frac{1}{F}+\frac{1}{s}\]</div>
+        <p>当 \(0\lt s\lt F\) 时右边为正，得到 \(s'\gt0\) 的实像；当 \(s=F\) 时出射光平行；当 \(s\gt F\) 时仍为虚像。口诀“负透镜只能成虚像”只对实物入射成立。</p>
+
+        <h3>7. 作图法：三条特殊光线和两个焦平面</h3>
+        <p>外界介质相同的薄透镜有三条常用特殊光线：</p>
+        <ol>
+          <li>平行于光轴入射，出射光通过像方焦点 \(F'\)；负透镜则由反向延长线通过 \(F'\)。</li>
+          <li>通过物方焦点 \(F\) 入射，出射光平行于光轴。</li>
+          <li>通过光心 \(O\) 的近轴光线方向不变。</li>
+        </ol>
+        <figure>
+          <img src="assets/第05课/11-三条特殊光线.png" alt="薄透镜作图的三条特殊光线">
+          <figcaption>课件第 13 页：若两侧介质不同，过光心的光线不再保持直线，不能机械使用第三条。</figcaption>
+        </figure>
+        <p>焦点只管与主轴平行的光；焦平面则管理任意方向的平行光束。与主轴成某一小角度的平行光，会聚在像方焦平面上的某一点；物方焦平面上一点发出的光，经透镜后成为某一方向的平行光。</p>
+        <figure>
+          <img src="assets/第05课/12-焦平面.png" alt="物方像方焦平面的作用">
+          <figcaption>课件第 14 页：焦平面把“入射方向”与“焦面位置”一一对应。</figcaption>
+        </figure>
+
+        <h3>7.1 任意一条光线怎样作折射后的方向</h3>
+        <p>对一条任意入射光线 \(AB\)，先过光心 \(O\) 作一条与 \(AB\) 平行的辅助线。辅助线与像方焦平面的交点 \(Q\)，就是这一方向的平行光束共同对应的焦面点；原光线在透镜上的入射点与 \(Q\) 相连，就是出射方向。</p>
+        <figure>
+          <img src="assets/第05课/13-任意光线作图.png" alt="利用像方焦平面构造任意光线">
+          <figcaption>课件第 15 页：辅助线不是实际光线，它只用来确定同方向平行光在焦面上的对应点。</figcaption>
+        </figure>
+        <div class="deep">
+          <figure>
+            <img src="assets/第05课/20-教材薄透镜作图-p140.jpg" alt="教材第140页薄透镜焦平面作图法">
+            <figcaption>教材第 140 页：利用物方或像方焦平面构造任意光线。</figcaption>
+          </figure>
+        </div>
+
+        <h3>8. 已布置习题 3.15</h3>
+        <figure>
+          <img src="assets/第05课/21-教材习题3.15.jpg" alt="教材习题3.15">
+          <figcaption>教材第 162 页：双凸、双凹玻璃透镜分别放在空气和水中。</figcaption>
+        </figure>
+        <details><summary>只看入手提示</summary>
+          <p>对每块透镜先画两球心，确定 \(r_1,r_2\) 的符号。空气中用 \((n-1)(1/r_1-1/r_2)\)；水中必须改用 \((n/n_0-1)(1/r_1-1/r_2)\)。先求焦距，再代入物像公式。作图与计算都要说明像的实虚、正倒和放缩；水中折射率反差变小，光焦度的绝对值也会变小。</p>
+        </details>
+
+        <h3>8.1 已布置习题 3.17、3.18</h3>
+        <figure>
+          <img src="assets/第05课/22-教材习题3.17与3.18.jpg" alt="教材习题3.17和3.18">
+          <figcaption>教材第 162 页：空气透镜浸水与焦平面作图。</figcaption>
+        </figure>
+        <details><summary>习题 3.17：只看入手提示</summary>
+          <p>这是“空气做成的双凹透镜”放在水中。透镜材料折射率小于外界，\(n/n_0-1\lt0\)；双凹形状对应的曲率组合也为负，两者相乘后光焦度反而为正。先用这一符号判断功能，再算焦距。</p>
+        </details>
+        <details><summary>习题 3.18：只看入手提示</summary>
+          <p>斜入射平行光不在轴上焦点会聚，而在像方焦平面上成一点。第二问把点光源放在物方焦平面上，因此出射光应为平行光；离轴 \(1\,\mathrm{cm}\) 决定平行光束的倾角。会聚、发散透镜要分别使用实焦面或虚焦面的延长线。</p>
+        </details>
+
+        <h3>8.2 已布置习题 3.19</h3>
+        <figure>
+          <img src="assets/第05课/23-教材习题3.19.jpg" alt="教材习题3.19">
+          <figcaption>教材第 162 页：只给主轴、物点和像点，反求透镜中心与焦点。</figcaption>
+        </figure>
+        <details><summary>只看作图入口</summary>
+          <p>外界介质相同，过光心的光线方向不变，所以先连接 \(S\) 与 \(S'\)，它与主轴的交点就是光心 \(O\)；过 \(O\) 作垂直主轴的透镜平面。再从 \(S\) 作一条平行主轴的光线到透镜，连接其入射点与 \(S'\)，该出射线与主轴的交点给出 \(F'\)。反向使用光路可逆性求 \(F\)。虚线和实线必须按真实传播方向区分。</p>
+        </details>
+
+        <h3>8.3 已布置习题 3.25</h3>
+        <figure>
+          <img src="assets/第05课/24-教材习题3.25.jpg" alt="教材习题3.25">
+          <figcaption>教材第 163–164 页：由一条已知光线构造另一条任意光线的出射方向。</figcaption>
+        </figure>
+        <details><summary>只看作图入口</summary>
+          <p>先过光心 \(O\) 作与已知入射线 \(AB\) 平行的辅助线，它与已知出射线 \(BC\) 的交点确定像方焦平面上的一个点；过该点作垂直主轴的像方焦平面。再过 \(O\) 作与待求入射线 \(DE\) 平行的辅助线，它与该焦平面的交点就是 \(DE\) 这组方向对应的焦面点。把此点与 \(E\) 相连，即得出射方向。</p>
+        </details>
+
+        <h3>9. 思考题 1：正透镜实物成实像时，物像最小间距</h3>
+        <p>用正长度 \(u=-s\gt f'\)、\(v=s'\gt0\)，空气中薄正透镜满足</p>
+        <div class="math">\[\frac{1}{u}+\frac{1}{v}=\frac{1}{f'}\quad\Longleftrightarrow\quad uv=f'(u+v)\]</div>
+        <p>物像间距 \(L=u+v\)。由 \((u+v)^2\ge4uv\)，</p>
+        <div class="math">\[L^2\ge4f'L\quad\Longrightarrow\quad \boxed{L_{\min}=4f'}\]</div>
+        <p>等号要求 \(u=v=2f'\)，即物和像分别位于两侧的二倍焦距处。令 \(q=u/f'\gt1\)，曲线可写成</p>
+        <div class="math">\[\frac{L}{f'}=q+\frac{q}{q-1}\]</div>
+        <figure>
+          <img src="assets/第05课/25-物像间距曲线.svg" alt="薄正透镜物像间距随物距的变化曲线">
+          <figcaption>当 \(u\to f'^+\) 或 \(u\to\infty\) 时，\(L\to\infty\)；在 \(u=2f'\) 处取得唯一最小值 \(4f'\)。</figcaption>
+        </figure>
+
+        <h3>9.1 思考题 2：薄负透镜的实物能成实像吗</h3>
+        <p>对单个薄负透镜、同种外界介质和实物入射，\(s&lt0\)、\(f'&lt0\)，所以</p>
+        <div class="math">\[\frac{1}{s'}=\frac{1}{f'}+\frac{1}{s}\lt0\]</div>
+        <p>像必在物侧，是虚像。因此在题目限定下不能成实像。但如果入射光已经会聚，即透镜面对的是虚物 \(s\gt0\)，负透镜可以在 \(0\lt s\lt|f'|\) 时形成实像。考试答题时应把限定条件一起写出。</p>
+
+        <h3>10. 薄透镜题的固定流程</h3>
+        <ol>
+          <li><strong>先判是否真能当薄透镜：</strong>厚度是否可忽略；否则逐面成像。</li>
+          <li><strong>标光行方向和两面球心：</strong>确定 \(n_1,n,n_2,r_1,r_2\)。</li>
+          <li><strong>先求光焦度或焦距：</strong>外界不是空气时使用相对折射率。</li>
+          <li><strong>写带符号的物距：</strong>发散入射为实物，正在会聚的入射为虚物。</li>
+          <li><strong>求 \(s'\) 和 \(\beta\)：</strong>分别解释像的位置、实虚、正倒和放缩。</li>
+          <li><strong>用特殊光线或焦平面复核：</strong>数值与图示至少要在像区和方向上相符。</li>
+        </ol>
+
+        <h3>11. 第 05 课自测</h3>
+        <ol>
+          <li>薄透镜近似在合并两面公式时用了哪一步？<details><summary>答案</summary>忽略两顶点间厚度，令第二面的物距 \(s_2\approx s_1'\)，从而使中间像项在两式相加时消去。</details></li>
+          <li>写出一般介质中的薄透镜公式。<details><summary>答案</summary>\(n_2/s'-n_1/s=(n-n_1)/r_1+(n_2-n)/r_2=\Phi\)。</details></li>
+          <li>为何“凸透镜一定会聚”不是普遍命题？<details><summary>答案</summary>功能由折射率差和曲率共同决定；当透镜材料折射率低于外界介质时，光焦度符号可能反转。</details></li>
+          <li>空气薄透镜的物像公式和放大率是什么？<details><summary>答案</summary>\(1/s'-1/s=1/f'\)，\(\beta=s'/s\)。</details></li>
+          <li>为什么球面镜与空气薄透镜的放大率只差一个负号？<details><summary>答案</summary>反射可形式化为 \(n'=-n\)，出射光反向传播；折射透镜两侧同为空气，故分别得到 \(-s'/s\) 与 \(s'/s\)。</details></li>
+          <li>正透镜实物位于焦内时成什么像？<details><summary>答案</summary>物侧正立、放大的虚像。</details></li>
+          <li>负透镜对实物为什么不能成实像？<details><summary>答案</summary>\(s&lt0,f'&lt0\) 使 \(1/s'=1/f'+1/s\lt0\)，所以 \(s'&lt0\)，像在物侧且为虚像。</details></li>
+          <li>负透镜在什么条件下可以成实像？<details><summary>答案</summary>入射光正在会聚，形成虚物 \(s\gt0\)，且 \(0\lt s\lt|f'|\) 时可得 \(s'\gt0\) 的实像。</details></li>
+          <li>斜平行光为什么不在轴上焦点会聚？<details><summary>答案</summary>焦点只对应轴向平行光；不同方向的平行光分别会聚于像方焦平面上的不同点。</details></li>
+          <li>薄正透镜实物成实像时，物像最小间距和对应位置是什么？<details><summary>答案</summary>\(L_{\min}=4f'\)，等号在 \(u=v=2f'\) 时取得。</details></li>
+        </ol>
+      </section>
+
+      <section id="lesson6">
+        <h2>第 06 课：共轴球面组成像——把厚透镜压缩成一个“等效薄透镜”</h2>
+        <p class="lead">上一课把两个几乎重合的折射面合成薄透镜；这一课取消“厚度可以忽略”的条件。真正的新问题不是公式更长，而是：物距和像距不再从透镜表面量，而要从系统自己的主平面量。</p>
+        <div class="callout tip"><strong>本课的主线：</strong>逐面成像是底层算法；主点、主平面和焦点是压缩后的接口。只要找到这组接口，复杂系统在外部近轴光线看来就仍满足熟悉的高斯公式。</div>
+
+        <h3>1. 为什么需要“理想光具组”</h3>
+        <p>共轴球面组由多个球心位于同一直线上的折射面或反射面组成。照相机镜头看似是一只镜头，内部往往包含许多透镜和空气间隔。逐面计算当然可以完成成像，但每增加一个面，就多一个中间像和一次坐标换算。</p>
+        <figure>
+          <img src="assets/第06课/01-共轴球面组与理想光具组.png" alt="共轴球面组和多片照相机镜头">
+          <figcaption>课件《3-7 共轴球面组成像》第 4 页：复杂镜头仍然有共同的光轴；逐次成像法保留内部细节，理想光具组则描述系统的外部成像作用。</figcaption>
+        </figure>
+        <p>【课件】理想光具组保持近轴光束的单心性，并保持物与像的几何相似；物点、像点以及物方与像方的线、面互相共轭。这里的“理想”不是说元件没有厚度，而是说只研究一阶近轴成像，暂时忽略像差。</p>
+        <figure>
+          <img src="assets/第06课/02-理想光具组定义.png" alt="理想光具组的近轴性质和基点基面">
+          <figcaption>课件第 5 页：用少数特殊的点和面描述整个系统，不必追踪系统内部每一段实际光线。</figcaption>
+        </figure>
+        <table>
+          <thead><tr><th>方法</th><th>保留什么</th><th>什么时候用</th></tr></thead>
+          <tbody>
+            <tr><td>逐次成像法</td><td>每个界面的物距、像距和中间像</td><td>已知每个面的参数，或题目要求内部像、内部光路</td></tr>
+            <tr><td>理想光具组法</td><td>主点、焦点、焦距等基点</td><td>只关心系统外部物像关系，或题目已给主平面</td></tr>
+          </tbody>
+        </table>
+        <figure>
+          <img src="assets/第06课/14-教材理想光具组与厚透镜-p146.jpg" alt="教材第146页理想光具组与厚透镜开篇">
+          <figcaption>教材第 146 页：基点理论的目的，是用等效光具组代替实际系统来确定像的位置和大小；它明确限定在近轴区域。</figcaption>
+        </figure>
+        <div class="callout warn"><strong>两种方法不是互相替代。</strong>主平面的位置正是由逐面成像推出来的；不知道系统基点时，仍要回到底层的逐面计算。</div>
+
+        <h3>2. 厚透镜：最小但完整的复合系统</h3>
+        <p>设空气中的厚透镜折射率为 \(n\)，两球面顶点为 \(O_1,O_2\)，轴上厚度为 \(\delta\)，曲率半径为 \(r_1,r_2\)。物点为 \(P\)，最终像点为 \(P'\)。先暂时把从 \(O_1\) 量起的物距记作 \(\bar s\)，从 \(O_2\) 量起的最终像距记作 \(\bar s'\)。</p>
+        <figure>
+          <img src="assets/第06课/03-厚透镜逐面成像.png" alt="厚透镜两次球面折射和距离定义">
+          <figcaption>课件第 6 页：第一面先形成中间像 \(P_1'\)；它对第二面成为物，故第二面的物距为 \(s_2=s_1'-\delta\)。</figcaption>
+        </figure>
+        <p>第一面为空气到玻璃的球面折射：</p>
+        <div class="math">\[\frac{n}{s_1'}-\frac{1}{\bar s}=\frac{n-1}{r_1}=\frac{n}{f_1'}\]</div>
+        <p>第二面为玻璃到空气的球面折射：</p>
+        <div class="math">\[\frac{1}{\bar s'}-\frac{n}{s_1'-\delta}=\frac{1-n}{r_2}=-\frac{n}{f_2}\]</div>
+        <p>其中 \(f_1'\) 是第一球面的像方焦距，\(f_2\) 是第二球面的物方焦距：</p>
+        <div class="math">\[f_1'=\frac{nr_1}{n-1},\qquad f_2=\frac{nr_2}{n-1}\]</div>
+        <p>这一步最值得记住的不是结果，而是中间像的角色转换：</p>
+        <div class="path"><span class="node">物点 \(P\)</span><span class="arrow">第一面折射</span><span class="node">中间像 \(P_1'\)</span><span class="arrow">作为第二面的物</span><span class="node">最终像 \(P'\)</span></div>
+
+        <h3>3. 消去中间像：厚透镜的等效焦距</h3>
+        <p>联立两面公式并消去 \(s_1'\)，可以把整个厚透镜写成一个外部物像公式：</p>
+        <div class="math">\[\frac{1}{\bar s'-p'}-\frac{1}{\bar s-p}=\frac{1}{f'}\]</div>
+        <p>三个系统参数为</p>
+        <div class="math">\[f'=\frac{-f_1'f_2}{n\left(f_1'-f_2-\delta\right)},\qquad p=-\frac{\delta f'}{f_2},\qquad p'=-\frac{\delta f'}{f_1'}\]</div>
+        <figure>
+          <img src="assets/第06课/04-厚透镜等效公式推导.png" alt="厚透镜消去中间像并得到等效参数">
+          <figcaption>课件第 7 页：\(f'\) 描述系统的等效会聚能力；\(p,p'\) 描述物距、像距起算点需要移动多少。</figcaption>
+        </figure>
+        <p>直接用曲率半径和厚度表示，空气中厚透镜的制镜者公式为</p>
+        <div class="math">\[\boxed{\frac{1}{f'}=(n-1)\left(\frac{1}{r_1}-\frac{1}{r_2}+\frac{\delta(n-1)}{nr_1r_2}\right)}\]</div>
+        <p class="deep"><span class="deep-badge">和薄透镜比较：</span>当 \(\delta\to0\) 时，厚度项消失，公式退化为 \(1/f'=(n-1)(1/r_1-1/r_2)\)。因此薄透镜不是另一套理论，而是厚透镜在厚度趋近于零时的极限。</p>
+        <figure>
+          <img src="assets/第06课/15-教材厚透镜公式-p147.jpg" alt="教材第147页厚透镜等效焦距与主点偏移公式">
+          <figcaption>教材第 147 页：式（3-42）至（3-48）把两次球面折射化成从新起算点量距的高斯公式。</figcaption>
+        </figure>
+
+        <h3>4. 主点和主平面：新的距离原点</h3>
+        <p>定义</p>
+        <div class="math">\[s=\bar s-p,\qquad s'=\bar s'-p'\]</div>
+        <p>于是厚透镜的物像公式恢复为熟悉的形式：</p>
+        <div class="math">\[\boxed{\frac{1}{s'}-\frac{1}{s}=\frac{1}{f'}}\]</div>
+        <figure>
+          <img src="assets/第06课/05-新起算点与等效公式.png" alt="厚透镜的物距像距新起算点">
+          <figcaption>课件第 8 页：把物距起算点从 \(O_1\) 移到 \(H\)，把像距起算点从 \(O_2\) 移到 \(H'\)，公式就与薄透镜完全同形。</figcaption>
+        </figure>
+        <p>新的两个原点分别叫物方主点 \(H\) 和像方主点 \(H'\)；过它们并垂直于主轴的平面叫物方主平面和像方主平面。</p>
+        <table>
+          <thead><tr><th>量</th><th>从哪里量</th><th>坐标意义</th></tr></thead>
+          <tbody>
+            <tr><td>\(\bar s\)</td><td>从前表面顶点 \(O_1\) 量到物点</td><td>物点相对 \(O_1\) 的坐标</td></tr>
+            <tr><td>\(p\)</td><td>从 \(O_1\) 量到 \(H\)</td><td>\(H\) 相对 \(O_1\) 的坐标</td></tr>
+            <tr><td>\(s=\bar s-p\)</td><td>从 \(H\) 量到物点</td><td>代入等效高斯公式的物距</td></tr>
+            <tr><td>\(\bar s'\)</td><td>从后表面顶点 \(O_2\) 量到像点</td><td>像点相对 \(O_2\) 的坐标</td></tr>
+            <tr><td>\(p'\)</td><td>从 \(O_2\) 量到 \(H'\)</td><td>\(H'\) 相对 \(O_2\) 的坐标</td></tr>
+            <tr><td>\(s'=\bar s'-p'\)</td><td>从 \(H'\) 量到像点</td><td>代入等效高斯公式的像距</td></tr>
+          </tbody>
+        </table>
+        <div class="callout"><strong>主平面不是透镜表面。</strong>它是等效系统的坐标基准，可以在玻璃内部，也可以落在系统外部。\(p\) 或 \(p'\) 的正负只说明主点位于对应顶点的哪一侧。</div>
+        <figure>
+          <img src="assets/第06课/08-主点与主平面.png" alt="厚透镜物方像方主点和主平面">
+          <figcaption>课件第 13 页：真正进入成像公式的是从 \(H,H'\) 量起的 \(s,s'\)，不是从 \(O_1,O_2\) 量起的表面距离。</figcaption>
+        </figure>
+
+        <h3>5. 为什么主平面是一对单位放大率共轭面</h3>
+        <p>厚透镜的总横向放大率是两次球面折射放大率的乘积：</p>
+        <div class="math">\[\beta=\beta_1\beta_2=\frac{s'}{s}\]</div>
+        <figure>
+          <img src="assets/第06课/07-厚透镜横向放大率.png" alt="厚透镜横向放大率是两球面放大率之积">
+          <figcaption>课件第 11 页：总放大率由两次折射的放大率相乘得到，化简后仍是 \(s'/s\)。</figcaption>
+        </figure>
+        <p>若物逐渐靠近物方主平面，\(s\to0\)，由物像公式有 \(s'\to0\)，同时</p>
+        <div class="math">\[\beta=\frac{s'}{s}=\frac{f'}{s+f'}\longrightarrow1\]</div>
+        <p>所以 \(H\) 所在的物方主平面与 \(H'\) 所在的像方主平面互相共轭，横向放大率为 1。作图时，一条光线在物方主平面上的高度，可以按相同高度转移到像方主平面，再按系统外部的出射方向继续画。</p>
+        <figure>
+          <img src="assets/第06课/09-主平面共轭性质.png" alt="主平面单位横向放大率性质">
+          <figcaption>课件第 14 页：物在 \(H\) 上时，像在 \(H'\) 上，并且横向放大率趋于 1。</figcaption>
+        </figure>
+        <div class="callout warn"><strong>“等高转移”不代表光线在玻璃内部水平传播。</strong>它只是理想光具组的外部作图规则；若题目要求内部真实路径，必须逐面折射。</div>
+
+        <h3>6. 焦点、焦面和等效焦距</h3>
+        <p>像方焦点 \(F'\) 是轴向平行光通过系统后所成的像；物方焦点 \(F\) 是出射光平行于主轴时所对应的物点。过 \(F,F'\) 且垂直于主轴的平面分别是物方焦平面和像方焦平面。</p>
+        <figure>
+          <img src="assets/第06课/10-焦点与焦面.png" alt="厚透镜的物方像方焦点与焦面">
+          <figcaption>课件第 15 页：焦点定义与薄透镜相同，区别只在于焦距从主点而不是表面顶点量起。</figcaption>
+        </figure>
+        <p>当物在无穷远时，\(s=-\infty\)，故 \(s'=f'\)；当像在无穷远时，\(s'=+\infty\)，故 \(s=f\)。若系统两侧折射率相同，</p>
+        <div class="math">\[f=-f'\]</div>
+        <figure>
+          <img src="assets/第06课/11-焦距定义.png" alt="厚透镜焦距从主点量起">
+          <figcaption>课件第 16 页：图中的 \(-f\) 从 \(F\) 量到 \(H\)，\(f'\) 从 \(H'\) 量到 \(F'\)。</figcaption>
+        </figure>
+        <p>定义牛顿坐标 \(x\) 为物点相对物方焦点的有向距离，\(x'\) 为像点相对像方焦点的有向距离，则理想系统仍满足</p>
+        <div class="math">\[xx'=ff'\]</div>
+        <p>空气两侧 \(f=-f'\) 时，横向放大率可写成</p>
+        <div class="math">\[\beta=\frac{s'}{s}=\frac{f'}{x}=-\frac{x'}{f'}\]</div>
+
+        <h3>7. 课件例题：先求系统，再求具体物像</h3>
+        <p>双凸厚透镜满足 \(r_1=4\,\mathrm{cm}\)、\(r_2=-6\,\mathrm{cm}\)、\(\delta=2.0\,\mathrm{cm}\)、\(n=1.5\)。先求两个单球面的焦距：</p>
+        <figure>
+          <img src="assets/第06课/12-厚透镜成像例题条件.png" alt="厚透镜成像例题的条件与系统参数">
+          <figcaption>课件第 17 页：先由结构参数求 \(f',p,p'\)，再把具体物点换算到主点坐标。</figcaption>
+        </figure>
+        <div class="math">\[f_1'=\frac{nr_1}{n-1}=12\,\mathrm{cm},\qquad f_2=\frac{nr_2}{n-1}=-18\,\mathrm{cm}\]</div>
+        <p>代入等效参数：</p>
+        <div class="math">\[f'=5.14\,\mathrm{cm},\qquad p=0.57\,\mathrm{cm},\qquad p'=-0.86\,\mathrm{cm}\]</div>
+        <figure>
+          <img src="assets/第06课/06-厚透镜参数例题.png" alt="厚透镜焦距和主点位置例题">
+          <figcaption>课件第 9 页：\(H\) 在 \(O_1\) 右侧 \(0.57\,\mathrm{cm}\)，\(H'\) 在 \(O_2\) 左侧 \(0.86\,\mathrm{cm}\)。</figcaption>
+        </figure>
+        <p>若物点在 \(O_1\) 左侧 \(8\,\mathrm{cm}\)，表面坐标为 \(\bar s=-8\,\mathrm{cm}\)，但进入高斯公式前必须改成主点坐标：</p>
+        <div class="math">\[s=\bar s-p=-8-0.57=-8.57\,\mathrm{cm}\]</div>
+        <p>由等效物像公式：</p>
+        <div class="math">\[\frac{1}{s'}-\frac{1}{-8.57}=\frac{1}{5.14}\quad\Longrightarrow\quad s'=12.80\,\mathrm{cm}\]</div>
+        <p>这个 \(s'\) 是从 \(H'\) 量起的。题目问像相对后表面 \(O_2\) 的位置，所以还要换回表面坐标：</p>
+        <div class="math">\[\bar s'=s'+p'=12.80-0.86=11.94\,\mathrm{cm}\]</div>
+        <figure>
+          <img src="assets/第06课/13-厚透镜成像例题结果.png" alt="厚透镜例题的主平面坐标换算和最终像位置">
+          <figcaption>课件第 18 页：最终像在 \(O_2\) 右侧 \(11.94\,\mathrm{cm}\)，不是右侧 \(12.80\,\mathrm{cm}\)。后者是相对 \(H'\) 的像距。</figcaption>
+        </figure>
+        <div class="callout danger"><strong>本课最常见失分：</strong>算出 \(s'\) 后忘记它从 \(H'\) 起算，直接把它当成距后表面的距离。题目问“像在哪里”时，一定要说明参考点。</div>
+
+        <h3>8. 用主平面作图</h3>
+        <p>当系统两侧介质相同、主点和焦点已知时，可把薄透镜的三条特殊光线改写为：</p>
+        <ol>
+          <li>入射光平行主轴：在物方主平面取交点，等高移到像方主平面，出射线通过 \(F'\)。</li>
+          <li>入射线指向 \(F\)：等高移过主平面后，出射光平行主轴。</li>
+          <li>普通光线：先利用前两条确定像点，或利用焦平面确定出射方向。</li>
+        </ol>
+        <p>薄透镜只是 \(H,H'\) 重合的特殊情况。厚透镜作图时不能把入射点和出射点画在同一竖线上，而应分别落在两个主平面上，并保持高度相同。</p>
+        <figure>
+          <img src="assets/第06课/16-教材主点焦点与节点-p148.jpg" alt="教材第148页厚透镜主点焦点及作图说明">
+          <figcaption>教材第 148 页：主平面给出等高共轭关系；页面后半开始介绍节点，节点及复合光具组属于课件尚未展开的后续内容，本课暂不要求。</figcaption>
+        </figure>
+
+        <h3>9. 教材习题放在知识链中的位置</h3>
+        <figure>
+          <img src="assets/第06课/17-教材习题3.26与3.28-p163.jpg" alt="教材第163页习题3.26与3.28">
+          <figcaption>教材第 163 页：3.26 直接检验主平面作图；3.28 用两个清晰成像位置反求焦距，与实验测量相连。</figcaption>
+        </figure>
+        <figure>
+          <img src="assets/第06课/18-教材习题3.26图及后续-p164.jpg" alt="教材第164页习题3.26图和厚透镜题">
+          <figcaption>教材第 164 页：题 3.26 的图明确给出 \(H,H'\) 和一对共轭点，要求只依靠系统的外部映射完成作图。</figcaption>
+        </figure>
+
+        <h3>9.1 对位练习 3.26：已知主平面，作另一对共轭点</h3>
+        <details><summary>只看作图入口</summary>
+           <p>先由已知共轭点 \(S_1,S_1'\) 恢复系统对光线的映射。选一条从 \(S_1\) 出发的入射线，让它在物方主平面上取一点；把这一高度等高转移到像方主平面，再连接 \(S_1'\)，得到对应出射方向。随后从 \(S_2\) 发出与刚才入射线平行的辅助线；同方向入射光共享同一个像方焦面点，由此确定通过系统后的方向。两条出射线的交点就是 \(S_2'\)。重点是用主平面承担“等高转移”，而不是猜透镜内部光路。</p>
+        </details>
+
+        <h3>9.2 已布置习题 3.28：两次成像与实验反演</h3>
+        <details><summary>只看方法入口，不展开作业答案</summary>
+          <p>物与屏固定，相距 \(l\)。透镜有两个位置能在屏上形成清晰实像，对应物距、像距交换。若两透镜位置相距 \(d\)，可写成 \(u+v=l\)、\(|v-u|=d\)，再与 \(1/u+1/v=1/f'\) 联立。大小比来自两次放大率互为倒数；实验可行条件来自 \(l\ge4f'\)。做题时先画出“物—透镜位置 1—透镜位置 2—屏”的同一坐标轴，避免把 \(d\) 错当物距或像距。</p>
+        </details>
+        <p class="deep"><span class="deep-badge">它为什么放在这里：</span>3.28 虽使用薄透镜公式，却训练“把不可直接测的焦距换成可测位置差”的系统观念。这正是从单元件公式走向光学系统和实验反演的桥梁。</p>
+
+        <h3>10. 题型识别与固定流程</h3>
+        <table>
+          <thead><tr><th>题目给法</th><th>首选方法</th><th>首要检查</th></tr></thead>
+          <tbody>
+            <tr><td>给每个面的 \(r,n,\delta\)</td><td>逐面成像，或先求 \(f',p,p'\)</td><td>中间像到下一面的有向距离</td></tr>
+            <tr><td>给 \(H,H',F,F'\)</td><td>直接用理想光具组作图或高斯公式</td><td>\(s,s'\) 是否从主点量起</td></tr>
+            <tr><td>给表面到物、像的距离</td><td>先换成主点坐标，再列公式</td><td>结果最后是否换回题目指定参考面</td></tr>
+            <tr><td>问内部光路或中间像</td><td>逐面成像</td><td>不能用等效系统伪造内部路径</td></tr>
+            <tr><td>透镜与屏有两个清晰位置</td><td>用 \(u+v\)、\(|u-v|\) 和薄透镜公式</td><td>是否满足 \(l\ge4f'\)</td></tr>
+          </tbody>
+        </table>
+        <ol>
+          <li><strong>判系统：</strong>薄透镜、厚透镜，还是多个分离元件？</li>
+          <li><strong>判资料：</strong>题目给的是表面参数，还是已经给了基点？</li>
+          <li><strong>定参考点：</strong>在图上明确 \(O_1,O_2,H,H'\)，所有距离都写清起点。</li>
+          <li><strong>选算法：</strong>要内部信息就逐面算；只要外部物像就用等效系统。</li>
+          <li><strong>做坐标换算：</strong>表面距离先换成主点距离，求完后按题意换回。</li>
+          <li><strong>解释结果：</strong>写出像相对哪个点、位于哪侧、实虚、正倒和放缩。</li>
+        </ol>
+
+        <h3>11. 易错点</h3>
+        <table>
+          <thead><tr><th>错误</th><th>为什么错</th><th>修正</th></tr></thead>
+          <tbody>
+            <tr><td>厚透镜仍从表面顶点量 \(s,s'\)</td><td>等效高斯公式的原点已经改为 \(H,H'\)</td><td>先写 \(s=\bar s-p\)、\(s'=\bar s'-p'\)</td></tr>
+            <tr><td>把 \(p,p'\) 当正长度</td><td>它们是有向坐标</td><td>根据主点相对表面顶点的位置保留符号</td></tr>
+            <tr><td>把主平面当实体界面</td><td>主平面是等效几何结构</td><td>外部作图可等高转移，内部光路仍需逐面折射</td></tr>
+            <tr><td>看到公式同形就认为厚度没影响</td><td>厚度已经进入 \(f',p,p'\)</td><td>公式形式相同不等于系统参数相同</td></tr>
+            <tr><td>直接报告 \(s'\) 为距后表面的像距</td><td>\(s'\) 从 \(H'\) 起算</td><td>若题目以 \(O_2\) 为准，报告 \(\bar s'=s'+p'\)</td></tr>
+          </tbody>
+        </table>
+
+        <h3>12. 第 06 课自测</h3>
+        <ol>
+          <li>理想光具组为什么能代替复杂共轴系统？<details><summary>答案</summary>在近轴一阶范围内，只要系统保持单心性和几何相似，外部物像关系可由少数基点、基面决定，无需知道每一段内部光路。</details></li>
+          <li>逐次成像法与基点法各自最适合什么问题？<details><summary>答案</summary>逐次成像适合求内部像和已知各面的系统；基点法适合只求系统外部的物像、焦距和放大率。</details></li>
+          <li>厚透镜第二面的物距为什么是 \(s_1'-\delta\)？<details><summary>答案</summary>第一面中间像的位置以 \(O_1\) 为原点，而第二面以 \(O_2\) 为原点；两原点相距 \(\delta\)，所以要做平移。</details></li>
+          <li>空气中厚透镜的高斯公式是什么？其中距离从哪里量？<details><summary>答案</summary>\(1/s'-1/s=1/f'\)。\(s\) 从物方主点 \(H\) 量，\(s'\) 从像方主点 \(H'\) 量。</details></li>
+          <li>主平面的单位放大率共轭是什么意思？<details><summary>答案</summary>物方主平面上的点与像方主平面上同高度的点互相共轭，横向放大率为 1；它提供外部作图的等高转移规则。</details></li>
+          <li>主平面是否一定在玻璃内部？<details><summary>答案</summary>不一定。它是等效系统的几何基面，可位于元件内部，也可落在系统外。</details></li>
+          <li>为什么薄透镜只有一个近似重合的主平面？<details><summary>答案</summary>当厚度 \(\delta\to0\) 时，\(p,p'\to0\)，两主点与透镜位置近似重合。</details></li>
+          <li>课件例题中 \(s'=12.80\,\mathrm{cm}\) 为什么不是最终报告的表面像距？<details><summary>答案</summary>它从 \(H'\) 起算；还需用 \(\bar s'=s'+p'\) 换回相对 \(O_2\) 的距离，得到 \(11.94\,\mathrm{cm}\)。</details></li>
+          <li>什么时候不能只用等效厚透镜作图？<details><summary>答案</summary>题目要求内部真实光路、中间像或某一表面上的信息时，必须逐面分析。</details></li>
+          <li>两次清晰成像实验为什么要求物屏距离不小于 \(4f'\)？<details><summary>答案</summary>固定物屏距离就是固定 \(u+v\)。正透镜成实像时 \(u+v\ge4f'\)，小于该值便不存在实数的共轭位置。</details></li>
+        </ol>
+      </section>
+
+      <section id="lesson7" class="new-lesson">
+<h2>第 07 课：理想光具组的基点与镜像法</h2>
+<p>关联脉络：<a href="%E8%AF%BE%E7%A8%8B%E8%84%89%E7%BB%9C.md">课程脉络</a>。前置：第 03 课球面折射、第 04 课反射与镜像、第 06 课厚透镜与主平面。</p>
+<p>本课解决两个问题：复杂系统除焦点、主点外为什么还需要节点；有折射又有反射时，怎样用镜像展开把返回光路转成已经会算的系统。学完应能推导节点位置、区别横向与角放大率，并用逐次成像、镜像展开和复合光具组三种方法核对同一课件例题。</p>
+<h3>来源依据与本课知识点</h3>
+<table>
+<thead>
+<tr>
+<th>内容</th>
+<th>来源</th>
+<th>位置与用途</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>主点、节点、节点位置</td>
+<td>《3-7 共轴球面组成像》完整 PPT</td>
+<td>第 19–22 页；正式定义、推导及光路图</td>
+</tr>
+<tr>
+<td>镀银玻璃半球例题</td>
+<td>同上</td>
+<td>第 23–27 页；完整题设与镜像法</td>
+</tr>
+<tr>
+<td>节点、复合系统和三种解法</td>
+<td>姚启钧《光学教程》第五版</td>
+<td>书页 148–153，对应本项目 PDF 第 166–171 页；补齐课件省略的步骤</td>
+</tr>
+<tr>
+<td>比较方法、极限检查、独立练习</td>
+<td>讲义补充</td>
+<td>基于上述公式组织，不作为教师新增要求</td>
+</tr>
+</tbody></table>
+<p>核心知识点：<a href="%E7%9F%A5%E8%AF%86%E7%82%B9/%E4%B8%BB%E7%82%B9%E4%B8%8E%E4%B8%BB%E5%B9%B3%E9%9D%A2.md">主点与主平面</a>、<a href="%E7%9F%A5%E8%AF%86%E7%82%B9/%E8%8A%82%E7%82%B9%E4%B8%8E%E8%A7%92%E6%94%BE%E5%A4%A7%E7%8E%87.md">节点与角放大率</a>、<a href="%E7%9F%A5%E8%AF%86%E7%82%B9/%E5%A4%8D%E5%90%88%E5%85%89%E5%85%B7%E7%BB%84.md">复合光具组</a>、<a href="%E7%9F%A5%E8%AF%86%E7%82%B9/%E9%95%9C%E5%83%8F%E5%B1%95%E5%BC%80%E6%B3%95.md">镜像展开法</a>。这些概念共同服务于“用系统外部性质压缩多界面光路”。前置/辅助知识：球面折射公式、近轴条件、平面镜对称、坐标换算。</p>
+<h3>1. 从“光线方向保持”这个问题进入</h3>
+<p>照相机镜头有厚度。你希望把某条斜光线穿过镜头前后的方向联系起来，不能随便把一条线画穿透镜几何中心，再称它“方向不变”。第 06 课的主平面告诉我们怎样转移<strong>高度</strong>；现在要寻找能转移<strong>方向</strong>的另一对参考点。</p>
+<p>这里沿用左入射、光轴向右为正的有向坐标。以下节点和一般成像公式先讨论没有返回段的理想共轴折射系统，两侧介质折射率为 \(n,n'&gt;0\)；镀银半球的实际反射另按传播顺序处理。所有公式限于近轴一阶、小物体范围。</p>
+<h3>2. 三对基点分别控制什么</h3>
+<figure><img src="assets/%E7%AC%AC07%E8%AF%BE/%E8%AF%BE%E4%BB%B6-19.png" alt="主点和主平面"><figcaption>完整 3-7 PPT 第 19 页。图中的 next 是“下一页”；H、H′为物方、像方主点，M、M′为主面上的同高点，P、P′为共轭物像点，u、u′为光线倾角。</figcaption></figure>
+<p>从左读图：入射线延长到物方主面，交于 \(M\)；对应出射线延长到像方主面，交于同高度的 \(M'\)。中间虚线是等效作图的高度对应，不能据此认定真实光线在元件内水平传播。主点是轴上横向放大率 \(+1\) 的一对共轭点；主面是过主点垂直主轴的平面。</p>
+<table>
+<thead>
+<tr>
+<th>基点</th>
+<th>中文学术含义</th>
+<th>控制的关系</th>
+<th>距离的起点</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>\(H,H'\)</td>
+<td>物方、像方主点</td>
+<td>主面共轭，横向放大率 \(\beta=+1\)</td>
+<td>高斯公式中的 \(s,s'\) 从此量起</td>
+</tr>
+<tr>
+<td>\(F,F'\)</td>
+<td>物方、像方焦点</td>
+<td>物在 \(F\) 时出射平行；轴向平行入射时像在 \(F'\)</td>
+<td>牛顿公式中的 \(x,x'\) 从此量起</td>
+</tr>
+<tr>
+<td>\(K,K'\)</td>
+<td>物方、像方节点</td>
+<td>节点共轭，角放大率 \(\gamma=+1\)</td>
+<td>连接节点的入、出射光线方向相同</td>
+</tr>
+</tbody></table>
+<figure><img src="assets/%E7%AC%AC07%E8%AF%BE/%E8%AF%BE%E4%BB%B6-20.png" alt="节点定义"><figcaption>完整 3-7 PPT 第 20 页。K、K′分别表示物方、像方节点。</figcaption></figure>
+<p>“通过节点”包括光线本身或其延长线通过该点。它不要求节点是玻璃中的实体位置，也不要求两段光线处于同一直线上。节点分开时，入、出射线方向相同而有横向位移；只有 \(K,K'\) 重合时，这条特殊线才可画成连续的一条直线。</p>
+<h3>3. 从放大率推导节点位置</h3>
+<h4>3.1 先分清大小比例与方向比例</h4>
+<p>横向放大率和角放大率分别定义为</p>
+<div class="math">\[\beta=\frac{y'}{y},\qquad \gamma=\frac{u'}{u}.\]</div>
+<p>对于轴上共轭物像点，取在两主面上同高的近轴光线。主面等高使角度与距离给出</p>
+<div class="math">\[\gamma=\frac{s}{s'},\qquad
+\beta=\frac{ns'}{n's},\qquad
+\boxed{\beta\gamma=\frac{n}{n'}}.\]</div>
+<p>第二式可由各折射面的放大率与角放大率关系逐面相乘得到：中间介质的折射率因子依次约去，只留下最外侧的 \(n/n'\)。因此 \(\gamma=1\) 只说明方向保持；节点处的横向放大率是 \(n/n'\)，未必为 \(1\)。两侧介质不同，主点和节点就不应混为一谈。</p>
+<p>一般系统的高斯公式、焦距比和牛顿公式为</p>
+<div class="math">\[\frac{f'}{s'}+\frac{f}{s}=1,\qquad
+\frac{f'}{f}=-\frac{n'}{n},\qquad
+x=s-f,\quad x'=s'-f',\quad xx'=ff'.\]</div>
+<p>第 08 课会由三条特殊光线的几何关系逐步推出这些一般式。先把高斯式两边乘 \(ss'\)，得 \(ss'=f's+fs'\)；用 \(x=s-f,x'=s'-f'\) 展开，即得 \(xx'=ff'\)。</p>
+<p>由一般放大率式再得</p>
+<div class="math">\[\beta=-\frac{f}{x}=-\frac{x'}{f'},\qquad
+\gamma=\frac{x}{f'}=\frac{f}{x'}.\]</div>
+<p>这些式子里的减号来自有向距离，不能因想套熟悉的正长度公式而删去。</p>
+<h4>3.2 令方向比例等于一</h4>
+<figure><img src="assets/%E7%AC%AC07%E8%AF%BE/%E8%AF%BE%E4%BB%B6-21.png" alt="节点位置推导"><figcaption>完整 3-7 PPT 第 21 页。γ 表示角放大率，β 表示横向放大率；图中先用 s/s′建立角度比，再改写为焦点坐标 x/f′。</figcaption></figure>
+<p>节点满足 \(\gamma=1\)，所以</p>
+<div class="math">\[\boxed{\overline{FK}=x_K=f',\qquad
+\overline{F'K'}=x_{K'}'=f}.\]</div>
+<p>课件中“在焦点右侧”的表述对应它画出的 \(f'&gt;0,f&lt;0\) 会聚情形。普遍写法应保留有向距离：\(f'\) 若为负，\(K\) 就在 \(F\) 左侧；\(f\) 若为正，\(K'\) 就在 \(F'\) 右侧。</p>
+<p>换成主点坐标后</p>
+<div class="math">\[\boxed{\overline{HK}=f+f',\qquad
+\overline{H'K'}=f+f'}.\]</div>
+<p>这里两个位移相等，<strong>不是</strong>说两个节点的全局坐标相等。若要在同一坐标轴定位，还需分别加上 \(H,H'\) 的全局坐标。</p>
+<figure><img src="assets/%E7%AC%AC07%E8%AF%BE/%E8%AF%BE%E4%BB%B6-22.png" alt="节点与主点的重合条件"><figcaption>完整 3-7 PPT 第 22 页。蓝线分别展示轴向平行线和节点线；标注 f′、−f 为焦点到节点的几何距离。</figcaption></figure>
+<p>当 \(n=n'\) 时，\(f=-f'\)，两个位移都为零，故 \(K=H,K'=H'\)。空气薄透镜进一步有两个主点近似重合于光心，才得到高中熟悉的“过光心不偏折”。空气厚透镜虽然各节点与对应主点重合，两个主点通常仍不重合，不能画成一条贯穿中心的直线。</p>
+<p><strong>数值检查（讲义补充）</strong>：若 \(f=-5\,\mathrm{cm},f'=6\,\mathrm{cm}\)，则 \(n'/n=6/5\)，\(K\) 在 \(H\) 右侧 \(1\,\mathrm{cm}\)，\(K'\) 在 \(H'\) 右侧 \(1\,\mathrm{cm}\)。节点处 \(\gamma=1\)，但 \(\beta=5/6\)；两种“放大率为一”不能互换。</p>
+<h3>4. 教材的进一步深度：两个光具组如何复合</h3>
+<p>两个空气中的理想共轴光具组组成系统时，系统 I 的像是系统 II 的物。设</p>
+<div class="math">\[d=\overline{H_1'H_2},\qquad
+s_2=s_1'-d.\]</div>
+<p>\(d\) 是第一组像方主点到第二组物方主点的有向间隔，通常不是两外表面间距。空气中 \(f_i=-f_i'\)；\(f_1',f_2'\) 可以正也可以负。</p>
+<figure><img src="assets/%E7%AC%AC07%E8%AF%BE/%E6%95%99%E6%9D%90-p149.png" alt="教材复合光具组公式"><figcaption>教材书页 149，PDF 第 167 页。上图标出两组主面、焦点及光学间隔；先认清 d、Δ的起点，再看公式。</figcaption></figure>
+<p>为推导等效焦距，让光轴方向平行光进入系统 I。出射线在 \(H_1'\) 高度为 \(h\)，将会在第一组像焦点聚焦，所以其普通几何斜率为 \(m_1=-h/f_1'\)。到 \(H_2\) 的高度变为</p>
+<div class="math">\[h_2=h+d m_1=h\left(1-\frac{d}{f_1'}\right).\]</div>
+<p>系统 II 再使斜率改变 \(-h_2/f_2'\)，故</p>
+<div class="math">\[m_2=m_1-\frac{h_2}{f_2'}
+=-h\left(\frac1{f_1'}+\frac1{f_2'}-\frac{d}{f_1'f_2'}\right).\]</div>
+<p>此处 \(m=dy/dz\) 只是直线几何斜率；老师的角度约定是顺时针为正，二者符号相反。整个推导只在同一斜率约定内进行。通过选取一对等高主面定义总系统的焦距，得到</p>
+<div class="math">\[\boxed{\frac1{f'}=\frac1{f_1'}+\frac1{f_2'}-\frac{d}{f_1'f_2'}}.\]</div>
+<p>若记 \(\Delta=\overline{F_1'F_2}=d-f_1'-f_2'\)，还可写</p>
+<div class="math">\[f'=-\frac{f_1'f_2'}{\Delta},\qquad
+p=\overline{H_1H}=\frac{df'}{f_2'},\qquad
+p'=\overline{H_2'H'}=-\frac{df'}{f_1'}.\]</div>
+<p>这两个 \(p,p'\) 的起点是子系统的主点，而第 06 课厚透镜公式的起点是表面顶点，不能只因名字相同就混用。主点位移也可以直接由同高条件推出：</p>
+<ol>
+<li>对刚才的平行入射线，总像方主面上的高度仍为 h。从 \(H_2'\) 移到总主面 \(H'\)，有 \(h=h_2+p'm_2\)。代入 \(h_2=h(1-d/f_1')\)、\(m_2=-h/f'\)，即得 \(p'=-df'/f_1'\)。</li>
+<li>再选一条最终出射平行的光线，在 \(H_2'\) 高度为 h。逆向追踪第二组前的斜率为 \(m_1=h/f_2'\)，在 \(H_1'\) 的高度为 \(h_1=h-dh/f_2'\)；第一组前的斜率为 \(m_0=m_1+h_1/f_1'=h/f'\)。总物方主面高度也须为 h，故 \(h=h_1+pm_0\)，得 \(p=df'/f_2'\)。</li>
+</ol>
+<p>这解释了为什么总系统焦距求出后，仍要移动物像距离的起点：总主面一般不等于子系统主面。</p>
+<p><strong>三个检查</strong>：\(d=0\) 时焦度相加且 \(p=p'=0\)；若 \(d=f_1'+f_2'\)，总焦度为零，系统为无焦系统，不能硬套有限焦距及有限主点公式；若中间介质不是空气，本节推导的传输与焦度因子要重写，不能照抄。</p>
+<p><strong>独立例子</strong>：\(f_1'=10\,\mathrm{cm},f_2'=20\,\mathrm{cm},d=5\,\mathrm{cm}\)，得 \(f'=8\,\mathrm{cm}\)，\(p=+2\,\mathrm{cm},p'=-4\,\mathrm{cm}\)。第一组物方主点左侧 \(18\,\mathrm{cm}\) 的物，变为总系统 \(s=-20\,\mathrm{cm}\)，得 \(s'=40/3\,\mathrm{cm}\)；换回第二组像方主点则为 \(s'+p'=28/3\,\mathrm{cm}\)。逐次算得 \(s_1'=22.5\,\mathrm{cm},s_2=17.5\,\mathrm{cm},s_2'=28/3\,\mathrm{cm}\)，两法一致。</p>
+<h3>5. 贯穿例题：镀银玻璃半球为什么能把像送回物面</h3>
+<p>课件题设：半径 \(R\) 的玻璃半球，\(n=1.5\)，平面镀银。物体 \(PQ\) 在凸球面顶点前 \(2R\)，求最终像的位置和性质。这是课件例题，不是登记为指定作业的题目，下面完整展开。</p>
+<p>取凸面顶点 \(O\) 的全局坐标 \(z=0\)，球心及镀银平面在 \(z=R\)，物点在 \(z=-2R\)。实际传播次序为</p>
+<div class="math">\[\text{空气}\longrightarrow\text{球面折射}\longrightarrow
+\text{玻璃中平面反射}\longrightarrow\text{同一球面反向折射}\longrightarrow\text{空气}.\]</div>
+<h4>5.1 方法一：按实际光行方向逐次成像</h4>
+<p>第一次为空气到玻璃，\(s_1=-2R,r_1=R,n_1=1,n_1'=3/2\)：</p>
+<div class="math">\[\frac{3/2}{s_1'}-\frac1{-2R}=\frac{3/2-1}{R}
+\quad\Rightarrow\quad\frac1{s_1'}=0.\]</div>
+<p>第一面出射成平行光。平面镜把平行光反向送回，仍为平行光。对于返回球面，明确沿用全局向右为正的坐标，\(s_2=+\infty\)，玻璃到空气的折射率为 \(3/2\to1\)，球心仍在原顶点右侧，故 \(r_2=+R\)。于是</p>
+<div class="math">\[\frac1{s_2'}-\frac{3/2}{+\infty}=\frac{1-3/2}{R}
+\quad\Rightarrow\quad s_2'=-2R.\]</div>
+<p>返回光真实会聚于 \(z=-2R\)，所以最终像在物平面，是实像。实像的像距为负，与第 01 课“正负不等于实虚”完全一致。</p>
+<p>轴上无穷远中间像使逐段放大率出现一段趋于无穷、另一段趋于零，不能直接把 \(\infty\times0\) 当作答案。可先把初始物距改为一般有限 \(a\)，再取极限：</p>
+<div class="math">\[a_1=\frac{3Ra}{a+2R},\qquad
+b=2R-a_1,\qquad
+c=\frac{2Rb}{3R-b}.\]</div>
+<p>\(a_1\) 是第一面像的全局坐标，\(b\) 是它关于镀银平面 \(z=R\) 的镜像坐标，\(c\) 是最终像坐标。三段横向放大率为 \(2a_1/(3a)\)、\(1\)、\(3c/(2b)\)，乘积在有定义时化简成</p>
+<div class="math">\[c=\frac{R(4R-a)}{2a+R},\qquad
+\beta=\frac{a_1c}{ab}=\frac{3R}{2a+R}.\]</div>
+<p>取 \(a\to-2R\) 得 \(c\to-2R\)、\(\beta\to-1\)。因此像倒立、等大。</p>
+<figure><img src="assets/%E7%AC%AC07%E8%AF%BE/%E8%AF%BE%E4%BB%B6-24.png" alt="实际反射与镜像展开光路"><figcaption>完整 3-7 PPT 第 24 页。黑色箭头是首次进入玻璃的光线；右侧蓝色线是展开系统中的透射线，左侧蓝色返回线才对应实际反射系统。</figcaption></figure>
+<h4>5.2 方法二：先展开成玻璃球，再折回实际空间</h4>
+<p>把右侧反射空间关于 \(z=R\) 镜像展开：原半球与其镜像组成半径为 \(R\) 的整球。实际同一球面上的两次折射，变成整球前、后表面的两次折射。展开图的后半球是计算辅助体，不是实际增加的一块玻璃。</p>
+<p>对展开球体，\(r_1=R,r_2=-R,\delta=2R,n=3/2\)。代第 06 课厚透镜公式：</p>
+<div class="math">\[\frac1{f'}=(n-1)\left[\frac1R-\frac1{-R}+
+\frac{2R(n-1)}{nR(-R)}\right]
+=\frac{2(n-1)}{nR}.\]</div>
+<p>所以</p>
+<div class="math">\[f'=\frac{nR}{2(n-1)}=\frac32R,\qquad
+p=R,\quad p'=-R.\]</div>
+<p>两主点都在球心 \(z=R\)。物距从主点量为 \(s=-2R-R=-3R\)：</p>
+<div class="math">\[\frac1{s'}-\frac1{-3R}=\frac1{(3/2)R}
+\quad\Rightarrow\quad s'=3R,\qquad \beta=\frac{s'}s=-1.\]</div>
+<figure><img src="assets/%E7%AC%AC07%E8%AF%BE/%E8%AF%BE%E4%BB%B6-25.png" alt="整球的焦距与主点"><figcaption>完整 3-7 PPT 第 25 页。先由 r₁、r₂、δ计算 f′，再由 p、p′把两个主点定位到球心；不要把相对不同顶点的 p=R、p′=−R误读为两个不同位置。</figcaption></figure>
+<p>展开像的全局位置为 \(z_{\rm 展开}=R+s'=4R\)。镜像展开最后必须折回：</p>
+<div class="math">\[\boxed{z_{\rm 实际}=2R-z_{\rm 展开}=-2R}.\]</div>
+<p>平面镜对横向高度不加额外的上下翻转，所以原玻璃半球最终仍有 \(\beta=-1\)。若只报告“球心右侧 \(3R\)”，那回答的是辅助整球，而不是题目中的反射装置。</p>
+<figure><img src="assets/%E7%AC%AC07%E8%AF%BE/%E8%AF%BE%E4%BB%B6-27.png" alt="展开像与实际像"><figcaption>完整 3-7 PPT 第 27 页。上图先定位辅助整球的倒立像；下图把右侧展开路径关于镀银平面折回，显示实际像与物面重合。等效主面作图不是元件内部的实际路径，图中的两种层次要分别解释。</figcaption></figure>
+<h4>5.3 方法三：用教材的复合光具组重算整球</h4>
+<p>教材把展开球拆成两个空气中的平凸半球子系统。对 \(n=3/2\)，两组各有 \(f_1'=f_2'=2R\)。前半球像方主面和后半球物方主面分别离公共平面 \(2R/3\)，故主点间隔</p>
+<div class="math">\[d=2R-\frac R3-\frac R3=\frac{4R}{3}.\]</div>
+<p>代复合焦度式：</p>
+<div class="math">\[\frac1{f'}=\frac1{2R}+\frac1{2R}-\frac{(4/3)R}{4R^2}
+=\frac2{3R},\qquad f'=\frac32R.\]</div>
+<p>相对两组最外侧主点，\(p=df'/f_2'=R\)、\(p'=-df'/f_1'=-R\)，总主点再次位于球心。随后 \(s=-3R,s'=3R\)，再镜像折回，得到相同的实际像。</p>
+<details><summary>教材三种方法的原始推导页</summary>
+
+<figure><img src="assets/%E7%AC%AC07%E8%AF%BE/%E6%95%99%E6%9D%90-p151.png" alt="教材逐次成像"><figcaption>书页 151，PDF 第 169 页。依次看第一次折射变成平行光、平面反射、返回折射；纸面下部用始终向右为正的坐标。</figcaption></figure>
+<figure><img src="assets/%E7%AC%AC07%E8%AF%BE/%E6%95%99%E6%9D%90-p152.png" alt="教材镜像法与半球参数"><figcaption>书页 152，PDF 第 170 页。上半页对应整球 f′、p、p′和成像结果；下半页确定两个半球子系统的主面。</figcaption></figure>
+<figure><img src="assets/%E7%AC%AC07%E8%AF%BE/%E6%95%99%E6%9D%90-p153.png" alt="教材复合光具组法"><figcaption>书页 153，PDF 第 171 页。上半页先求主面间隔 4R/3，再求总焦距与主点，核对前两种方法。下半页“集成光学简介”是教材拓展背景，不是本例额外条件。</figcaption></figure>
+</details>
+
+<h3>6. 考试题型识别与方法选择</h3>
+<table>
+<thead>
+<tr>
+<th>题目触发信息</th>
+<th>方法</th>
+<th>必做检查</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>要节点位置、出射方向或给出不同 f、f′</td>
+<td>用 \(\gamma=1\) 及节点有向距离</td>
+<td>是否错误假定 \(K=H\)</td>
+</tr>
+<tr>
+<td>给两子系统焦距与间距</td>
+<td>逐次成像，或复合焦度与主点换算</td>
+<td>间距从哪两个主点量；焦度是否为零</td>
+</tr>
+<tr>
+<td>球面折射后遇平面镀银，再返回</td>
+<td>实际逐段算，或镜像展开</td>
+<td>反向传播的坐标约定；展开像是否折回</td>
+</tr>
+<tr>
+<td>问实际内部光路</td>
+<td>实际界面逐段追踪</td>
+<td>不能把主面等高虚线当作实际路径</td>
+</tr>
+</tbody></table>
+<p>把光路返回问题拉直的做法与第 04 课平面镜镜像法相同；新难点是拉直以后仍有折射面，还要算展开系统的主点和焦距。实际成像位置最终必须落回原装置所在空间。</p>
+<h3>7. 最小记忆包</h3>
+<table>
+<thead>
+<tr>
+<th>中文学术名称</th>
+<th>关系</th>
+<th>一句话调用</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>节点与角放大率</td>
+<td>\(\gamma=1\)，\(\beta\gamma=n/n'\)</td>
+<td>方向不变不等于像等大</td>
+</tr>
+<tr>
+<td>节点位置</td>
+<td>\(\overline{FK}=f',\overline{F'K'}=f\)</td>
+<td>先焦点坐标，再转主点坐标</td>
+</tr>
+<tr>
+<td>节点与主点</td>
+<td>\(HK=H'K'=f+f'\)</td>
+<td>两侧相同介质时分别重合</td>
+</tr>
+<tr>
+<td>空气中的复合焦度</td>
+<td>\(1/f'=1/f_1'+1/f_2'-d/(f_1'f_2')\)</td>
+<td>d 从两组相邻主点量</td>
+</tr>
+<tr>
+<td>镜像展开法</td>
+<td>\(z_{\rm 实际}=2z_{\rm 镜}-z_{\rm 展开}\)</td>
+<td>求完展开像后折回</td>
+</tr>
+</tbody></table>
+<h3>8. 快速检查与独立练习</h3>
+<p>先独立作答，答案折叠。下列练习为讲义补充，不重复指定作业完整答案。</p>
+<h4>第 1 题</h4>
+<p>\(n=1,n'=1.5,f'=9\,\mathrm{cm}\)。求 \(f\)、两个节点相对对应主点的位置，以及节点处的 \(\beta\)。</p>
+<div class="interactive answer-field"><label for="lesson7_answer1">第 1 题作答
+</label><p class="small">写下推理、计算与不确定的地方，再展开答案检查。</p><textarea id="lesson7_answer1" data-save="lesson7_answer1" data-label="第7课：第 1 题作答
+" placeholder="我的回答：&#10;我不确定的地方："></textarea></div>
+
+
+<h4>第 2 题</h4>
+<p>两空气光具组 \(f_1'=12\,\mathrm{cm},f_2'=-6\,\mathrm{cm},d=3\,\mathrm{cm}\)。求总 \(f'\)、\(p,p'\)；若把 d 改为 \(6\,\mathrm{cm}\)，系统怎样变化？</p>
+<div class="interactive answer-field"><label for="lesson7_answer2">第 2 题作答
+</label><p class="small">写下推理、计算与不确定的地方，再展开答案检查。</p><textarea id="lesson7_answer2" data-save="lesson7_answer2" data-label="第7课：第 2 题作答
+" placeholder="我的回答：&#10;我不确定的地方："></textarea></div>
+
+
+<h4>第 3 题</h4>
+<p>某镜像展开问题中，镜面全局坐标为 \(z=4\,\mathrm{cm}\)，展开像在 \(z=14\,\mathrm{cm}\)。实际像位置是什么？仅凭位置能判断实虚吗？</p>
+<div class="interactive answer-field"><label for="lesson7_answer3">第 3 题作答
+</label><p class="small">写下推理、计算与不确定的地方，再展开答案检查。</p><textarea id="lesson7_answer3" data-save="lesson7_answer3" data-label="第7课：第 3 题作答
+" placeholder="我的回答：&#10;我不确定的地方："></textarea></div>
+
+
+<h4>第 4 题</h4>
+<p>课件半球例题第一次像在无穷远，为什么不能把两次横向放大率直接相乘为“无穷乘零”？如何检查最终正倒？</p>
+<div class="interactive answer-field"><label for="lesson7_answer4">第 4 题作答
+</label><p class="small">写下推理、计算与不确定的地方，再展开答案检查。</p><textarea id="lesson7_answer4" data-save="lesson7_answer4" data-label="第7课：第 4 题作答
+" placeholder="我的回答：&#10;我不确定的地方："></textarea></div>
+
+
+
+<details><summary>展开参考答案与检查过程</summary>
+
+<ol>
+<li>\(f=-6\,\mathrm{cm}\)；\(HK=H'K'=3\,\mathrm{cm}\)，均在对应主点右侧；节点处 \(\beta=n/n'=2/3\)，不是 1。</li>
+<li>\(1/f'=1/12-1/6+3/72=-1/24\)，故 \(f'=-24\,\mathrm{cm}\)；\(p=df'/f_2'=12\,\mathrm{cm},p'=-df'/f_1'=6\,\mathrm{cm}\)。当 \(d=6\,\mathrm{cm}=f_1'+f_2'\) 时总焦度为零，变成无焦系统，有限主点公式不再可用。</li>
+<li>\(z=2\times4-14=-6\,\mathrm{cm}\)。还必须看实际出射光是否真实会聚；坐标位置不能单独判断实虚。</li>
+<li>两式在该精确条件下分别失去普通有限像高意义，必须取相邻有限条件的总放大率极限，或用展开整球求 \(\beta=-1\) 后折回；均得倒立等大。</li>
+</ol>
+</details>
+
+<div class="interactive answer-field"><label for="lesson7_feedback">疑问与复习重点</label><p class="small">节点推导 / 复合主点 / 镜像折回</p><textarea id="lesson7_feedback" data-save="lesson7_feedback" data-label="第7课：疑问与复习重点" placeholder="写下具体问题或题号。"></textarea></div>
+
+</section>
+
+<section id="lesson8" class="new-lesson">
+<h2>第 08 课：一般理想光具组的作图成像</h2>
+<p>关联脉络：<a href="%E8%AF%BE%E7%A8%8B%E8%84%89%E7%BB%9C.md">课程脉络</a>。前置：第 05 课特殊光线与焦平面、第 06 课主面、第 07 课节点。</p>
+<p>本课的任务是：已知六个基点，即使不了解系统内部形状、两侧介质又不同，也能确定像的位置与性质。作图、一般高斯式、牛顿式和放大率必须相互验证；不能只得到一个像距数字。</p>
+<h3>来源依据与本课知识点</h3>
+<table>
+<thead>
+<tr>
+<th>内容</th>
+<th>来源</th>
+<th>位置与用途</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>三条特殊光线、图上基点和例题</td>
+<td>《3-9 一般理想光具组的作图成像法》PPT</td>
+<td>第 1–5 页；原始图形、已知量和公式条件</td>
+</tr>
+<tr>
+<td>新课件作业记录</td>
+<td>同上</td>
+<td>第 6 页：第三章 3.26、3.29*</td>
+</tr>
+<tr>
+<td>一般高斯式、牛顿式与图解推导</td>
+<td>《光学教程》第五版</td>
+<td>书页 149–150，PDF 第 167–168 页</td>
+</tr>
+<tr>
+<td>习题 3.29 原文</td>
+<td>同上</td>
+<td>书页 164，PDF 第 182 页；只保留题意与方法入口</td>
+</tr>
+<tr>
+<td>补齐例题高斯法、放大率、独立练习</td>
+<td>讲义补充</td>
+<td>按教材一般关系推导，区分于课件略去的步骤</td>
+</tr>
+</tbody></table>
+<p>核心知识点：<a href="%E7%9F%A5%E8%AF%86%E7%82%B9/%E7%90%86%E6%83%B3%E5%85%89%E5%85%B7%E7%BB%84%E4%BD%9C%E5%9B%BE.md">理想光具组作图</a>、<a href="%E7%9F%A5%E8%AF%86%E7%82%B9/%E4%B8%80%E8%88%AC%E9%AB%98%E6%96%AF%E4%B8%8E%E7%89%9B%E9%A1%BF%E5%85%AC%E5%BC%8F.md">一般高斯与牛顿公式</a>。辅助：<a href="%E7%9F%A5%E8%AF%86%E7%82%B9/%E8%8A%82%E7%82%B9%E4%B8%8E%E8%A7%92%E6%94%BE%E5%A4%A7%E7%8E%87.md">节点与角放大率</a>、主面共轭、实虚判断。几何作图与公式都是同一基点体系的表达，不是需要分开记忆的两套成像理论。</p>
+<h3>1. 把薄透镜的画法改成两个参考平面</h3>
+<p>你在第 05 课能用两条特殊线定像。现在把薄透镜的位置拆成 \(H,H'\) 两个主面：入射线延长到 \(H\)，对应出射线延长到 \(H'\)；两端等高，但中间没有要求真实光线水平前进。再把“过光心方向不变”改成“过 \(K\) 的入射线对应过 \(K'\) 的同方向出射线”。</p>
+<p>这两处替换，就是从薄透镜作图迁移到一般系统作图的核心。外部实际光线画实线；延长线和等效连接画虚线，并为实际光线标箭头。</p>
+<p>以下均取正折射率、近轴一阶共轴系统，入射从左向右。真实介质或传播方向改变时，先核对坐标约定，不凭图上左右猜实虚。</p>
+<h3>2. 三条特殊光线的操作步骤</h3>
+<figure><img src="assets/%E7%AC%AC08%E8%AF%BE/%E8%AF%BE%E4%BB%B6-01.png" alt="平行入射线与像方焦点"><figcaption>3-9 PPT 第 1 页。图中 P、Q为物体下端和上端，P′、Q′为其像，H、H′为主点，F、F′为焦点，k、k′为节点；M、M′等是光线构造的辅助标记。基点的角色以课件正文及本课表格为准。</figcaption></figure>
+<p><strong>平行主轴线</strong>：从物体上端 \(Q\) 作轴向平行入射线，与物方主面交于 \(M\)；在像方主面取同高度的 \(M'\)；出射线经过 \(F'\)。图中的绿色实线给出系统外部方向，\(M\to M'\) 的虚线只是主面等高关系。若像方焦点是虚焦点，用出射线的反向延长线通过 \(F'\)，不能给不存在的真实会聚画错箭头。</p>
+<figure><img src="assets/%E7%AC%AC08%E8%AF%BE/%E8%AF%BE%E4%BB%B6-02.png" alt="焦点线和节点线"><figcaption>3-9 PPT 第 2 页。蓝线使用物方焦点，红线使用物方节点；绿线使用像方焦点。各条线必须从同一物点发出并得到同一像点。</figcaption></figure>
+<p><strong>通过物方焦点的线</strong>：从 \(Q\) 指向 \(F\)，延长至物方主面，得到交点 \(N\)；在像方主面取同高 \(N'\)；从 \(N'\) 向前画平行主轴的出射线。对虚物或虚焦点，先把“通过”理解为直线及其延长线的共线关系，再补实际传播箭头。</p>
+<p><strong>节点线</strong>：作入射直线 \(QK\)；过 \(K'\) 作与 \(QK\) 平行的出射直线。不要要求它同时经过像方主面上与入射点同高的位置：等高规则要在正确的两主面上应用，不是把任意位置的两个线段任意连接。节点线既同方向，又符合整个系统的主面映射。</p>
+<p>任选两条不重合、能有效定交点的出射线确定 \(Q'\)，第三条检验。出射线实交得实像；出射线发散而反向延长相交得虚像；出射线互相平行则像在无穷远。由 \(Q'\) 向主轴作垂线定位轴上像点 \(P'\)。</p>
+<h4>退化情况怎样处理</h4>
+<p>物点恰在焦平面时，两条出射线可能平行，不要强行画一个远处的有限交点。物点在主轴上时，三条轴上特殊线可能重合，应选有非零近轴高度的辅助线确定交点；物在 \(F\) 时直接用出射平行这一特征。若某条线恰与主面平行而没有普通有限交点，换另一条辅助线或用公式。</p>
+<h3>3. 从图形推出一般成像公式</h3>
+<h4>3.1 先统一距离起点</h4>
+<table>
+<thead>
+<tr>
+<th>量</th>
+<th>有向定义</th>
+<th>本课用途</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>\(s\)</td>
+<td>\(\overline{HP}\)</td>
+<td>从物方主点量的物距</td>
+</tr>
+<tr>
+<td>\(s'\)</td>
+<td>\(\overline{H'P'}\)</td>
+<td>从像方主点量的像距</td>
+</tr>
+<tr>
+<td>\(f\)</td>
+<td>\(\overline{HF}\)</td>
+<td>物方焦距</td>
+</tr>
+<tr>
+<td>\(f'\)</td>
+<td>\(\overline{H'F'}\)</td>
+<td>像方焦距</td>
+</tr>
+<tr>
+<td>\(x=s-f\)</td>
+<td>\(\overline{FP}\)</td>
+<td>从物方焦点量的物距</td>
+</tr>
+<tr>
+<td>\(x'=s'-f'\)</td>
+<td>\(\overline{F'P'}\)</td>
+<td>从像方焦点量的像距</td>
+</tr>
+</tbody></table>
+<p>例如主点左侧的物有 \(s&lt;0\)；会聚系统的物焦点在主点左侧有 \(f&lt;0\)。这两个量分别确定，不能把课件图上“20 cm”和“5 cm”直接当作正代数量。</p>
+<h4>3.2 用一条焦点线、一条平行线建立相似三角形</h4>
+<p>从 \(Q\) 通过 \(F\) 的线在 \(H\) 主面的高度记为 \(h\)。点 \((s,y)\)、\((f,0)\) 和 \((0,h)\) 共线，所以</p>
+<div class="math">\[h=-\frac{fy}{s-f}=-\frac{fy}{x}.\]</div>
+<p>该线出射后平行主轴、主面等高，故像高 \(y'=h\)。另一条入射平行线在两个主面上的高度均为 \(y\)；其出射线经过 \(F'\)，在 \(s'\) 位置的高度为</p>
+<div class="math">\[y'=y\left(1-\frac{s'}{f'}\right)=-y\frac{x'}{f'}.\]</div>
+<p>两条线给出的像高相同，因而</p>
+<div class="math">\[\boxed{\beta=\frac{y'}y=-\frac f x=-\frac{x'}{f'},\qquad
+xx'=ff'}.\]</div>
+<p>把 \(x=s-f,x'=s'-f'\) 代回并展开，得到 \(ss'-sf'-fs'=0\)。在普通有限物像距情形除以 \(ss'\)，得</p>
+<div class="math">\[\boxed{\frac{f}{s}+\frac{f'}{s'}=1}.\]</div>
+<p>这就是一般高斯公式，牛顿式与它相同来源。公式中两焦距不必等长；像在主面等特殊情形，应回到极限或直接作图，不硬把零距离代进含倒数的式子。</p>
+<figure><img src="assets/%E7%AC%AC08%E8%AF%BE/%E6%95%99%E6%9D%90-p150.png" alt="教材一般高斯与牛顿推导"><figcaption>教材书页 150，PDF 第 168 页。按图 3-32先认两主面等高，再看两对相似三角形；教材由此推出一般高斯式与牛顿式。页面底部开始的镀银半球例题已在第 07 课完整展开。</figcaption></figure>
+<h4>3.3 空气简化式到底多用了哪个条件</h4>
+<p>各面近轴放大率关系相乘给出 \(\beta\gamma=n/n'\)；两主面等高又给 \(\gamma=s/s'\)，所以</p>
+<div class="math">\[\beta=\frac{ns'}{n's}.\]</div>
+<p>将一般高斯式代入上述几何放大率关系，可得焦距比</p>
+<div class="math">\[\frac{f'}f=-\frac{n'}n.\]</div>
+<p>也可以把 \(f=-n/\Phi,f'=n'/\Phi\) 作为系统光焦度 \(\Phi\) 的定义式。因此一般高斯式等价于</p>
+<div class="math">\[\frac{n'}{s'}-\frac n s=\Phi.\]</div>
+<p>只有 \(n=n'\)，才有 \(f=-f'\)，高斯式才能化为</p>
+<div class="math">\[\frac1{s'}-\frac1s=\frac1{f'},\qquad \beta=\frac{s'}s.\]</div>
+<p><strong>做题规则</strong>：题目给两种焦距时，先用一般式；不确定介质时，牛顿式 \(xx'=ff'\) 同样直接可用。\(f\ne-f'\) 已经足以否定两侧同介质的假设。只有明确满足条件才用第 05、06 课的简化式。</p>
+<h3>4. 完整展开课件例题：作图、两种公式与性质四重核对</h3>
+<figure><img src="assets/%E7%AC%AC08%E8%AF%BE/%E8%AF%BE%E4%BB%B6-03.png" alt="课件例题三线作图"><figcaption>3-9 PPT 第 3 页。20 cm 是物点到 H 的距离，5 cm 是 F 到 H 的距离，6 cm 是 H′到 F′的距离；不是把所有标注统一从光心或表面量。图中绿、蓝、红三条出射线在主轴下方相交。</figcaption></figure>
+<p>已知 \(s=-20\,\mathrm{cm},f=-5\,\mathrm{cm},f'=+6\,\mathrm{cm}\)。物体上端位于主轴上方。要求最终像的位置和性质。</p>
+<h4>4.1 图形解法</h4>
+<p>从物体上端分别画平行线、物焦点线和节点线。先把各线与物方主面的相交关系确定，再在像方侧使用等高或同方向规则。三条实际出射线在 \(F'\) 右侧、主轴下方相交：说明是倒立实像。图形主要检验位置区域和正倒；精确距离由公式给出。</p>
+<h4>4.2 牛顿公式：从焦点量</h4>
+<div class="math">\[x=s-f=-20-(-5)=-15\,\mathrm{cm},\]</div>
+<div class="math">\[x'=\frac{ff'}x=\frac{(-5)\times6}{-15}=+2\,\mathrm{cm}.\]</div>
+<p>因此像在 \(F'\) 右侧 \(2\,\mathrm{cm}\)。再转换起点：</p>
+<div class="math">\[\boxed{s'=f'+x'=6+2=8\,\mathrm{cm}}.\]</div>
+<figure><img src="assets/%E7%AC%AC08%E8%AF%BE/%E8%AF%BE%E4%BB%B6-04.png" alt="课件牛顿计算与高斯法入口"><figcaption>3-9 PPT 第 4 页。课件给出牛顿法计算，标明一般高斯法“略”；下面补齐这一步。</figcaption></figure>
+<h4>4.3 一般高斯公式：补齐 PPT 略去的步骤</h4>
+<div class="math">\[\frac{-5}{-20}+\frac6{s'}=1
+\quad\Rightarrow\quad \frac6{s'}=\frac34
+\quad\Rightarrow\quad s'=8\,\mathrm{cm}.\]</div>
+<p>两个公式得到同一个像点；“距 \(F'\) 2 cm”和“距 \(H'\) 8 cm”是两个起点下的同一位置。如果题目要求距系统后表面，应再知道后表面到 \(H'\) 的距离，不能凭空把 8 cm 改称表面像距。</p>
+<h4>4.4 放大率、节点与实虚</h4>
+<div class="math">\[\beta=-\frac f x=-\frac{-5}{-15}=-\frac13.\]</div>
+<p>所以像倒立，像高绝对值为物高的三分之一。若物高为 \(3\,\mathrm{cm}\)，像高为 \(-1\,\mathrm{cm}\)。图中的出射光真实会聚，像为实像。</p>
+<p>由焦距比得 \(n'/n=6/5\)，再核对</p>
+<div class="math">\[\beta=\frac n{n'}\frac{s'}s
+=\frac56\frac8{-20}=-\frac13.\]</div>
+<p>节点相对各自主点的位移为 \(f+f'=+1\,\mathrm{cm}\)；这解释了图中两个节点分别在对应主点右側。此物像对的角放大率 \(\gamma=x/f'=-15/6=-5/2\)，并不是 1：<strong>只有以节点为共轭点的那个特殊物像对满足角放大率为一，不能把节点线的性质误套到所有物像点。</strong></p>
+<h4>4.5 错式会造成什么结果</h4>
+<figure><img src="assets/%E7%AC%AC08%E8%AF%BE/%E8%AF%BE%E4%BB%B6-05.png" alt="课件强调的公式边界"><figcaption>3-9 PPT 第 5 页。f≠−f′是不能使用空气简化式的证据，不是说所有成像公式都不能使用。</figcaption></figure>
+<p>若误用 \(1/s'-1/s=1/6\)，会得 \(s'=60/7\,\mathrm{cm}\)；若再误用 \(\beta=s'/s\)，会得 \(\beta=-3/7\)。即使有人用了正确 \(s'=8\)，再套空气放大率，仍会错得 \(-2/5\)。两种错误都来自忘记 \(n'/n\)，不是计算粗心。</p>
+<p>最终标准表述：<strong>像在像方主点 \(H'\) 右侧 8 cm，即像方焦点 \(F'\) 右侧 2 cm；为倒立、缩小的实像，横向放大率为 −1/3。</strong></p>
+<h3>5. 任意入射光线与焦平面的构造</h3>
+<p>若给出的不是物点而是一条任意入射线，过 \(K\) 作与它平行的辅助入射直线。其对应出射线过 \(K'\) 且保持方向；该出射线与像方焦平面的交点 \(B'\)，确定这一入射方向对应的焦面点。实际入射线在 \(H\) 主面取交点 \(A\)，到 \(H'\) 同高位置 \(A'\) 后，出射直线通过 \(B'\)。</p>
+<p>为什么能这样做？同一方向的近轴平行光束，相当于同一个无穷远物点，经过系统落在同一像方焦面点。节点辅助线负责确定这个点，主面等高负责确定实际光线的出射位置。第 05 课“过光心作平行辅助线”只是两侧相同且薄透镜主节点重合的特例。</p>
+<p>虚焦面要用恰当的延长线；若要求内部实际路径，六个基点仍不足以恢复每个界面的折射过程，需要原系统结构。</p>
+<h3>6. 新作业 3.26、3.29* 的方法入口</h3>
+<figure><img src="assets/%E7%AC%AC08%E8%AF%BE/%E8%AF%BE%E4%BB%B6-06.png" alt="新课件作业页"><figcaption>3-9 PPT第6页：作业3.26、3.29（星号题）。</figcaption></figure>
+<p><strong>3.26</strong>：现有第 06 课已保留原图。题目给两主面及一对已知共轭点，用已知物像点恢复入、出射线的对应关系；平行入射方向共享同一焦面点，再由新物点的两条线确定新像点。题目并没有直接给出完整六基点，不能擅自画两个未知焦点当作已知条件。</p>
+<figure><img src="assets/%E7%AC%AC08%E8%AF%BE/%E6%95%99%E6%9D%90%E4%B9%A0%E9%A2%983.29-p164.png" alt="教材习题3.29及邻近题"><figcaption>教材书页164，PDF第182页，顶部为3.29原题。</figcaption></figure>
+<p><strong>3.29</strong>*：题给厚透镜 \(f'=60\,\mathrm{mm}\)、两焦点间距 \(125\,\mathrm{mm}\)，分别讨论物在物方焦点左侧、右侧和虚物位于像方焦点右侧的情形。先在同一全局轴画 \(F,H,H',F'\)，明确采用教材本题通常的两侧空气条件，令 \(f=-f'\)；若另有介质条件，应先更换焦距关系。</p>
+<p>方法步骤：</p>
+<ol>
+<li>用 \(\overline{FF'}=\overline{HH'}+f'-f\) 恢复主点间隔，避免把 125 mm 当作厚度或直接当作主点间隔。</li>
+<li>前两种物的位置直接给 \(x=\overline{FP}\) 的符号，用 \(xx'=ff'\) 求像相对 \(F'\) 的位置。</li>
+<li>第三种给的是相对像方焦点的虚物位置，必须先换到同一全局坐标，再算 \(s=\overline{HP}\) 或 \(x=\overline{FP}\)；不能把这个给定距离直接写成物方牛顿坐标。</li>
+<li>用特殊光线复核实虚，再由 \(\beta=-f/x\) 判断正倒和放缩。讲义保留原题与路线，完整指定作业解析在聊天中单独完成。</li>
+</ol>
+<h3>7. 题型识别与快速检查</h3>
+<table>
+<thead>
+<tr>
+<th>给定信息</th>
+<th>首选方法</th>
+<th>最容易漏掉的检查</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>给六基点或完整基点图</td>
+<td>两条特殊线定像，第三条检查</td>
+<td>等高用主面，平行方向用节点</td>
+</tr>
+<tr>
+<td>给 \(f,f'\) 与主点物距</td>
+<td>一般高斯式</td>
+<td>不擅自令 \(f=-f'\)</td>
+</tr>
+<tr>
+<td>给距焦点的距离</td>
+<td>牛顿式</td>
+<td>x、x′是否从各自焦点量</td>
+</tr>
+<tr>
+<td>问大小和正倒</td>
+<td>\(\beta=-f/x=-x'/f'\)</td>
+<td>不同介质不能用 \(s'/s\)</td>
+</tr>
+<tr>
+<td>给任意入射光线</td>
+<td>节点辅助线与焦平面</td>
+<td>实线、延长线和实际箭头分清</td>
+</tr>
+</tbody></table>
+<p>真实应用是镜头系统的外部成像、不同介质之间的成像和光线方向构造。前置的薄透镜直觉可以迁移，迁移边界是主面分离、节点分离及两侧折射率不等。</p>
+<h3>8. 最小记忆包</h3>
+<table>
+<thead>
+<tr>
+<th>中文学术名称</th>
+<th>公式或规则</th>
+<th>调用时先检查</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>一般高斯公式</td>
+<td>\(f/s+f'/s'=1\)</td>
+<td>物像距从两主点量</td>
+</tr>
+<tr>
+<td>牛顿公式</td>
+<td>\(xx'=ff'\)</td>
+<td>物像距从两焦点量</td>
+</tr>
+<tr>
+<td>一般横向放大率</td>
+<td>\(\beta=-f/x=-x'/f'=ns'/(n's)\)</td>
+<td>同介质才等于 \(s'/s\)</td>
+</tr>
+<tr>
+<td>三条特殊线</td>
+<td>平行到 F′；经 F后平行；经 K对应经 K′同方向</td>
+<td>主面等高，节点不一定与主点重合</td>
+</tr>
+<tr>
+<td>实虚判断</td>
+<td>实际出射线交点 / 反向延长线交点</td>
+<td>不能由坐标符号直接决定</td>
+</tr>
+</tbody></table>
+<h3>9. 独立练习与参考解析</h3>
+<h4>第 1 题</h4>
+<p>系统 \(f=-4\,\mathrm{cm},f'=6\,\mathrm{cm}\)，物在 \(H\) 左侧 \(12\,\mathrm{cm}\)。求 \(s',x',\beta\)，并求节点相对主点的位移。</p>
+<div class="interactive answer-field"><label for="lesson8_answer1">第 1 题作答
+</label><p class="small">写下推理、计算与不确定的地方，再展开答案检查。</p><textarea id="lesson8_answer1" data-save="lesson8_answer1" data-label="第8课：第 1 题作答
+" placeholder="我的回答：&#10;我不确定的地方："></textarea></div>
+
+
+<h4>第 2 题</h4>
+<p>同一系统的实物放在 \(F\) 右侧 \(1\,\mathrm{cm}\)。用牛顿式确定像的主点坐标与放大率，并说明像的性质。</p>
+<div class="interactive answer-field"><label for="lesson8_answer2">第 2 题作答
+</label><p class="small">写下推理、计算与不确定的地方，再展开答案检查。</p><textarea id="lesson8_answer2" data-save="lesson8_answer2" data-label="第8课：第 2 题作答
+" placeholder="我的回答：&#10;我不确定的地方："></textarea></div>
+
+
+<h4>第 3 题</h4>
+<p>对两侧介质不等的系统，有人把节点线直接画成穿过 \(H,H'\) 的同一条直线。指出这一画法遗漏的两项条件。</p>
+<div class="interactive answer-field"><label for="lesson8_answer3">第 3 题作答
+</label><p class="small">写下推理、计算与不确定的地方，再展开答案检查。</p><textarea id="lesson8_answer3" data-save="lesson8_answer3" data-label="第8课：第 3 题作答
+" placeholder="我的回答：&#10;我不确定的地方："></textarea></div>
+
+
+<h4>第 4 题</h4>
+<p>轴上物点在 \(F\)；用图和式说明成像结果。若物是焦平面上的离轴点，出射光为什么仍平行但不一定沿主轴？</p>
+<div class="interactive answer-field"><label for="lesson8_answer4">第 4 题作答
+</label><p class="small">写下推理、计算与不确定的地方，再展开答案检查。</p><textarea id="lesson8_answer4" data-save="lesson8_answer4" data-label="第8课：第 4 题作答
+" placeholder="我的回答：&#10;我不确定的地方："></textarea></div>
+
+
+
+<details><summary>展开独立练习解析</summary>
+
+<ol>
+<li>\(4/12+6/s'=1\)，得 \(s'=9\,\mathrm{cm}\)；\(x=-12-(-4)=-8\,\mathrm{cm},x'=3\,\mathrm{cm}\)；\(\beta=-(-4)/(-8)=-1/2\)。节点位移 \(f+f'=2\,\mathrm{cm}\)，分别在对应主点右侧。对左入射、会聚成像，像为倒立实像。</li>
+<li>\(x=+1\,\mathrm{cm},s=f+x=-3\,\mathrm{cm}\)，仍是实物。\(x'=ff'/x=-24\,\mathrm{cm}\)，\(s'=f'+x'=-18\,\mathrm{cm}\)；\(\beta=-f/x=4\)。出射光发散，反向延长交于物侧，像为正立放大虚像。这说明“距焦点为正”不等于物是虚物。</li>
+<li>两侧介质不同一般有 \(K\ne H,K'\ne H'\)；就算同介质、分别重合，厚系统的两个节点仍可能分离，入、出射线通常只平行而非一条连续直线。</li>
+<li>\(x=0\) 时有限 \(x'\) 不可能满足 \(xx'=ff'\)，应取 \(s'=\infty\) 的极限；轴上点出射沿轴平行。焦平面离轴点对应另一个无穷远方向，出射光彼此平行而倾斜，这与第 05 课焦平面性质相同。</li>
+</ol>
+</details>
+
+<div class="interactive answer-field"><label for="lesson8_feedback">疑问与复习重点</label><p class="small">图形构造 / 公式条件 / 3.26 / 3.29*</p><textarea id="lesson8_feedback" data-save="lesson8_feedback" data-label="第8课：疑问与复习重点" placeholder="写下具体问题或题号。"></textarea></div>
+
+</section>
+
+<section id="method" class="exam">
+        <h2>做题时就按这五步检查</h2>
+        <ol>
+          <li><strong>先看光往哪边走：</strong>在图上补出入射光和出射光的箭头。</li>
+          <li><strong>再看现在算哪一个面：</strong>把这个面的顶点或薄透镜中心当作原点。</li>
+          <li><strong>给各段距离带上正负号：</strong>不要把图上的几何长度直接抄进公式。</li>
+          <li><strong>选这个界面对应的公式：</strong>折射面、反射面和薄透镜不要混用。</li>
+          <li><strong>算完回到图上解释：</strong>像在什么位置，是实像还是虚像，结果是否符合光线方向。</li>
+        </ol>
+        <div class="callout tip"><strong>最省事的记法：</strong>看方向 → 定原点 → 标正负 → 列公式 → 回图检查。</div>
+        <h3>符号示例</h3>
+        <p>界面顶点取 x=0，光从左向右；物点 x=−20 cm，球心 x=+8 cm，计算所得像点 x=+30 cm，则：</p>
+        <div class="math">\[s=-20\,\mathrm{cm},\qquad r=+8\,\mathrm{cm},\qquad s'=+30\,\mathrm{cm}\]</div>
+        <p>如果出射光真实在 \(+30\,\mathrm{cm}\) 处会聚，它就是实像。若反射光在 \(x=-15\,\mathrm{cm}\) 处真实会聚，则 \(s'=-15\,\mathrm{cm}\)，但仍是实像。</p>
+      </section>
+
+      <section id="memory" class="exam">
+        <h2>最低记忆表</h2>
+        <table>
+          <tbody>
+            <tr><th>成像本质</th><td>入射光束经系统变为指向共轭像点的出射光束。</td></tr>
+            <tr><th>实物 / 虚物</th><td>看入射光是真发散，还是正要会聚。</td></tr>
+            <tr><th>实像 / 虚像</th><td>看出射光是真会聚，还是反向延长后相交。</td></tr>
+            <tr><th>物 / 像空间</th><td>分别由入射光、出射光所在空间定义。</td></tr>
+            <tr><th>近轴条件</th><td>靠轴、小角，可作一阶近似。</td></tr>
+            <tr><th>正负号</th><td>坐标决定，不能由实虚直接决定。</td></tr>
+            <tr><th>球面折射</th><td>\(n'/s'-n/s=(n'-n)/r\)；光焦度 \(\Phi=(n'-n)/r\)。</td></tr>
+            <tr><th>焦距关系</th><td>\(f'=n'/\Phi\)，\(f=-n/\Phi\)；高斯式 \(f'/s'+f/s=1\)。</td></tr>
+            <tr><th>横向放大率</th><td>\(\beta=ns'/(n's)\)；多面系统的总放大率逐面相乘。</td></tr>
+            <tr><th>平面折射</th><td>\(r\to\infty\)，所以 \(s'=(n'/n)s\)、\(\beta=1\)。</td></tr>
+            <tr><th>球面反射</th><td>\(1/s'+1/s=2/r=1/f'\)，且 \(f'=r/2\)。</td></tr>
+            <tr><th>镜面放大率</th><td>\(\beta=-s'/s\)；符号判正倒，绝对值判放缩。</td></tr>
+            <tr><th>平面镜</th><td>\(r\to\infty\)，所以 \(s'=-s\)、\(\beta=1\)。</td></tr>
+            <tr><th>一般薄透镜</th><td>\(n_2/s'-n_1/s=\Phi\)，且 \(f'=n_2/\Phi\)、\(f=-n_1/\Phi\)。</td></tr>
+            <tr><th>空气薄透镜</th><td>\(1/s'-1/s=1/f'\)，\(\beta=s'/s\)。</td></tr>
+            <tr><th>制镜者公式</th><td>\(1/f'=(n-1)(1/r_1-1/r_2)\)；浸液时改用相对折射率。</td></tr>
+            <tr><th>正透镜实像最小间距</th><td>\(L_{\min}=4f'\)，在 \(u=v=2f'\) 时取得。</td></tr>
+          <tr><th>厚透镜主点换算</th><td>\(s=\bar s-p\)，\(s'=\bar s'-p'\)；等效公式从 \(H,H'\) 起算。</td></tr>
+            <tr><th>同介质厚透镜高斯公式</th><td>\(1/s'-1/s=1/f'\)，横向放大率 \(\beta=s'/s\)；两侧介质不同时使用下列一般光具组公式。</td></tr>
+            <tr><th>厚透镜制镜者公式</th><td>\(1/f'=(n-1)[1/r_1-1/r_2+\delta(n-1)/(nr_1r_2)]\)。</td></tr>
+            <tr><th>主平面</th><td>一对横向放大率为 1 的共轭面；外部作图可等高转移，不能代替内部实际光路。</td></tr>
+            <tr><th>节点</th><td>\(\gamma=1\)，\(\beta\gamma=n/n'\)；\(HK=H'K'=f+f'\)。</td></tr>
+<tr><th>一般光具组</th><td>\(f/s+f'/s'=1\)，\(xx'=ff'\)；\(\beta=-f/x=-x'/f'=ns'/(n's)\)。</td></tr>
+<tr><th>空气复合系统</th><td>\(1/f'=1/f_1'+1/f_2'-d/(f_1'f_2')\)；间隔从相邻主点量。</td></tr>
+<tr><th>做题顺序</th><td>传播方向 → 原点 → 符号 → 方程 → 检查。</td></tr>
+          </tbody>
+        </table>
+      </section>
+
+      <section id="quiz" class="exam">
+        <h2>快速自测</h2>
+        <p class="small">先回答，再展开。这里使用新问题，不是布置作业答案。</p>
+        <ol>
+          <li>入射光正向界面右侧 Q 点会聚，但在到达 Q 前经过透镜。Q 对该透镜是什么物？
+            <details><summary>查看答案</summary>虚物。判断物的实虚只看入射光；它不是从 Q 发散，而是正朝 Q 会聚。</details></li>
+          <li>出射光发散，但反向延长线交于一点，该点是什么像？
+            <details><summary>查看答案</summary>虚像。出射光没有在那里真实会聚。</details></li>
+          <li>“像在元件左侧，所以一定是虚像。”为什么错？
+            <details><summary>查看答案</summary>左右只表示坐标位置；反射系统的实像也可能在左侧。</details></li>
+          <li>物空间由物点位置定义，对还是错？
+            <details><summary>查看答案</summary>错。物空间由入射光线所在空间定义。</details></li>
+          <li>近轴条件为什么能简化成像关系？
+            <details><summary>查看答案</summary>它使三角关系线性化并允许忽略高阶项，从而让一阶像点位置不依赖具体光线高度。</details></li>
+          <li>写出做题时的五步检查。
+            <details><summary>查看答案</summary>看传播方向、定当前原点、标距离正负、选公式、回到光路图检查。</details></li>
+          <li>某球面镜顶点取 \(x=0\)，入射光从左向右。物点在 \(x=-12\,\mathrm{cm}\)，反射光在 \(x=-18\,\mathrm{cm}\) 处真正会聚，球心在 \(x=-6\,\mathrm{cm}\)。写出 \(s,s',r\)，并判断像的实虚。
+            <details><summary>查看答案</summary>\(s=-12\,\mathrm{cm}\)，\(s'=-18\,\mathrm{cm}\)，\(r=-6\,\mathrm{cm}\)；像是实像。三个量都为负只说明三个点都在原点左侧，不等于“虚”。</details></li>
+          <li>教材用光程展开推导近轴成像公式时，为什么要求含光线入射高度 h 的项不再影响像点位置？
+            <details><summary>查看答案</summary>因为同一物点发出的不同近轴光线会在球面上取不同的 h。如果所得像点随 h 改变，这些光线就不能共同成像于一个点。令相应系数满足条件，才能得到确定的近轴像点。</details></li>
+          <li>把一对共轭点的传播方向完全反过来，原来的物点和像点会怎样？符号能否直接照抄？
+            <details><summary>查看答案</summary>由光路可逆性，原物点和原像点交换角色；但入射方向已经改变，坐标和各量符号必须按新的当前系统重新判断，不能机械照抄。</details></li>
+          <li>一条光线与光轴平行，但离轴距离很大。能否只凭“平行”认定它满足近轴条件？
+            <details><summary>查看答案</summary>不能。近轴近似不仅要求倾角小，还要求光线靠近光轴、入射高度相对曲率尺度足够小。</details></li>
+        </ol>
+      </section>
+
+      <section id="feedback" class="interactive">
+        <h2>学习记录</h2>
+        <p class="small">内容保存在当前浏览器。点击顶部“导出学习记录”可另存为文本。</p>
+        <div class="checklist">
+          <label><input type="checkbox" data-save="goal1"> 我能不用原文解释实物、虚物、实像、虚像。</label>
+          <label><input type="checkbox" data-save="goal2"> 我能区分实/虚与正/负。</label>
+          <label><input type="checkbox" data-save="goal3"> 我能说明近轴条件为何必要。</label>
+          <label><input type="checkbox" data-save="goal4"> 我能按五步检查处理一道成像题。</label>
+        </div>
+        <h3>第 01 课最模糊的一点</h3><textarea data-save="unclear" data-label="第01课最模糊的一点" placeholder="例如：我仍不理解为什么反射时实像的像距可以为负。"></textarea>
+        <h3>第 02 课完成情况</h3>
+        <div class="checklist">
+          <label><input type="checkbox" data-save="goal5"> 我能先检查介质方向，再判断是否可能全反射。</label>
+          <label><input type="checkbox" data-save="goal6"> 我能写出一般棱镜的角度关系和计算顺序。</label>
+          <label><input type="checkbox" data-save="goal7"> 我能解释最小偏向时为什么光路对称。</label>
+          <label><input type="checkbox" data-save="goal8"> 我能从 n(λ) 判断各色光的偏向次序。</label>
+        </div>
+        <h3>第 02 课最模糊的一点</h3><textarea data-save="lesson2_unclear" data-label="第02课最模糊的一点" placeholder="例如：我不清楚第二面全反射的边界应该怎样列式。"></textarea>
+        <h3>第 03 课完成情况</h3>
+        <div class="checklist">
+          <label><input type="checkbox" data-save="goal9"> 我能按坐标而不是实虚判断 \(s,s',r\) 的符号。</label>
+          <label><input type="checkbox" data-save="goal10"> 我能解释近轴条件如何产生确定的像点。</label>
+          <label><input type="checkbox" data-save="goal11"> 我能在球面、平面、高斯和牛顿形式之间转换。</label>
+          <label><input type="checkbox" data-save="goal12"> 我能把多面系统逐面计算，并重判中间像的角色。</label>
+        </div>
+        <h3>第 03 课最模糊的一点</h3><textarea data-save="lesson3_unclear" data-label="第03课最模糊的一点" placeholder="例如：我会套球面折射公式，但第二面物距的符号仍容易错。"></textarea>
+        <h3>第 04 课完成情况</h3>
+        <div class="checklist">
+          <label><input type="checkbox" data-save="goal13"> 我能由 \(n'=-n\) 说明反射公式如何由折射公式得到。</label>
+          <label><input type="checkbox" data-save="goal14"> 我能在课件符号下判断凹、凸面镜的 \(r\)、\(f'\)、\(s'\)。</label>
+          <label><input type="checkbox" data-save="goal15"> 我能用公式和特殊光线互相检查像的位置与性质。</label>
+          <label><input type="checkbox" data-save="goal16"> 我能处理平面镜镜像法以及玻璃板双程问题。</label>
+        </div>
+        <h3>第 04 课最模糊的一点</h3><textarea data-save="lesson4_unclear" data-label="第04课最模糊的一点" placeholder="例如：我容易把统一坐标法与高中正长度公式混用。"></textarea>
+        <h3>第 05 课完成情况</h3>
+        <div class="checklist">
+          <label><input type="checkbox" data-save="goal17"> 我能从两次球面折射说明薄透镜公式的来源。</label>
+          <label><input type="checkbox" data-save="goal18"> 我会根据介质和曲率判断透镜光焦度，而不只看外形。</label>
+          <label><input type="checkbox" data-save="goal19"> 我能处理实物、虚物经过正负透镜的成像。</label>
+          <label><input type="checkbox" data-save="goal20"> 我能用特殊光线和焦平面构造任意光线。</label>
+        </div>
+        <h3>第 05 课最模糊的一点</h3><textarea data-save="lesson5_unclear" data-label="第05课最模糊的一点" placeholder="例如：浸液透镜的正负判断，或者焦平面作任意光线。"></textarea>
+        <h3>第 06 课完成情况</h3>
+        <div class="checklist">
+          <label><input type="checkbox" data-save="goal21"> 我能说明逐次成像与理想光具组法各自保留什么信息。</label>
+          <label><input type="checkbox" data-save="goal22"> 我能区分表面坐标 \(\bar s,\bar s'\) 与主点坐标 \(s,s'\)。</label>
+          <label><input type="checkbox" data-save="goal23"> 我能由 \(f',p,p'\) 求厚透镜的像，并把答案换回题目指定参考面。</label>
+          <label><input type="checkbox" data-save="goal24"> 我能用主平面的等高共轭性质完成外部光路作图。</label>
+        </div>
+        <h3>第 06 课最模糊的一点</h3><textarea data-save="lesson6_unclear" data-label="第06课最模糊的一点" placeholder="例如：我会用高斯公式，但不确定 p、p' 的方向和最后怎样换回表面距离。"></textarea>
+        <h3>第 07 课完成情况</h3><div class="checklist"><label><input type="checkbox" data-save="goal25"> 我能说明并应用节点位置与主点区别。</label><label><input type="checkbox" data-save="goal26"> 我能说明并应用复合焦度、主点换算及无焦边界。</label><label><input type="checkbox" data-save="goal27"> 我能说明并应用镀银半球逐次成像、镜像展开与复合三种解法。</label><label><input type="checkbox" data-save="goal28"> 我能说明并应用返回光路实虚及无穷远中间像的极限检查。</label></div><h3>第 07 课最模糊的一点</h3><textarea data-save="lesson7_unclear" data-label="第07课最模糊的一点" placeholder="写出具体题号、光线或公式条件。"></textarea><h3>第 08 课完成情况</h3><div class="checklist"><label><input type="checkbox" data-save="goal29"> 我能说明并应用三条特殊光线与延长线方向。</label><label><input type="checkbox" data-save="goal30"> 我能说明并应用一般高斯、牛顿式及其几何推导。</label><label><input type="checkbox" data-save="goal31"> 我能说明并应用不同介质时正确计算横向放大率。</label><label><input type="checkbox" data-save="goal32"> 我能说明并应用3.26、3.29*的已知条件与方法入口。</label></div><h3>第 08 课最模糊的一点</h3><textarea data-save="lesson8_unclear" data-label="第08课最模糊的一点" placeholder="写出具体题号、光线或公式条件。"></textarea><h3>后续课程怎样调整</h3><textarea data-save="next" data-label="后续课程调整" placeholder="更偏直观 / 推导 / 做题，或写下具体需求。"></textarea>
+      </section>
+
+      <section id="sources">
+        <h2>材料来源与边界</h2>
+        <ul>
+          <li>【教材】姚启钧《光学教程》第五版，第 3 章相关内容。</li>
+          <li>【课件】3-2至3-7、3-9教师PPT。</li>
+          <li>【作业反推】两次作业、星号题及两道思考题的能力结构分析。</li>
+          <li>【讲义补充】五步检查、误区表、自测和课程组织方式。</li>
+        </ul>
+        <div class="callout">原始PPT和教材PDF不随公开版发布。图注同时标注书页与PDF页码（本版PDF页码＝书页＋18）。公式支持离线阅读。</div>
+      </section>
+
+      <footer>光学自学讲义 · 第 1.6 版 · 2026-10-08</footer>
+    </main>
+  </div>
+  <script>
+    const key = 'optics-self-study-v1:';
+    function setMode(mode) {
+      document.body.classList.toggle('sprint', mode === 'sprint');
+      document.getElementById('fullBtn').classList.toggle('active', mode === 'full');
+      document.getElementById('sprintBtn').classList.toggle('active', mode === 'sprint');
+      try { localStorage.setItem(key + 'mode', mode); } catch (_) {}
+    }
+    document.querySelectorAll('[data-save]').forEach(el => {
+      const k = key + el.dataset.save;
+      try {
+        if (el.type === 'checkbox') el.checked = localStorage.getItem(k) === 'true';
+        else el.value = localStorage.getItem(k) || '';
+        el.addEventListener('input', () => localStorage.setItem(k, el.type === 'checkbox' ? el.checked : el.value));
+      } catch (_) {}
+    });
+    try { setMode(localStorage.getItem(key + 'mode') || 'full'); } catch (_) { setMode('full'); }
+    function exportNotes() {
+      const checked = [...document.querySelectorAll('input[data-save]')].map((x,i) => `- [${x.checked?'x':' '}] 目标 ${i+1}：${x.parentElement.textContent.trim()}`).join('\n');
+      const notes = [...document.querySelectorAll('textarea[data-save]')].map(x => `## ${x.dataset.label || x.dataset.save}\n${x.value}`).join('\n\n');
+      const text = `# 光学学习记录\n\n${checked}\n\n${notes}\n`;
+      const blob = new Blob([text], {type:'text/markdown;charset=utf-8'});
+      const a = document.createElement('a'); a.href = URL.createObjectURL(blob); a.download = '光学学习记录.md'; a.click(); URL.revokeObjectURL(a.href);
+    }
+  </script>
+</body>
+</html>

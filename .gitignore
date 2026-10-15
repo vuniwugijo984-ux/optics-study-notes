@@ -1,0 +1,10 @@
+*.ppt
+*.pptx
+*.pdf
+*.docx
+/学习历史/
+/工具/
+/AGENTS.md
+/tmp/
+.env
+.env.*

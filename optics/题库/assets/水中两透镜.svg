@@ -1,0 +1,54 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="920" height="780" viewBox="0 0 920 780">
+<rect width="920" height="780" fill="white"/>
+<style>text{font:18px "Microsoft YaHei",sans-serif;fill:#23344a}.small{font-size:15px}.title{font-weight:700;font-size:21px}</style>
+<text x="28.00" y="30.00" class="title">3.15 双凸玻璃镜浸水：焦内实物</text>
+<path d="M35.00,178.00L875.00,178.00" fill="none" stroke="#7b8799" stroke-width="1"/>
+<path d="M444.40,65.00L444.40,285.00" fill="none" stroke="#23344a" stroke-width="2"/>
+<text x="426.40" y="61.00" class="small">O</text>
+<circle cx="143.9555564309702" cy="178" r="3" fill="#23344a"/>
+<text x="135.96" y="202.00" class="small">F</text>
+<circle cx="744.8444445748253" cy="178" r="3" fill="#23344a"/>
+<text x="736.84" y="202.00" class="small">F′</text>
+<path d="M290.79,131.08L444.40,131.08" fill="none" stroke="#205fb5" stroke-width="1.8"/>
+<polygon points="389.10,131.08 382.71,133.94 382.71,128.23" fill="#205fb5"/>
+<path d="M444.40,131.08L130.09,82.00" fill="none" stroke="#b64048" stroke-width="1.8" stroke-dasharray="7 5"/>
+<path d="M444.40,131.08L850.00,194.42" fill="none" stroke="#205fb5" stroke-width="1.8"/>
+<polygon points="703.98,171.62 697.23,173.45 698.11,167.81" fill="#205fb5"/>
+<path d="M290.79,131.08L444.40,178.00" fill="none" stroke="#19805d" stroke-width="1.8"/>
+<polygon points="389.10,161.11 382.15,161.97 383.82,156.51" fill="#19805d"/>
+<path d="M444.40,178.00L130.09,82.00" fill="none" stroke="#b64048" stroke-width="1.8" stroke-dasharray="7 5"/>
+<path d="M444.40,178.00L794.73,285.00" fill="none" stroke="#19805d" stroke-width="1.8"/>
+<polygon points="668.61,246.48 661.66,247.34 663.33,241.88" fill="#19805d"/>
+<path d="M290.79,178.00L290.79,131.08" fill="none" stroke="#23344a" stroke-width="2"/>
+<circle cx="290.7893070621969" cy="131.08270684072588" r="3" fill="#23344a"/>
+<text x="272.79" y="119.08" class="small">P</text>
+<circle cx="130.08888881438548" cy="82.0" r="4" fill="#b64048"/>
+<text x="122.09" y="70.00" class="small" style="fill:#b64048">P′</text>
+<text x="35.00" y="318.00" class="small">s = −20 cm；f′ = +39.11765 cm</text>
+<text x="35.00" y="343.00" class="small">s′ = −40.92308 cm；β = +2.04615（正立放大虚像）</text>
+<text x="28.00" y="420.00" class="title">3.15 双凹玻璃镜浸水：实物</text>
+<path d="M35.00,568.00L875.00,568.00" fill="none" stroke="#7b8799" stroke-width="1"/>
+<path d="M437.06,455.00L437.06,675.00" fill="none" stroke="#23344a" stroke-width="2"/>
+<text x="419.06" y="451.00" class="small">O</text>
+<circle cx="742.9411764705883" cy="568" r="3" fill="#23344a"/>
+<text x="734.94" y="592.00" class="small">F</text>
+<circle cx="131.1764705882353" cy="568" r="3" fill="#23344a"/>
+<text x="123.18" y="592.00" class="small">F′</text>
+<path d="M280.67,472.00L437.06,472.00" fill="none" stroke="#205fb5" stroke-width="1.8"/>
+<polygon points="380.76,472.00 374.37,474.85 374.37,469.15" fill="#205fb5"/>
+<path d="M437.06,472.00L333.58,504.48" fill="none" stroke="#b64048" stroke-width="1.8" stroke-dasharray="7 5"/>
+<path d="M437.06,472.00L475.29,460.00" fill="none" stroke="#205fb5" stroke-width="1.8"/>
+<polygon points="461.53,464.32 456.29,468.96 454.58,463.51" fill="#205fb5"/>
+<path d="M280.67,472.00L437.06,568.00" fill="none" stroke="#19805d" stroke-width="1.8"/>
+<polygon points="380.76,533.44 373.82,532.53 376.80,527.66" fill="#19805d"/>
+<path d="M437.06,568.00L333.58,504.48" fill="none" stroke="#b64048" stroke-width="1.8" stroke-dasharray="7 5"/>
+<path d="M437.06,568.00L611.37,675.00" fill="none" stroke="#19805d" stroke-width="1.8"/>
+<polygon points="548.62,636.48 541.68,635.57 544.66,630.70" fill="#19805d"/>
+<path d="M280.67,568.00L280.67,472.00" fill="none" stroke="#23344a" stroke-width="2"/>
+<circle cx="280.66784585062834" cy="472.0" r="3" fill="#23344a"/>
+<text x="262.67" y="460.00" class="small">P</text>
+<circle cx="333.57623636176737" cy="504.47761197261457" r="4" fill="#b64048"/>
+<text x="325.58" y="492.48" class="small" style="fill:#b64048">P′</text>
+<text x="35.00" y="708.00" class="small">s = −20 cm；f′ = −39.11765 cm</text>
+<text x="35.00" y="733.00" class="small">s′ = −13.23383 cm；β = +0.66169（正立缩小虚像）</text>
+</svg>

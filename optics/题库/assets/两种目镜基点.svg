@@ -1,0 +1,60 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="920" height="760" viewBox="0 0 920 760">
+<rect width="920" height="760" fill="white"/>
+<style>text{font:18px "Microsoft YaHei",sans-serif;fill:#23344a}.small{font-size:15px}.title{font-weight:700;font-size:21px}</style>
+<text x="25.00" y="30.00" class="title">I05 惠更斯：f₁′=3a，f₂′=a，d=2a</text>
+<path d="M35.00,180.00L875.00,180.00" fill="none" stroke="#7b8799" stroke-width="2"/>
+<path d="M142.50,70.00L142.50,265.00" fill="none" stroke="#23344a" stroke-width="2"/>
+<text x="132.50" y="61.00">L₁</text>
+<path d="M559.17,70.00L559.17,265.00" fill="none" stroke="#23344a" stroke-width="2"/>
+<text x="549.17" y="61.00">L₂</text>
+<path d="M767.50,96.00L767.50,252.00" fill="none" stroke="#b64048" stroke-width="2" stroke-dasharray="7 5"/>
+<text x="759.50" y="285.00" class="small" style="fill:#b64048">H</text>
+<path d="M350.83,96.00L350.83,252.00" fill="none" stroke="#b64048" stroke-width="2" stroke-dasharray="7 5"/>
+<text x="342.83" y="285.00" class="small" style="fill:#b64048">H′</text>
+<circle cx="455.0" cy="180" r="4" fill="#19805d"/>
+<text x="447.00" y="207.00" class="small" style="fill:#19805d">F</text>
+<circle cx="663.3333333333334" cy="180" r="4" fill="#19805d"/>
+<text x="655.33" y="207.00" class="small" style="fill:#19805d">F′</text>
+<path d="M80.00,131.00L142.50,131.00" fill="none" stroke="#205fb5" stroke-width="2"/>
+<polygon points="120.00,131.00 113.61,133.85 113.61,128.15" fill="#205fb5"/>
+<path d="M142.50,131.00L559.17,163.67" fill="none" stroke="#205fb5" stroke-width="2"/>
+<polygon points="409.17,151.91 402.57,154.25 403.02,148.56" fill="#205fb5"/>
+<path d="M559.17,163.67L663.33,180.00" fill="none" stroke="#205fb5" stroke-width="2"/>
+<polygon points="625.83,174.12 619.08,175.95 619.96,170.31" fill="#205fb5"/>
+<path d="M80.00,211.50L142.50,211.50" fill="none" stroke="#19805d" stroke-width="2"/>
+<polygon points="120.00,211.50 113.61,214.35 113.61,208.65" fill="#19805d"/>
+<path d="M142.50,211.50L559.17,190.50" fill="none" stroke="#19805d" stroke-width="2"/>
+<polygon points="409.17,198.06 402.93,201.23 402.64,195.53" fill="#19805d"/>
+<path d="M559.17,190.50L663.33,180.00" fill="none" stroke="#19805d" stroke-width="2"/>
+<polygon points="625.83,183.78 619.76,187.26 619.19,181.58" fill="#19805d"/>
+<text x="30.00" y="326.00" class="small">实线：平行光经两片实际成像于F′；红虚线是主面位置，不是额外玻璃片。</text>
+<text x="30.00" y="355.00" class="small">F在两镜之间；H甚至可在系统外。</text>
+<text x="25.00" y="410.00" class="title">I06 冉斯登：f₁′=f₂′=a，d=2a/3</text>
+<path d="M35.00,560.00L875.00,560.00" fill="none" stroke="#7b8799" stroke-width="2"/>
+<path d="M265.57,450.00L265.57,645.00" fill="none" stroke="#23344a" stroke-width="2"/>
+<text x="255.57" y="441.00">L₁</text>
+<path d="M574.85,450.00L574.85,645.00" fill="none" stroke="#23344a" stroke-width="2"/>
+<text x="564.85" y="441.00">L₂</text>
+<path d="M497.53,476.00L497.53,632.00" fill="none" stroke="#b64048" stroke-width="2" stroke-dasharray="7 5"/>
+<text x="489.53" y="665.00" class="small" style="fill:#b64048">H</text>
+<path d="M342.89,476.00L342.89,632.00" fill="none" stroke="#b64048" stroke-width="2" stroke-dasharray="7 5"/>
+<text x="334.89" y="665.00" class="small" style="fill:#b64048">H′</text>
+<circle cx="149.58762886597938" cy="560" r="4" fill="#19805d"/>
+<text x="141.59" y="587.00" class="small" style="fill:#19805d">F</text>
+<circle cx="690.8247422680412" cy="560" r="4" fill="#19805d"/>
+<text x="682.82" y="587.00" class="small" style="fill:#19805d">F′</text>
+<path d="M80.00,511.00L265.57,511.00" fill="none" stroke="#205fb5" stroke-width="2"/>
+<polygon points="198.76,511.00 192.37,513.85 192.37,508.15" fill="#205fb5"/>
+<path d="M265.57,511.00L574.85,543.67" fill="none" stroke="#205fb5" stroke-width="2"/>
+<polygon points="463.51,531.91 456.85,534.07 457.45,528.40" fill="#205fb5"/>
+<path d="M574.85,543.67L690.82,560.00" fill="none" stroke="#205fb5" stroke-width="2"/>
+<polygon points="649.07,554.12 642.34,556.06 643.14,550.40" fill="#205fb5"/>
+<path d="M80.00,591.50L265.57,591.50" fill="none" stroke="#19805d" stroke-width="2"/>
+<polygon points="198.76,591.50 192.37,594.35 192.37,588.65" fill="#19805d"/>
+<path d="M265.57,591.50L574.85,570.50" fill="none" stroke="#19805d" stroke-width="2"/>
+<polygon points="463.51,578.06 457.32,581.34 456.93,575.65" fill="#19805d"/>
+<path d="M574.85,570.50L690.82,560.00" fill="none" stroke="#19805d" stroke-width="2"/>
+<polygon points="649.07,563.78 642.96,567.20 642.45,561.51" fill="#19805d"/>
+<text x="30.00" y="706.00" class="small">实线：平行光经两片实际成像于F′；红虚线是主面位置，不是额外玻璃片。</text>
+<text x="30.00" y="735.00" class="small">F在L₁左a/4，也就是总焦距的1/3；不是总焦距的1/4。</text>
+</svg>

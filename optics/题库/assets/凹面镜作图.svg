@@ -1,0 +1,47 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="920" height="470" viewBox="0 0 920 470">
+<rect width="920" height="470" fill="white"/>
+<style>text{font:18px "Microsoft YaHei",sans-serif;fill:#23344a}.small{font-size:15px}.title{font-weight:700;font-size:21px}</style>
+<text x="25.00" y="32.00" class="title">3.6 凹面镜：同一入射坐标下，物像都在左侧</text>
+<path d="M40.00,140.00L880.00,140.00" fill="none" stroke="#7b8799" stroke-width="2"/>
+<path d="M830.00,65.00L830.00,365.00" fill="none" stroke="#23344a" stroke-width="3"/>
+<path d="M830.00,70.00L842.00,62.00" fill="none" stroke="#7b8799" stroke-width="2"/>
+<path d="M830.00,88.00L842.00,80.00" fill="none" stroke="#7b8799" stroke-width="2"/>
+<path d="M830.00,106.00L842.00,98.00" fill="none" stroke="#7b8799" stroke-width="2"/>
+<path d="M830.00,124.00L842.00,116.00" fill="none" stroke="#7b8799" stroke-width="2"/>
+<path d="M830.00,142.00L842.00,134.00" fill="none" stroke="#7b8799" stroke-width="2"/>
+<path d="M830.00,160.00L842.00,152.00" fill="none" stroke="#7b8799" stroke-width="2"/>
+<path d="M830.00,178.00L842.00,170.00" fill="none" stroke="#7b8799" stroke-width="2"/>
+<path d="M830.00,196.00L842.00,188.00" fill="none" stroke="#7b8799" stroke-width="2"/>
+<path d="M830.00,214.00L842.00,206.00" fill="none" stroke="#7b8799" stroke-width="2"/>
+<path d="M830.00,232.00L842.00,224.00" fill="none" stroke="#7b8799" stroke-width="2"/>
+<path d="M830.00,250.00L842.00,242.00" fill="none" stroke="#7b8799" stroke-width="2"/>
+<path d="M830.00,268.00L842.00,260.00" fill="none" stroke="#7b8799" stroke-width="2"/>
+<path d="M830.00,286.00L842.00,278.00" fill="none" stroke="#7b8799" stroke-width="2"/>
+<path d="M830.00,304.00L842.00,296.00" fill="none" stroke="#7b8799" stroke-width="2"/>
+<path d="M830.00,322.00L842.00,314.00" fill="none" stroke="#7b8799" stroke-width="2"/>
+<path d="M830.00,340.00L842.00,332.00" fill="none" stroke="#7b8799" stroke-width="2"/>
+<path d="M830.00,358.00L842.00,350.00" fill="none" stroke="#7b8799" stroke-width="2"/>
+<path d="M698.00,100.00L830.00,100.00" fill="none" stroke="#205fb5" stroke-width="2"/>
+<polygon points="782.48,100.00 776.09,102.85 776.09,97.15" fill="#205fb5"/>
+<path d="M830.00,100.00L170.00,340.00" fill="none" stroke="#205fb5" stroke-width="2"/>
+<polygon points="407.60,253.60 412.63,248.73 414.58,254.10" fill="#205fb5"/>
+<path d="M698.00,100.00L830.00,340.00" fill="none" stroke="#19805d" stroke-width="2"/>
+<polygon points="782.48,253.60 776.90,249.38 781.90,246.62" fill="#19805d"/>
+<path d="M830.00,340.00L170.00,340.00" fill="none" stroke="#19805d" stroke-width="2"/>
+<polygon points="407.60,340.00 413.99,337.15 413.99,342.85" fill="#19805d"/>
+<circle cx="170" cy="140" r="3" fill="#23344a"/>
+<text x="142.00" y="421.00" class="small">P′ = −60</text>
+<circle cx="610" cy="140" r="3" fill="#23344a"/>
+<text x="582.00" y="421.00" class="small">C = −20</text>
+<circle cx="698" cy="140" r="3" fill="#23344a"/>
+<text x="670.00" y="396.00" class="small">P = −12</text>
+<circle cx="720" cy="140" r="3" fill="#23344a"/>
+<text x="692.00" y="421.00" class="small">F = −10</text>
+<circle cx="830" cy="140" r="3" fill="#23344a"/>
+<text x="802.00" y="396.00" class="small">O = 0</text>
+<path d="M698.00,140.00L698.00,100.00" fill="none" stroke="#b64048" stroke-width="2"/>
+<text x="662.00" y="86.00" class="small" style="fill:#b64048">y = +5 cm</text>
+<path d="M170.00,140.00L170.00,340.00" fill="none" stroke="#b64048" stroke-width="2"/>
+<text x="134.00" y="366.00" class="small" style="fill:#b64048">y′ = −25 cm</text>
+<text x="25.00" y="456.00" class="small">镜面按顶点平面表示；箭头入射向右、反射向左。横纵比例不同，不按图量角。</text>
+</svg>

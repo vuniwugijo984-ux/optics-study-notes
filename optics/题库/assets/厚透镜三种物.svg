@@ -1,0 +1,113 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="920" height="1210" viewBox="0 0 920 1210">
+<rect width="920" height="1210" fill="white"/>
+<style>text{font:18px "Microsoft YaHei",sans-serif;fill:#23344a}.small{font-size:15px}.title{font-weight:700;font-size:21px}</style>
+<text x="28.00" y="30.00" class="title">3.29 (1) 实物在F左20 mm</text>
+<path d="M35.00,178.00L875.00,178.00" fill="none" stroke="#7b8799" stroke-width="1"/>
+<path d="M270.45,65.00L270.45,285.00" fill="none" stroke="#23344a" stroke-width="2"/>
+<text x="210.45" y="61.00" class="small">H = K</text>
+<path d="M281.34,65.00L281.34,285.00" fill="none" stroke="#23344a" stroke-width="2"/>
+<text x="291.34" y="61.00" class="small">H′ = K′</text>
+<circle cx="139.72067039106145" cy="178" r="3" fill="#23344a"/>
+<text x="131.72" y="202.00" class="small">F</text>
+<circle cx="412.0670391061452" cy="178" r="3" fill="#23344a"/>
+<text x="404.07" y="202.00" class="small">F′</text>
+<path d="M96.15,146.00L270.45,146.00" fill="none" stroke="#205fb5" stroke-width="1.8"/>
+<polygon points="207.70,146.00 201.31,148.85 201.31,143.15" fill="#205fb5"/>
+<path d="M270.45,146.00L281.34,146.00" fill="none" stroke="#7b8799" stroke-width="1.8" stroke-dasharray="7 5"/>
+<path d="M281.34,146.00L849.18,285.00" fill="none" stroke="#205fb5" stroke-width="1.8"/>
+<polygon points="644.76,234.96 637.87,236.21 639.23,230.67" fill="#205fb5"/>
+<path d="M96.15,146.00L270.45,178.00" fill="none" stroke="#19805d" stroke-width="1.8"/>
+<polygon points="207.70,166.48 200.90,168.13 201.93,162.52" fill="#19805d"/>
+<path d="M270.45,178.00L281.34,178.00" fill="none" stroke="#7b8799" stroke-width="1.8" stroke-dasharray="7 5"/>
+<path d="M281.34,178.00L850.00,282.40" fill="none" stroke="#19805d" stroke-width="1.8"/>
+<polygon points="645.28,244.82 638.48,246.47 639.51,240.85" fill="#19805d"/>
+<path d="M96.15,178.00L96.15,146.00" fill="none" stroke="#23344a" stroke-width="2"/>
+<circle cx="96.14525139664804" cy="146.0" r="3" fill="#23344a"/>
+<text x="78.15" y="134.00" class="small">P</text>
+<circle cx="804.2458100558658" cy="274.0" r="4" fill="#b64048"/>
+<text x="796.25" y="298.00" class="small" style="fill:#b64048">P′</text>
+<text x="35.00" y="318.00" class="small">物从H量：s = -80 mm；像从H′量：s′ = 240 mm</text>
+<text x="35.00" y="343.00" class="small">β = -3；H = 0，H′ = 5，F = −60，F′ = 65 mm</text>
+<rect x="630" y="306" width="250" height="80" fill="#f3f7fc"/>
+<path d="M650.00,347.00L860.00,347.00" fill="none" stroke="#7b8799" stroke-width="1"/>
+<path d="M680.00,328.00L680.00,364.00" fill="none" stroke="#23344a" stroke-width="2"/>
+<text x="665.00" y="322.00" class="small">H：0</text>
+<path d="M790.00,328.00L790.00,364.00" fill="none" stroke="#23344a" stroke-width="2"/>
+<text x="775.00" y="322.00" class="small">H′：5</text>
+<text x="702.00" y="379.00" class="small">间距5 mm（局部）</text>
+<text x="35.00" y="385.00" class="small">主图同一水平比例；右下另放大HH′。灰虚段为等效转接。</text>
+<text x="28.00" y="430.00" class="title">3.29 (2) 实物在F右20 mm</text>
+<path d="M35.00,578.00L875.00,578.00" fill="none" stroke="#7b8799" stroke-width="1"/>
+<path d="M535.07,465.00L535.07,685.00" fill="none" stroke="#23344a" stroke-width="2"/>
+<text x="475.07" y="461.00" class="small">H = K</text>
+<path d="M553.38,465.00L553.38,685.00" fill="none" stroke="#23344a" stroke-width="2"/>
+<text x="563.38" y="461.00" class="small">H′ = K′</text>
+<circle cx="315.3521126760563" cy="578" r="3" fill="#23344a"/>
+<text x="307.35" y="602.00" class="small">F</text>
+<circle cx="773.0985915492957" cy="578" r="3" fill="#23344a"/>
+<text x="765.10" y="602.00" class="small">F′</text>
+<path d="M388.59,546.00L535.07,546.00" fill="none" stroke="#205fb5" stroke-width="1.8"/>
+<polygon points="482.34,546.00 475.95,548.85 475.95,543.15" fill="#205fb5"/>
+<path d="M535.07,546.00L553.38,546.00" fill="none" stroke="#7b8799" stroke-width="1.8" stroke-dasharray="7 5"/>
+<path d="M553.38,546.00L113.94,482.00" fill="none" stroke="#b64048" stroke-width="1.8" stroke-dasharray="7 5"/>
+<path d="M553.38,546.00L850.00,589.20" fill="none" stroke="#205fb5" stroke-width="1.8"/>
+<polygon points="743.22,573.65 736.48,575.55 737.30,569.90" fill="#205fb5"/>
+<path d="M388.59,546.00L535.07,578.00" fill="none" stroke="#19805d" stroke-width="1.8"/>
+<polygon points="482.34,566.48 475.48,567.90 476.70,562.33" fill="#19805d"/>
+<path d="M535.07,578.00L553.38,578.00" fill="none" stroke="#7b8799" stroke-width="1.8" stroke-dasharray="7 5"/>
+<path d="M553.38,578.00L113.94,482.00" fill="none" stroke="#b64048" stroke-width="1.8" stroke-dasharray="7 5"/>
+<path d="M553.38,578.00L850.00,642.80" fill="none" stroke="#19805d" stroke-width="1.8"/>
+<polygon points="743.22,619.47 736.36,620.90 737.58,615.32" fill="#19805d"/>
+<path d="M388.59,578.00L388.59,546.00" fill="none" stroke="#23344a" stroke-width="2"/>
+<circle cx="388.59154929577466" cy="546.0" r="3" fill="#23344a"/>
+<text x="370.59" y="534.00" class="small">P</text>
+<circle cx="113.94366197183098" cy="482.0" r="4" fill="#b64048"/>
+<text x="105.94" y="470.00" class="small" style="fill:#b64048">P′</text>
+<text x="35.00" y="718.00" class="small">物从H量：s = -40 mm；像从H′量：s′ = -120 mm</text>
+<text x="35.00" y="743.00" class="small">β = 3；H = 0，H′ = 5，F = −60，F′ = 65 mm</text>
+<rect x="630" y="706" width="250" height="80" fill="#f3f7fc"/>
+<path d="M650.00,747.00L860.00,747.00" fill="none" stroke="#7b8799" stroke-width="1"/>
+<path d="M680.00,728.00L680.00,764.00" fill="none" stroke="#23344a" stroke-width="2"/>
+<text x="665.00" y="722.00" class="small">H：0</text>
+<path d="M790.00,728.00L790.00,764.00" fill="none" stroke="#23344a" stroke-width="2"/>
+<text x="775.00" y="722.00" class="small">H′：5</text>
+<text x="702.00" y="779.00" class="small">间距5 mm（局部）</text>
+<text x="35.00" y="785.00" class="small">主图同一水平比例；右下另放大HH′。灰虚段为等效转接。</text>
+<text x="28.00" y="830.00" class="title">3.29 (3) 虚物在F′右20 mm</text>
+<path d="M35.00,978.00L875.00,978.00" fill="none" stroke="#7b8799" stroke-width="1"/>
+<path d="M385.51,865.00L385.51,1085.00" fill="none" stroke="#23344a" stroke-width="2"/>
+<text x="325.51" y="861.00" class="small">H = K</text>
+<path d="M407.42,865.00L407.42,1085.00" fill="none" stroke="#23344a" stroke-width="2"/>
+<text x="417.42" y="861.00" class="small">H′ = K′</text>
+<circle cx="122.58426966292137" cy="978" r="3" fill="#23344a"/>
+<text x="114.58" y="1002.00" class="small">F</text>
+<circle cx="670.3370786516853" cy="978" r="3" fill="#23344a"/>
+<text x="662.34" y="1002.00" class="small">F′</text>
+<path d="M70.00,882.00L385.51,882.00" fill="none" stroke="#205fb5" stroke-width="1.8"/>
+<polygon points="271.92,882.00 265.53,884.85 265.53,879.15" fill="#205fb5"/>
+<path d="M385.51,882.00L757.98,882.00" fill="none" stroke="#205fb5" stroke-width="1.8" stroke-dasharray="7 5"/>
+<path d="M385.51,882.00L407.42,882.00" fill="none" stroke="#7b8799" stroke-width="1.8" stroke-dasharray="7 5"/>
+<path d="M407.42,882.00L850.00,1043.60" fill="none" stroke="#205fb5" stroke-width="1.8"/>
+<polygon points="690.67,985.42 683.69,985.91 685.64,980.55" fill="#205fb5"/>
+<path d="M70.00,1059.32L385.51,978.00" fill="none" stroke="#19805d" stroke-width="1.8"/>
+<polygon points="271.92,1007.27 266.45,1011.63 265.02,1006.11" fill="#19805d"/>
+<path d="M385.51,978.00L757.98,882.00" fill="none" stroke="#19805d" stroke-width="1.8" stroke-dasharray="7 5"/>
+<path d="M385.51,978.00L407.42,978.00" fill="none" stroke="#7b8799" stroke-width="1.8" stroke-dasharray="7 5"/>
+<path d="M407.42,978.00L826.45,870.00" fill="none" stroke="#19805d" stroke-width="1.8"/>
+<polygon points="675.60,908.88 670.12,913.24 668.69,907.71" fill="#19805d"/>
+<path d="M757.98,978.00L757.98,882.00" fill="none" stroke="#23344a" stroke-width="2" stroke-dasharray="7 5"/>
+<circle cx="757.9775280898875" cy="882.0" r="3" fill="#23344a"/>
+<text x="739.98" y="870.00" class="small">P（虚物）</text>
+<circle cx="561.5420379697791" cy="938.2758620689656" r="4" fill="#b64048"/>
+<text x="553.54" y="926.28" class="small" style="fill:#b64048">P′</text>
+<text x="35.00" y="1118.00" class="small">物从H量：s = 85 mm；像从H′量：s′ = 35.172 mm</text>
+<text x="35.00" y="1143.00" class="small">β = 0.41379；H = 0，H′ = 5，F = −60，F′ = 65 mm</text>
+<rect x="630" y="1106" width="250" height="80" fill="#f3f7fc"/>
+<path d="M650.00,1147.00L860.00,1147.00" fill="none" stroke="#7b8799" stroke-width="1"/>
+<path d="M680.00,1128.00L680.00,1164.00" fill="none" stroke="#23344a" stroke-width="2"/>
+<text x="665.00" y="1122.00" class="small">H：0</text>
+<path d="M790.00,1128.00L790.00,1164.00" fill="none" stroke="#23344a" stroke-width="2"/>
+<text x="775.00" y="1122.00" class="small">H′：5</text>
+<text x="702.00" y="1179.00" class="small">间距5 mm（局部）</text>
+<text x="35.00" y="1185.00" class="small">主图同一水平比例；右下另放大HH′。灰虚段为等效转接。</text>
+</svg>

@@ -1,0 +1,58 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="920" height="780" viewBox="0 0 920 780">
+<rect width="920" height="780" fill="white"/>
+<style>text{font:18px "Microsoft YaHei",sans-serif;fill:#23344a}.small{font-size:15px}.title{font-weight:700;font-size:21px}</style>
+<text x="25.00" y="32.00" class="title">B09 加平板：逐段折射与返回</text>
+<path d="M40.00,175.00L875.00,175.00" fill="none" stroke="#7b8799" stroke-width="2"/>
+<rect x="614" y="75" width="144" height="210" fill="#edf4fb"/>
+<path d="M614.00,75.00L614.00,285.00" fill="none" stroke="#7b8799" stroke-width="2"/>
+<path d="M758.00,75.00L758.00,285.00" fill="none" stroke="#7b8799" stroke-width="2"/>
+<text x="604.00" y="62.00" class="small">d₁=6，n=1.5</text>
+<path d="M830.00,75.00L830.00,285.00" fill="none" stroke="#23344a" stroke-width="3"/>
+<text x="795.00" y="311.00" class="small">镜：0</text>
+<path d="M110.00,139.00L614.00,112.00" fill="none" stroke="#205fb5" stroke-width="2"/>
+<polygon points="432.56,121.72 426.33,124.91 426.02,119.21" fill="#205fb5"/>
+<path d="M614.00,112.00L758.00,106.86" fill="none" stroke="#205fb5" stroke-width="2"/>
+<polygon points="706.16,108.71 699.87,111.79 699.67,106.08" fill="#205fb5"/>
+<path d="M758.00,106.86L830.00,103.00" fill="none" stroke="#205fb5" stroke-width="2"/>
+<polygon points="804.08,104.39 797.85,107.58 797.54,101.88" fill="#205fb5"/>
+<path d="M830.00,103.00L758.00,120.74" fill="none" stroke="#205fb5" stroke-width="2"/>
+<polygon points="783.92,114.36 789.44,110.05 790.81,115.60" fill="#205fb5"/>
+<path d="M758.00,120.74L614.00,144.40" fill="none" stroke="#205fb5" stroke-width="2"/>
+<polygon points="665.84,135.88 671.68,132.03 672.61,137.66" fill="#205fb5"/>
+<path d="M614.00,144.40L408.67,195.00" fill="none" stroke="#205fb5" stroke-width="2"/>
+<polygon points="482.59,176.78 488.11,172.48 489.48,178.03" fill="#205fb5"/>
+<path d="M110.00,139.00L614.00,193.00" fill="none" stroke="#19805d" stroke-width="2"/>
+<polygon points="432.56,173.56 425.90,175.72 426.51,170.04" fill="#19805d"/>
+<path d="M614.00,193.00L758.00,203.29" fill="none" stroke="#19805d" stroke-width="2"/>
+<polygon points="706.16,199.58 699.58,201.97 699.99,196.28" fill="#19805d"/>
+<path d="M758.00,203.29L830.00,211.00" fill="none" stroke="#19805d" stroke-width="2"/>
+<polygon points="804.08,208.22 797.42,210.38 798.03,204.70" fill="#19805d"/>
+<path d="M830.00,211.00L758.00,207.91" fill="none" stroke="#19805d" stroke-width="2"/>
+<polygon points="783.92,209.03 790.43,206.45 790.18,212.15" fill="#19805d"/>
+<path d="M758.00,207.91L614.00,203.80" fill="none" stroke="#19805d" stroke-width="2"/>
+<polygon points="665.84,205.28 672.31,202.61 672.15,208.32" fill="#19805d"/>
+<path d="M614.00,203.80L408.67,195.00" fill="none" stroke="#19805d" stroke-width="2"/>
+<polygon points="482.59,198.17 489.09,195.59 488.85,201.29" fill="#19805d"/>
+<path d="M110.00,175.00L110.00,139.00" fill="none" stroke="#b64048" stroke-width="2"/>
+<text x="82.00" y="336.00" class="small">P：−30</text>
+<path d="M408.67,175.00L408.67,195.00" fill="none" stroke="#b64048" stroke-width="2"/>
+<text x="380.67" y="336.00" class="small">P′：−17.555…</text>
+<text x="30.00" y="370.00" class="small">数值只用于证明的几何验算：F=10，Δ=2 cm；上下图最终像坐标相同。</text>
+<text x="25.00" y="422.00" class="title">B09 去板、镜面向物移动Δ：同一最终像点</text>
+<path d="M40.00,565.00L875.00,565.00" fill="none" stroke="#7b8799" stroke-width="2"/>
+<path d="M782.00,465.00L782.00,675.00" fill="none" stroke="#23344a" stroke-width="3"/>
+<text x="747.00" y="701.00" class="small">镜：−2</text>
+<path d="M110.00,529.00L782.00,493.00" fill="none" stroke="#205fb5" stroke-width="2"/>
+<polygon points="540.08,505.96 533.85,509.15 533.54,503.45" fill="#205fb5"/>
+<path d="M782.00,493.00L408.67,585.00" fill="none" stroke="#205fb5" stroke-width="2"/>
+<polygon points="543.07,551.88 548.59,547.58 549.96,553.12" fill="#205fb5"/>
+<path d="M110.00,529.00L782.00,601.00" fill="none" stroke="#19805d" stroke-width="2"/>
+<polygon points="540.08,575.08 533.42,577.24 534.03,571.56" fill="#19805d"/>
+<path d="M782.00,601.00L408.67,585.00" fill="none" stroke="#19805d" stroke-width="2"/>
+<polygon points="543.07,590.76 549.57,588.18 549.33,593.89" fill="#19805d"/>
+<path d="M110.00,565.00L110.00,529.00" fill="none" stroke="#b64048" stroke-width="2"/>
+<text x="82.00" y="726.00" class="small">P：−30</text>
+<path d="M408.67,565.00L408.67,585.00" fill="none" stroke="#b64048" stroke-width="2"/>
+<text x="380.67" y="726.00" class="small">P′：−17.555…</text>
+<text x="30.00" y="760.00" class="small">数值只用于证明的几何验算：F=10，Δ=2 cm；上下图最终像坐标相同。</text>
+</svg>

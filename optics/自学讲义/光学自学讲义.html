@@ -87,6 +87,7 @@
     <aside>
       <h2>目录</h2>
       <a href="#start">如何使用</a>
+      <a href="../题库/光学PPT与作业题解.html">PPT与作业完整题解</a>
       <a href="#map">完整课程地图</a>
       <a href="#homework">作业布置逻辑</a>
       <a href="#principles">基础原理：光程与费马</a>
@@ -1739,7 +1740,7 @@ L(h)\approx L_0
 <h3>8. 已布置习题 3.15</h3>
         <figure>
           <img src="assets/第05课/21-教材习题3.15.jpg" alt="教材习题3.15">
-          <figcaption>教材第 162 页：双凸、双凹玻璃透镜分别放在空气和水中。</figcaption>
+          <figcaption>教材第162页：双凸、双凹两块玻璃透镜分别浸在水中计算。</figcaption>
         </figure>
         <details><summary>只看入手提示</summary>
           <p>对每块透镜先画两球心，确定 \(r_1,r_2\) 的符号。空气中用 \((n-1)(1/r_1-1/r_2)\)；水中必须改用 \((n/n_0-1)(1/r_1-1/r_2)\)。先求焦距，再代入物像公式。作图与计算都要说明像的实虚、正倒和放缩；水中折射率反差变小，光焦度的绝对值也会变小。</p>
@@ -1754,7 +1755,7 @@ L(h)\approx L_0
           <p>这是“空气做成的双凹透镜”放在水中。透镜材料折射率小于外界，\(n/n_0-1\lt0\)；双凹形状对应的曲率组合也为负，两者相乘后光焦度反而为正。先用这一符号判断功能，再算焦距。</p>
         </details>
         <details><summary>习题 3.18：只看入手提示</summary>
-          <p>斜入射平行光不在轴上焦点会聚，而在像方焦平面上成一点。第二问把点光源放在物方焦平面上，因此出射光应为平行光；离轴 \(1\,\mathrm{cm}\) 决定平行光束的倾角。会聚、发散透镜要分别使用实焦面或虚焦面的延长线。</p>
+          <p>斜平行光在像方焦平面成像，负镜用反向延长找虚像。第二问给的是几何左焦平面：正镜出射平行；负镜左侧为像方焦面，\(s=-10\) cm时成\(s'=-5\) cm虚像，不能同判平行。</p>
         </details>
 
         <h3>8.2 已布置习题 3.19</h3>
@@ -1964,17 +1965,14 @@ L(h)\approx L_0
           <img src="assets/第06课/06-厚透镜参数例题.png" alt="厚透镜焦距和主点位置例题">
           <figcaption>课件第 9 页：\(H\) 在 \(O_1\) 右侧 \(0.57\,\mathrm{cm}\)，\(H'\) 在 \(O_2\) 左侧 \(0.86\,\mathrm{cm}\)。</figcaption>
         </figure>
-        <p>若物点在 \(O_1\) 左侧 \(8\,\mathrm{cm}\)，表面坐标为 \(\bar s=-8\,\mathrm{cm}\)，但进入高斯公式前必须改成主点坐标：</p>
-        <div class="math">\[s=\bar s-p=-8-0.57=-8.57\,\mathrm{cm}\]</div>
-        <p>由等效物像公式：</p>
-        <div class="math">\[\frac{1}{s'}-\frac{1}{-8.57}=\frac{1}{5.14}\quad\Longrightarrow\quad s'=12.80\,\mathrm{cm}\]</div>
-        <p>这个 \(s'\) 是从 \(H'\) 量起的。题目问像相对后表面 \(O_2\) 的位置，所以还要换回表面坐标：</p>
-        <div class="math">\[\bar s'=s'+p'=12.80-0.86=11.94\,\mathrm{cm}\]</div>
-        <figure>
-          <img src="assets/第06课/13-厚透镜成像例题结果.png" alt="厚透镜例题的主平面坐标换算和最终像位置">
-          <figcaption>课件第 18 页：最终像在 \(O_2\) 右侧 \(11.94\,\mathrm{cm}\)，不是右侧 \(12.80\,\mathrm{cm}\)。后者是相对 \(H'\) 的像距。</figcaption>
-        </figure>
-        <div class="callout danger"><strong>本课最常见失分：</strong>算出 \(s'\) 后忘记它从 \(H'\) 起算，直接把它当成距后表面的距离。题目问“像在哪里”时，一定要说明参考点。</div>
+        <p>物在左顶点前8 cm，用未舍入参数：\(f'=36/7\) cm、\(p=4/7\) cm、\(p'=-6/7\) cm。先把物距起点改到主点：</p>
+        <div class="math">\[s=\bar s-p=-8-4/7=-60/7\ \mathrm{cm}\]</div>
+        <div class="math">\[\frac1{s'}-\frac1{-60/7}=\frac7{36}\quad\Rightarrow\quad s'=90/7\ \mathrm{cm}\]</div>
+        <p>该像距从\(H'\)量；换回后顶点：</p>
+        <div class="math">\[\bar s'=s'+p'=90/7-6/7=12\ \mathrm{cm}\]</div>
+        <p><strong>逐面检查：</strong>第一面\(1.5/s_1'+1/8=0.5/4\)，内部恰为平行光；第二面直接给\(1/s_2'=(1-1.5)/(-6)=1/12\)。所以像在后顶点右12 cm，倒立放大实像，\(\beta=-3/2\)。</p>
+        <figure><img src="assets/第06课/13-厚透镜成像例题结果.png" alt="课件原计算，数值已在正文更正"><figcaption>课件第18页的12.80、11.94 cm有误。正确值：从\(H'\)量\(90/7\) cm，从\(O_2\)量12 cm。</figcaption></figure>
+        <div class="callout warn">解题须说明参考点，使用未舍入参数计算，最后再取小数；原课件答案也要回代检查。</div>
 
         <h3>8. 用主平面作图</h3>
         <p>当系统两侧介质相同、主点和焦点已知时，可把薄透镜的三条特殊光线改写为：</p>
@@ -2051,7 +2049,7 @@ L(h)\approx L_0
           <li>主平面的单位放大率共轭是什么意思？<details><summary>答案</summary>物方主平面上的点与像方主平面上同高度的点互相共轭，横向放大率为 1；它提供外部作图的等高转移规则。</details></li>
           <li>主平面是否一定在玻璃内部？<details><summary>答案</summary>不一定。它是等效系统的几何基面，可位于元件内部，也可落在系统外。</details></li>
           <li>为什么薄透镜只有一个近似重合的主平面？<details><summary>答案</summary>当厚度 \(\delta\to0\) 时，\(p,p'\to0\)，两主点与透镜位置近似重合。</details></li>
-          <li>课件例题中 \(s'=12.80\,\mathrm{cm}\) 为什么不是最终报告的表面像距？<details><summary>答案</summary>它从 \(H'\) 起算；还需用 \(\bar s'=s'+p'\) 换回相对 \(O_2\) 的距离，得到 \(11.94\,\mathrm{cm}\)。</details></li>
+          <li>厚透镜例题从\(H'\)量的\(s'=90/7\) cm，如何换成后顶点像距？<details><summary>答案</summary>\(\bar s'=s'+p'=90/7-6/7=12\) cm，参考点从\(H'\)改为\(O_2\)；课件原数值有误。</details></li>
           <li>什么时候不能只用等效厚透镜作图？<details><summary>答案</summary>题目要求内部真实光路、中间像或某一表面上的信息时，必须逐面分析。</details></li>
           <li>两次清晰成像实验为什么要求物屏距离不小于 \(4f'\)？<details><summary>答案</summary>固定物屏距离就是固定 \(u+v\)。正透镜成实像时 \(u+v\ge4f'\)，小于该值便不存在实数的共轭位置。</details></li>
         </ol>
@@ -2765,7 +2763,7 @@ xx'=ff'}.\]</div>
         <div class="callout">原始教材与课件见“optics/原始资料”。图注同时标注书页与PDF页码（本版PDF页码＝书页＋18）。公式支持离线阅读。</div>
       </section>
 
-      <footer>光学自学讲义 · 第 1.9.3 版 · 2026-10-24（棱镜题型与带练）</footer>
+      <footer>光学自学讲义 · 第 1.9.4 版 · 2026-10-24（题册入口与例题校正）</footer>
     </main>
   </div>
   <script>

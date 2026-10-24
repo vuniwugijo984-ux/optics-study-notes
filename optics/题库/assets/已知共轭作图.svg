@@ -1,0 +1,44 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="920" height="480" viewBox="0 0 920 480">
+<rect width="920" height="480" fill="white"/>
+<style>text{font:18px "Microsoft YaHei",sans-serif;fill:#23344a}.small{font-size:15px}.title{font-weight:700;font-size:21px}</style>
+<text x="25.00" y="32.00" class="title">3.26 先从已知共轭点恢复焦点，再作任意物点的像</text>
+<path d="M30.00,215.00L885.00,215.00" fill="none" stroke="#7b8799" stroke-width="2"/>
+<path d="M420.00,75.00L420.00,362.00" fill="none" stroke="#7b8799" stroke-width="2" stroke-dasharray="7 5"/>
+<text x="412.00" y="68.00">H</text>
+<path d="M560.00,75.00L560.00,362.00" fill="none" stroke="#7b8799" stroke-width="2" stroke-dasharray="7 5"/>
+<text x="552.00" y="68.00">H′</text>
+<path d="M255.00,127.00L420.00,127.00" fill="none" stroke="#7b8799" stroke-width="2"/>
+<path d="M420.00,127.00L560.00,127.00" fill="none" stroke="#7b8799" stroke-width="2" stroke-dasharray="7 5"/>
+<path d="M560.00,127.00L670.00,265.00" fill="none" stroke="#7b8799" stroke-width="2"/>
+<path d="M670.00,265.00L560.00,265.00" fill="none" stroke="#7b8799" stroke-width="2"/>
+<path d="M560.00,265.00L420.00,265.00" fill="none" stroke="#7b8799" stroke-width="2" stroke-dasharray="7 5"/>
+<path d="M420.00,265.00L255.00,127.00" fill="none" stroke="#7b8799" stroke-width="2"/>
+<path d="M310.00,295.00L420.00,295.00" fill="none" stroke="#205fb5" stroke-width="2"/>
+<polygon points="380.40,295.00 374.01,297.85 374.01,292.15" fill="#205fb5"/>
+<path d="M420.00,295.00L560.00,295.00" fill="none" stroke="#7b8799" stroke-width="2" stroke-dasharray="7 5"/>
+<path d="M560.00,295.00L713.65,119.76" fill="none" stroke="#205fb5" stroke-width="2"/>
+<polygon points="658.34,182.85 656.27,189.54 651.98,185.77" fill="#205fb5"/>
+<path d="M310.00,295.00L420.00,119.76" fill="none" stroke="#19805d" stroke-width="2"/>
+<polygon points="380.40,182.85 379.42,189.78 374.58,186.74" fill="#19805d"/>
+<path d="M420.00,119.76L560.00,119.76" fill="none" stroke="#7b8799" stroke-width="2" stroke-dasharray="7 5"/>
+<path d="M560.00,119.76L713.65,119.76" fill="none" stroke="#19805d" stroke-width="2"/>
+<polygon points="658.34,119.76 651.94,122.62 651.94,116.91" fill="#19805d"/>
+<circle cx="255" cy="127" r="3" fill="#23344a"/>
+<text x="223.00" y="115.00">S₁</text>
+<circle cx="670" cy="265" r="3" fill="#23344a"/>
+<text x="680.00" y="279.00">S₁′</text>
+<circle cx="310" cy="295" r="3" fill="#23344a"/>
+<text x="280.00" y="322.00">S₂</text>
+<circle cx="713.6507936507936" cy="119.76190476190473" r="3" fill="#23344a"/>
+<text x="723.65" y="111.76">S₂′</text>
+<circle cx="360.2173913043478" cy="215" r="3" fill="#23344a"/>
+<text x="352.22" y="240.00">F</text>
+<circle cx="630.1449275362319" cy="215" r="3" fill="#23344a"/>
+<text x="622.14" y="240.00">F′</text>
+<text x="396.00" y="148.00" class="small">A</text>
+<text x="570.00" y="148.00" class="small">A′</text>
+<text x="396.00" y="286.00" class="small">B</text>
+<text x="525.00" y="286.00" class="small">B′</text>
+<text x="30.00" y="410.00" class="small">灰线：已知S₁、S₁′构造F、F′；蓝/绿线：待求S₂的两条特殊光线。</text>
+<text x="30.00" y="442.00" class="small">主面间只作等高虚转接。教学重绘无给定比例，不能从图中读出厘米值。</text>
+</svg>

@@ -1,0 +1,65 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="920" height="780" viewBox="0 0 920 780">
+<rect width="920" height="780" fill="white"/>
+<style>text{font:18px "Microsoft YaHei",sans-serif;fill:#23344a}.small{font-size:15px}.title{font-weight:700;font-size:21px}</style>
+<text x="28.00" y="30.00" class="title">3.19(a) 已知倒立物像：补光心、两个焦点</text>
+<path d="M35.00,178.00L875.00,178.00" fill="none" stroke="#7b8799" stroke-width="1"/>
+<path d="M332.57,65.00L332.57,285.00" fill="none" stroke="#23344a" stroke-width="2"/>
+<text x="314.57" y="61.00" class="small">O</text>
+<circle cx="178.11881188118815" cy="178" r="3" fill="#23344a"/>
+<text x="170.12" y="202.00" class="small">F</text>
+<circle cx="487.029702970297" cy="178" r="3" fill="#23344a"/>
+<text x="479.03" y="202.00" class="small">F′</text>
+<path d="M100.89,130.00L332.57,130.00" fill="none" stroke="#205fb5" stroke-width="1.8"/>
+<polygon points="249.17,130.00 242.78,132.85 242.78,127.15" fill="#205fb5"/>
+<path d="M332.57,130.00L831.34,285.00" fill="none" stroke="#205fb5" stroke-width="1.8"/>
+<polygon points="651.78,229.20 644.83,230.03 646.53,224.58" fill="#205fb5"/>
+<path d="M100.89,130.00L332.57,178.00" fill="none" stroke="#23344a" stroke-width="1.8"/>
+<polygon points="249.17,160.72 242.33,162.22 243.49,156.63" fill="#23344a"/>
+<path d="M332.57,178.00L849.03,285.00" fill="none" stroke="#23344a" stroke-width="1.8"/>
+<polygon points="663.11,246.48 656.27,247.98 657.43,242.39" fill="#23344a"/>
+<path d="M100.89,130.00L332.57,274.00" fill="none" stroke="#7b8799" stroke-width="1.8"/>
+<polygon points="249.17,222.16 242.23,221.21 245.25,216.36" fill="#7b8799"/>
+<path d="M332.57,274.00L850.00,274.00" fill="none" stroke="#7b8799" stroke-width="1.8"/>
+<polygon points="663.73,274.00 657.34,276.85 657.34,271.15" fill="#7b8799"/>
+<path d="M100.89,178.00L100.89,130.00" fill="none" stroke="#23344a" stroke-width="2"/>
+<circle cx="100.8910891089109" cy="130.0" r="3" fill="#23344a"/>
+<text x="82.89" y="118.00" class="small">S</text>
+<circle cx="795.940594059406" cy="274.0" r="4" fill="#b64048"/>
+<text x="787.94" y="298.00" class="small" style="fill:#b64048">S′</text>
+<text x="342.57" y="120.00" class="small">A</text>
+<text x="308.57" y="298.00" class="small">B</text>
+<text x="35.00" y="318.00" class="small">构造顺序：连接SS′与轴交于O → 在O作镜面 → 平行轴线交镜面A → AS′交轴得F′。</text>
+<text x="35.00" y="343.00" class="small">逆向同理得F；图为按原题拓扑重绘，无原题数值，不按图量距。</text>
+<text x="28.00" y="420.00" class="title">3.19(b) 已知正立缩小虚像：补光心、两个焦点</text>
+<path d="M35.00,568.00L875.00,568.00" fill="none" stroke="#7b8799" stroke-width="1"/>
+<path d="M437.06,455.00L437.06,675.00" fill="none" stroke="#23344a" stroke-width="2"/>
+<text x="419.06" y="451.00" class="small">O</text>
+<circle cx="742.9411764705883" cy="568" r="3" fill="#23344a"/>
+<text x="734.94" y="592.00" class="small">F</text>
+<circle cx="131.1764705882353" cy="568" r="3" fill="#23344a"/>
+<text x="123.18" y="592.00" class="small">F′</text>
+<path d="M131.18,472.00L437.06,472.00" fill="none" stroke="#205fb5" stroke-width="1.8"/>
+<polygon points="326.94,472.00 320.55,474.85 320.55,469.15" fill="#205fb5"/>
+<path d="M437.06,472.00L284.12,520.00" fill="none" stroke="#b64048" stroke-width="1.8" stroke-dasharray="7 5"/>
+<path d="M437.06,472.00L475.29,460.00" fill="none" stroke="#205fb5" stroke-width="1.8"/>
+<polygon points="461.53,464.32 456.29,468.96 454.58,463.51" fill="#205fb5"/>
+<path d="M131.18,472.00L437.06,568.00" fill="none" stroke="#23344a" stroke-width="1.8"/>
+<polygon points="326.94,533.44 319.99,534.25 321.70,528.80" fill="#23344a"/>
+<path d="M437.06,568.00L284.12,520.00" fill="none" stroke="#b64048" stroke-width="1.8" stroke-dasharray="7 5"/>
+<path d="M437.06,568.00L777.99,675.00" fill="none" stroke="#23344a" stroke-width="1.8"/>
+<polygon points="655.25,636.48 648.30,637.29 650.01,631.84" fill="#23344a"/>
+<path d="M131.18,472.00L437.06,520.00" fill="none" stroke="#7b8799" stroke-width="1.8"/>
+<polygon points="326.94,502.72 320.18,504.55 321.07,498.91" fill="#7b8799"/>
+<path d="M437.06,520.00L284.12,520.00" fill="none" stroke="#b64048" stroke-width="1.8" stroke-dasharray="7 5"/>
+<path d="M437.06,520.00L850.00,520.00" fill="none" stroke="#7b8799" stroke-width="1.8"/>
+<polygon points="701.34,520.00 694.95,522.85 694.95,517.15" fill="#7b8799"/>
+<path d="M131.18,568.00L131.18,472.00" fill="none" stroke="#23344a" stroke-width="2"/>
+<circle cx="131.1764705882353" cy="472.0" r="3" fill="#23344a"/>
+<text x="113.18" y="460.00" class="small">S</text>
+<circle cx="284.11764705882354" cy="520.0" r="4" fill="#b64048"/>
+<text x="276.12" y="508.00" class="small" style="fill:#b64048">S′</text>
+<text x="447.06" y="462.00" class="small">A</text>
+<text x="413.06" y="508.00" class="small">B</text>
+<text x="35.00" y="708.00" class="small">S、S′的连线仍经O；AS′为出射线的反延，不能把指向左虚像的箭头画成实际传播。</text>
+<text x="35.00" y="733.00" class="small">黑线SS′先确定O；A、B处各自的轴向平行线分别恢复F′、F。</text>
+</svg>

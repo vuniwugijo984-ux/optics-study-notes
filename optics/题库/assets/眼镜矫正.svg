@@ -1,0 +1,51 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="920" height="780" viewBox="0 0 920 780">
+<rect width="920" height="780" fill="white"/>
+<style>text{font:18px "Microsoft YaHei",sans-serif;fill:#23344a}.small{font-size:15px}.title{font-weight:700;font-size:21px}</style>
+<text x="28.00" y="30.00" class="title">I01 近视矫正：平行光经负镜后像在远点</text>
+<path d="M35.00,178.00L875.00,178.00" fill="none" stroke="#7b8799" stroke-width="1"/>
+<path d="M422.26,65.00L422.26,285.00" fill="none" stroke="#23344a" stroke-width="2"/>
+<text x="404.26" y="61.00" class="small">O</text>
+<circle cx="673.8709677419356" cy="178" r="3" fill="#23344a"/>
+<text x="665.87" y="202.00" class="small">F</text>
+<circle cx="170.6451612903226" cy="178" r="3" fill="#23344a"/>
+<text x="162.65" y="202.00" class="small">F′</text>
+<path d="M70.00,115.60L422.26,115.60" fill="none" stroke="#205fb5" stroke-width="1.8"/>
+<polygon points="295.45,115.60 289.05,118.45 289.05,112.75" fill="#205fb5"/>
+<path d="M422.26,115.60L170.65,178.00" fill="none" stroke="#b64048" stroke-width="1.8" stroke-dasharray="7 5"/>
+<path d="M422.26,115.60L606.13,70.00" fill="none" stroke="#205fb5" stroke-width="1.8"/>
+<polygon points="539.94,86.42 534.42,90.72 533.04,85.18" fill="#205fb5"/>
+<path d="M70.00,240.40L422.26,240.40" fill="none" stroke="#19805d" stroke-width="1.8"/>
+<polygon points="295.45,240.40 289.05,243.25 289.05,237.55" fill="#19805d"/>
+<path d="M422.26,240.40L170.65,178.00" fill="none" stroke="#b64048" stroke-width="1.8" stroke-dasharray="7 5"/>
+<path d="M422.26,240.40L602.10,285.00" fill="none" stroke="#19805d" stroke-width="1.8"/>
+<polygon points="537.35,268.94 530.46,270.18 531.84,264.64" fill="#19805d"/>
+<circle cx="170.6451612903226" cy="178.0" r="4" fill="#b64048"/>
+<text x="184.65" y="161.00" class="small" style="fill:#b64048">P′</text>
+<text x="35.00" y="318.00" class="small">f′ = −0.50 m；平行束出射发散，左反延至远点。</text>
+<text x="35.00" y="343.00" class="small">眼睛位于镜后；图中红虚线不是实际走到远点的光。</text>
+<text x="28.00" y="420.00" class="title">I02 近点后移：正镜将25 cm物成50 cm虚像</text>
+<path d="M35.00,568.00L875.00,568.00" fill="none" stroke="#7b8799" stroke-width="1"/>
+<path d="M422.26,455.00L422.26,675.00" fill="none" stroke="#23344a" stroke-width="2"/>
+<text x="404.26" y="451.00" class="small">O</text>
+<circle cx="170.6451612903226" cy="568" r="3" fill="#23344a"/>
+<text x="162.65" y="592.00" class="small">F</text>
+<circle cx="673.8709677419356" cy="568" r="3" fill="#23344a"/>
+<text x="665.87" y="592.00" class="small">F′</text>
+<path d="M296.45,520.00L422.26,520.00" fill="none" stroke="#205fb5" stroke-width="1.8"/>
+<polygon points="376.97,520.00 370.58,522.85 370.58,517.15" fill="#205fb5"/>
+<path d="M422.26,520.00L170.65,472.00" fill="none" stroke="#b64048" stroke-width="1.8" stroke-dasharray="7 5"/>
+<path d="M422.26,520.00L850.00,601.60" fill="none" stroke="#205fb5" stroke-width="1.8"/>
+<polygon points="696.01,572.22 689.20,573.83 690.27,568.22" fill="#205fb5"/>
+<path d="M296.45,520.00L422.26,568.00" fill="none" stroke="#19805d" stroke-width="1.8"/>
+<polygon points="376.97,550.72 369.98,551.11 372.01,545.77" fill="#19805d"/>
+<path d="M422.26,568.00L170.65,472.00" fill="none" stroke="#b64048" stroke-width="1.8" stroke-dasharray="7 5"/>
+<path d="M422.26,568.00L702.70,675.00" fill="none" stroke="#19805d" stroke-width="1.8"/>
+<polygon points="601.74,636.48 594.75,636.87 596.79,631.53" fill="#19805d"/>
+<path d="M296.45,568.00L296.45,520.00" fill="none" stroke="#23344a" stroke-width="2"/>
+<circle cx="296.45161290322585" cy="520.0" r="3" fill="#23344a"/>
+<text x="278.45" y="508.00" class="small">P</text>
+<circle cx="170.6451612903226" cy="472.0" r="4" fill="#b64048"/>
+<text x="162.65" y="460.00" class="small" style="fill:#b64048">P′</text>
+<text x="35.00" y="708.00" class="small">s = −0.25 m；s′ = −0.50 m；f′ = +0.50 m</text>
+<text x="35.00" y="733.00" class="small">镜后眼睛收到的发散束，相当于来自较远的近点。</text>
+</svg>

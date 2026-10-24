@@ -1,0 +1,36 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="920" height="680" viewBox="0 0 920 680">
+<rect width="920" height="680" fill="white"/>
+<style>text{font:18px "Microsoft YaHei",sans-serif;fill:#23344a}.small{font-size:15px}.title{font-weight:700;font-size:21px}</style>
+<text x="25.00" y="32.00" class="title">W02 路长先由几何确定：R² = L² + ρ²</text>
+<path d="M55.00,230.00L840.00,230.00" fill="none" stroke="#7b8799" stroke-width="2"/>
+<path d="M650.00,65.00L650.00,275.00" fill="none" stroke="#7b8799" stroke-width="2"/>
+<path d="M110.00,230.00L650.00,100.00" fill="none" stroke="#205fb5" stroke-width="2"/>
+<polygon points="455.60,146.80 450.05,151.07 448.72,145.52" fill="#205fb5"/>
+<path d="M110.00,230.00L650.00,230.00" fill="none" stroke="#7b8799" stroke-width="2" stroke-dasharray="7 5"/>
+<path d="M650.00,230.00L650.00,100.00" fill="none" stroke="#19805d" stroke-width="2"/>
+<text x="310.00" y="145.00" class="small">R：源到观察点的实际路长</text>
+<text x="330.00" y="255.00" class="small">L = |z₁−z₀|</text>
+<text x="668.00" y="168.00" class="small">ρ</text>
+<circle cx="110" cy="230" r="3" fill="#23344a"/>
+<text x="45.00" y="280.00" class="small">源S：(x₀,y₀,z₀)</text>
+<circle cx="650" cy="100" r="3" fill="#23344a"/>
+<text x="640.00" y="82.00" class="small">P：(x,y,z₁)</text>
+<circle cx="650" cy="230" r="3" fill="#23344a"/>
+<text x="570.00" y="312.00" class="small">源在观察平面的投影</text>
+<text x="25.00" y="351.00" class="small">ρ² = (x−x₀)²+(y−y₀)²；图把横向距离合成ρ，不要求源在坐标轴上。</text>
+<text x="25.00" y="400.00" class="title">W05 在复平面把相量首尾相接：U = U₁ + U₂</text>
+<path d="M80.00,600.00L770.00,600.00" fill="none" stroke="#7b8799" stroke-width="2"/>
+<path d="M140.00,640.00L140.00,430.00" fill="none" stroke="#7b8799" stroke-width="2"/>
+<path d="M140.00,600.00L415.00,520.00" fill="none" stroke="#205fb5" stroke-width="3"/>
+<polygon points="316.00,548.80 310.66,553.33 309.07,547.84" fill="#205fb5"/>
+<path d="M415.00,520.00L370.00,450.00" fill="none" stroke="#19805d" stroke-width="3"/>
+<polygon points="386.20,475.20 392.06,479.03 387.26,482.12" fill="#19805d"/>
+<path d="M140.00,600.00L370.00,450.00" fill="none" stroke="#b64048" stroke-width="3"/>
+<polygon points="287.20,504.00 283.41,509.88 280.29,505.10" fill="#b64048"/>
+<text x="770.00" y="605.00" class="small">实轴</text>
+<text x="85.00" y="438.00" class="small">虚轴</text>
+<text x="280.00" y="573.00" class="small" style="fill:#205fb5">U₁</text>
+<text x="420.00" y="488.00" class="small" style="fill:#19805d">平移后的U₂</text>
+<text x="204.00" y="503.00" class="small" style="fill:#b64048">合相量U</text>
+<text x="25.00" y="670.00" class="small">相位角从实轴量；这是复数的幅相图，不是两束光的空间传播方向图。</text>
+</svg>

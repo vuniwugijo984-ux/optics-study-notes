@@ -1,0 +1,99 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="920" height="1270" viewBox="0 0 920 1270">
+<rect width="920" height="1270" fill="white"/>
+<style>text{font:18px "Microsoft YaHei",sans-serif;fill:#23344a}.small{font-size:15px}.title{font-weight:700;font-size:21px}</style>
+<text x="25.00" y="32.00" class="title">I04 显微镜：中间实像 → 目镜放大虚像（有限近点）</text>
+<path d="M30.00,200.00L880.00,200.00" fill="none" stroke="#7b8799" stroke-width="2"/>
+<path d="M390.00,80.00L390.00,315.00" fill="none" stroke="#23344a" stroke-width="2"/>
+<text x="368.00" y="65.00">物镜</text>
+<path d="M750.00,80.00L750.00,315.00" fill="none" stroke="#23344a" stroke-width="2"/>
+<text x="728.00" y="65.00">目镜</text>
+<path d="M332.70,197.69L390.00,194.75" fill="none" stroke="#205fb5" stroke-width="2"/>
+<polygon points="369.37,195.81 363.13,198.99 362.84,193.29" fill="#205fb5"/>
+<path d="M390.00,194.75L750.00,215.65" fill="none" stroke="#205fb5" stroke-width="2"/>
+<polygon points="620.40,208.13 613.85,210.61 614.18,204.91" fill="#205fb5"/>
+<path d="M750.00,215.65L822.00,204.18" fill="none" stroke="#205fb5" stroke-width="2"/>
+<polygon points="796.08,208.31 790.22,212.14 789.32,206.50" fill="#205fb5"/>
+<path d="M750.00,215.65L150.00,311.26" fill="none" stroke="#b64048" stroke-width="2" stroke-dasharray="7 5"/>
+<path d="M332.70,197.69L390.00,203.15" fill="none" stroke="#19805d" stroke-width="2"/>
+<polygon points="369.37,201.18 362.74,203.42 363.28,197.74" fill="#19805d"/>
+<path d="M390.00,203.15L750.00,213.83" fill="none" stroke="#19805d" stroke-width="2"/>
+<polygon points="620.40,209.98 613.93,212.65 614.10,206.94" fill="#19805d"/>
+<path d="M750.00,213.83L822.00,202.14" fill="none" stroke="#19805d" stroke-width="2"/>
+<polygon points="796.08,206.34 790.23,210.19 789.31,204.55" fill="#19805d"/>
+<path d="M750.00,213.83L150.00,311.26" fill="none" stroke="#b64048" stroke-width="2" stroke-dasharray="7 5"/>
+<path d="M332.70,200.00L332.70,197.69" fill="none" stroke="#23344a" stroke-width="2"/>
+<text x="308.70" y="180.69" class="small">物</text>
+<path d="M685.71,200.00L685.71,211.92" fill="none" stroke="#23344a" stroke-width="2"/>
+<text x="570.71" y="246.92" class="small">中间倒立实像</text>
+<path d="M150.00,200.00L150.00,311.26" fill="none" stroke="#23344a" stroke-width="2"/>
+<text x="122.00" y="339.26" class="small">最终倒立虚像</text>
+<circle cx="438" cy="200" r="3" fill="#23344a"/>
+<text x="428.00" y="220.00" class="small">Fₒ′</text>
+<circle cx="678" cy="200" r="3" fill="#23344a"/>
+<text x="668.00" y="188.00" class="small">Fₑ</text>
+<rect x="45" y="65" width="250" height="112" fill="#f3f7fc"/>
+<text x="52.00" y="83.00" class="small">物镜附近局部放大</text>
+<path d="M70.00,132.00L285.00,132.00" fill="none" stroke="#7b8799" stroke-width="1"/>
+<path d="M245.00,88.00L245.00,170.00" fill="none" stroke="#23344a" stroke-width="2"/>
+<text x="255.00" y="103.00" class="small">物镜</text>
+<path d="M149.50,132.00L149.50,110.00" fill="none" stroke="#b64048" stroke-width="2"/>
+<text x="126.50" y="102.00" class="small">P</text>
+<circle cx="165" cy="132" r="3" fill="#23344a"/>
+<text x="155.00" y="157.00" class="small">Fₒ</text>
+<path d="M149.50,110.00L245.00,82.00" fill="none" stroke="#205fb5" stroke-width="2"/>
+<polygon points="210.62,92.08 205.29,96.62 203.68,91.14" fill="#205fb5"/>
+<path d="M149.50,110.00L245.00,162.00" fill="none" stroke="#19805d" stroke-width="2"/>
+<polygon points="210.62,143.28 203.64,142.73 206.37,137.72" fill="#19805d"/>
+<text x="25.00" y="365.00" class="small">中间像在目镜物方焦点以内；红虚线为出射束反向延长。眼睛取贴近目镜。</text>
+<text x="25.00" y="394.00" class="small">横纵比例不同；左上另放大物与Fₒ。最终无穷远时，中间像移到Fₑ。</text>
+<text x="25.00" y="460.00" class="title">I07 开普勒：公共焦面真实中间像，倒立</text>
+<path d="M35.00,620.00L885.00,620.00" fill="none" stroke="#7b8799" stroke-width="2"/>
+<path d="M140.00,500.00L140.00,745.00" fill="none" stroke="#23344a" stroke-width="2"/>
+<text x="117.00" y="491.00">物镜</text>
+<path d="M700.00,500.00L700.00,745.00" fill="none" stroke="#23344a" stroke-width="2"/>
+<text x="677.00" y="491.00">目镜</text>
+<path d="M56.00,560.41L140.00,551.75" fill="none" stroke="#205fb5" stroke-width="2"/>
+<polygon points="109.76,554.87 103.69,558.36 103.11,552.68" fill="#205fb5"/>
+<path d="M140.00,551.75L700.00,579.31" fill="none" stroke="#205fb5" stroke-width="2"/>
+<polygon points="498.40,569.39 491.88,571.93 492.16,566.22" fill="#205fb5"/>
+<path d="M700.00,579.31L812.00,625.51" fill="none" stroke="#205fb5" stroke-width="2"/>
+<polygon points="771.68,608.88 764.68,609.08 766.86,603.80" fill="#205fb5"/>
+<path d="M56.00,665.41L140.00,656.75" fill="none" stroke="#19805d" stroke-width="2"/>
+<polygon points="109.76,659.87 103.69,663.36 103.11,657.68" fill="#19805d"/>
+<path d="M140.00,656.75L700.00,553.06" fill="none" stroke="#19805d" stroke-width="2"/>
+<polygon points="498.40,590.39 492.63,594.36 491.60,588.75" fill="#19805d"/>
+<path d="M700.00,553.06L812.00,599.26" fill="none" stroke="#19805d" stroke-width="2"/>
+<polygon points="771.68,582.63 764.68,582.83 766.86,577.55" fill="#19805d"/>
+<circle cx="588" cy="573.8" r="4" fill="#b64048"/>
+<text x="594.00" y="561.80" class="small">P</text>
+<circle cx="588" cy="620" r="3" fill="#23344a"/>
+<text x="558.00" y="646.00" class="small">Fₒ′ = Fₑ</text>
+<text x="30.00" y="786.00" class="small">逆时针几何倾角 θ；θ′ = −(fₒ′/fₑ′)θ。两条出射实线平行。</text>
+<text x="30.00" y="815.00" class="small">公共焦点与主轴同处不是任意斜物点的像；斜束对应离轴焦面点P。</text>
+<text x="25.00" y="870.00" class="title">I07 伽利略：会聚前被负目镜截住，正立</text>
+<path d="M35.00,1030.00L885.00,1030.00" fill="none" stroke="#7b8799" stroke-width="2"/>
+<path d="M140.00,910.00L140.00,1155.00" fill="none" stroke="#23344a" stroke-width="2"/>
+<text x="117.00" y="901.00">物镜</text>
+<path d="M476.00,910.00L476.00,1155.00" fill="none" stroke="#23344a" stroke-width="2"/>
+<text x="453.00" y="901.00">目镜</text>
+<path d="M56.00,970.41L140.00,961.75" fill="none" stroke="#205fb5" stroke-width="2"/>
+<polygon points="109.76,964.87 103.69,968.36 103.11,962.68" fill="#205fb5"/>
+<path d="M140.00,961.75L476.00,978.29" fill="none" stroke="#205fb5" stroke-width="2"/>
+<polygon points="355.04,972.33 348.52,974.87 348.80,969.17" fill="#205fb5"/>
+<path d="M476.00,978.29L588.00,932.09" fill="none" stroke="#205fb5" stroke-width="2"/>
+<polygon points="547.68,948.72 542.86,953.80 540.68,948.52" fill="#205fb5"/>
+<path d="M476.00,978.29L588.00,983.80" fill="none" stroke="#7b8799" stroke-width="2" stroke-dasharray="7 5"/>
+<path d="M56.00,1075.41L140.00,1066.75" fill="none" stroke="#19805d" stroke-width="2"/>
+<polygon points="109.76,1069.87 103.69,1073.36 103.11,1067.68" fill="#19805d"/>
+<path d="M140.00,1066.75L476.00,1004.54" fill="none" stroke="#19805d" stroke-width="2"/>
+<polygon points="355.04,1026.93 349.27,1030.90 348.24,1025.29" fill="#19805d"/>
+<path d="M476.00,1004.54L588.00,958.34" fill="none" stroke="#19805d" stroke-width="2"/>
+<polygon points="547.68,974.97 542.86,980.05 540.68,974.77" fill="#19805d"/>
+<path d="M476.00,1004.54L588.00,983.80" fill="none" stroke="#7b8799" stroke-width="2" stroke-dasharray="7 5"/>
+<circle cx="588" cy="983.8" r="4" fill="#b64048"/>
+<text x="594.00" y="971.80" class="small">P</text>
+<circle cx="588" cy="1030" r="3" fill="#23344a"/>
+<text x="558.00" y="1056.00" class="small">Fₒ′ = Fₑ</text>
+<text x="30.00" y="1196.00" class="small">逆时针几何倾角 θ；θ′ = −(fₒ′/fₑ′)θ。两条出射实线平行。</text>
+<text x="30.00" y="1225.00" class="small">公共焦点与主轴同处不是任意斜物点的像；斜束对应离轴焦面点P。</text>
+</svg>

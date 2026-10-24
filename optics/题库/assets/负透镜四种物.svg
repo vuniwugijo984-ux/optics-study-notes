@@ -1,0 +1,105 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="920" height="1570" viewBox="0 0 920 1570">
+<rect width="920" height="1570" fill="white"/>
+<style>text{font:18px "Microsoft YaHei",sans-serif;fill:#23344a}.small{font-size:15px}.title{font-weight:700;font-size:21px}</style>
+<text x="28.00" y="30.00" class="title">L07 负镜：实物</text>
+<path d="M35.00,178.00L875.00,178.00" fill="none" stroke="#7b8799" stroke-width="1"/>
+<path d="M460.00,65.00L460.00,285.00" fill="none" stroke="#23344a" stroke-width="2"/>
+<text x="442.00" y="61.00" class="small">O</text>
+<circle cx="562.6315789473684" cy="178" r="3" fill="#23344a"/>
+<text x="554.63" y="202.00" class="small">F</text>
+<circle cx="357.36842105263156" cy="178" r="3" fill="#23344a"/>
+<text x="349.37" y="202.00" class="small">F′</text>
+<path d="M336.84,82.00L460.00,82.00" fill="none" stroke="#205fb5" stroke-width="1.8"/>
+<polygon points="415.66,82.00 409.27,84.85 409.27,79.15" fill="#205fb5"/>
+<path d="M460.00,82.00L404.02,134.36" fill="none" stroke="#b64048" stroke-width="1.8" stroke-dasharray="7 5"/>
+<path d="M460.00,82.00L472.83,70.00" fill="none" stroke="#205fb5" stroke-width="1.8"/>
+<polygon points="468.21,74.32 465.49,80.77 461.59,76.60" fill="#205fb5"/>
+<path d="M336.84,82.00L460.00,178.00" fill="none" stroke="#19805d" stroke-width="1.8"/>
+<polygon points="415.66,143.44 408.87,141.76 412.38,137.26" fill="#19805d"/>
+<path d="M460.00,178.00L404.02,134.36" fill="none" stroke="#b64048" stroke-width="1.8" stroke-dasharray="7 5"/>
+<path d="M460.00,178.00L597.27,285.00" fill="none" stroke="#19805d" stroke-width="1.8"/>
+<polygon points="547.85,246.48 541.06,244.80 544.57,240.30" fill="#19805d"/>
+<path d="M336.84,178.00L336.84,82.00" fill="none" stroke="#23344a" stroke-width="2"/>
+<circle cx="336.8421052631579" cy="82.0" r="3" fill="#23344a"/>
+<text x="318.84" y="70.00" class="small">P</text>
+<circle cx="404.01913875598086" cy="134.36363636363637" r="4" fill="#b64048"/>
+<text x="396.02" y="122.36" class="small" style="fill:#b64048">P′</text>
+<text x="35.00" y="318.00" class="small">f′ = −10（示意单位）；s = -12</text>
+<text x="35.00" y="343.00" class="small">左半段为入射束，向右延长到P的虚线只表示未被截住时的会聚趋势。</text>
+<text x="28.00" y="420.00" class="title">L07 负镜：近虚物，仍成实像</text>
+<path d="M35.00,568.00L875.00,568.00" fill="none" stroke="#7b8799" stroke-width="1"/>
+<path d="M460.00,455.00L460.00,675.00" fill="none" stroke="#23344a" stroke-width="2"/>
+<text x="442.00" y="451.00" class="small">O</text>
+<circle cx="562.6315789473684" cy="568" r="3" fill="#23344a"/>
+<text x="554.63" y="592.00" class="small">F</text>
+<circle cx="357.36842105263156" cy="568" r="3" fill="#23344a"/>
+<text x="349.37" y="592.00" class="small">F′</text>
+<path d="M70.00,520.00L460.00,520.00" fill="none" stroke="#205fb5" stroke-width="1.8"/>
+<polygon points="319.60,520.00 313.21,522.85 313.21,517.15" fill="#205fb5"/>
+<path d="M460.00,520.00L511.32,520.00" fill="none" stroke="#205fb5" stroke-width="1.8" stroke-dasharray="7 5"/>
+<path d="M460.00,520.00L588.29,460.00" fill="none" stroke="#205fb5" stroke-width="1.8"/>
+<polygon points="542.11,481.60 537.52,486.89 535.11,481.72" fill="#205fb5"/>
+<path d="M345.61,675.00L460.00,568.00" fill="none" stroke="#19805d" stroke-width="1.8"/>
+<polygon points="418.82,606.52 416.10,612.97 412.20,608.80" fill="#19805d"/>
+<path d="M460.00,568.00L511.32,520.00" fill="none" stroke="#19805d" stroke-width="1.8" stroke-dasharray="7 5"/>
+<path d="M460.00,568.00L575.46,460.00" fill="none" stroke="#19805d" stroke-width="1.8"/>
+<polygon points="533.89,498.88 531.18,505.33 527.28,501.16" fill="#19805d"/>
+<path d="M511.32,568.00L511.32,520.00" fill="none" stroke="#23344a" stroke-width="2" stroke-dasharray="7 5"/>
+<circle cx="511.3157894736842" cy="520.0" r="3" fill="#23344a"/>
+<text x="493.32" y="508.00" class="small">P（虚物）</text>
+<circle cx="562.6315789473684" cy="472.0" r="4" fill="#b64048"/>
+<text x="554.63" y="460.00" class="small" style="fill:#b64048">P′</text>
+<text x="35.00" y="708.00" class="small">f′ = −10（示意单位）；s = 5</text>
+<text x="35.00" y="733.00" class="small">左半段为入射束，向右延长到P的虚线只表示未被截住时的会聚趋势。</text>
+<text x="28.00" y="810.00" class="title">L07 负镜：虚物在右物焦点，出射平行</text>
+<path d="M35.00,958.00L875.00,958.00" fill="none" stroke="#7b8799" stroke-width="1"/>
+<path d="M460.00,845.00L460.00,1065.00" fill="none" stroke="#23344a" stroke-width="2"/>
+<text x="442.00" y="841.00" class="small">O</text>
+<circle cx="562.6315789473684" cy="958" r="3" fill="#23344a"/>
+<text x="554.63" y="982.00" class="small">F</text>
+<circle cx="357.36842105263156" cy="958" r="3" fill="#23344a"/>
+<text x="349.37" y="982.00" class="small">F′</text>
+<path d="M70.00,862.00L460.00,862.00" fill="none" stroke="#205fb5" stroke-width="1.8"/>
+<polygon points="319.60,862.00 313.21,864.85 313.21,859.15" fill="#205fb5"/>
+<path d="M460.00,862.00L562.63,862.00" fill="none" stroke="#205fb5" stroke-width="1.8" stroke-dasharray="7 5"/>
+<path d="M460.00,862.00L472.83,850.00" fill="none" stroke="#205fb5" stroke-width="1.8"/>
+<polygon points="468.21,854.32 465.49,860.77 461.59,856.60" fill="#205fb5"/>
+<path d="M345.61,1065.00L460.00,958.00" fill="none" stroke="#19805d" stroke-width="1.8"/>
+<polygon points="418.82,996.52 416.10,1002.97 412.20,998.80" fill="#19805d"/>
+<path d="M460.00,958.00L562.63,862.00" fill="none" stroke="#19805d" stroke-width="1.8" stroke-dasharray="7 5"/>
+<path d="M460.00,958.00L575.46,850.00" fill="none" stroke="#19805d" stroke-width="1.8"/>
+<polygon points="533.89,888.88 531.18,895.33 527.28,891.16" fill="#19805d"/>
+<path d="M562.63,958.00L562.63,862.00" fill="none" stroke="#23344a" stroke-width="2" stroke-dasharray="7 5"/>
+<circle cx="562.6315789473684" cy="862.0" r="3" fill="#23344a"/>
+<text x="544.63" y="850.00" class="small">P（虚物）</text>
+<text x="665.00" y="875.00" class="small" style="fill:#b64048">出射平行 → ∞</text>
+<text x="35.00" y="1098.00" class="small">f′ = −10（示意单位）；s = 10</text>
+<text x="35.00" y="1123.00" class="small">左半段为入射束，向右延长到P的虚线只表示未被截住时的会聚趋势。</text>
+<text x="28.00" y="1200.00" class="title">L07 负镜：远虚物，成虚像</text>
+<path d="M35.00,1348.00L875.00,1348.00" fill="none" stroke="#7b8799" stroke-width="1"/>
+<path d="M460.00,1235.00L460.00,1455.00" fill="none" stroke="#23344a" stroke-width="2"/>
+<text x="442.00" y="1231.00" class="small">O</text>
+<circle cx="562.6315789473684" cy="1348" r="3" fill="#23344a"/>
+<text x="554.63" y="1372.00" class="small">F</text>
+<circle cx="357.36842105263156" cy="1348" r="3" fill="#23344a"/>
+<text x="349.37" y="1372.00" class="small">F′</text>
+<path d="M70.00,1300.00L460.00,1300.00" fill="none" stroke="#205fb5" stroke-width="1.8"/>
+<polygon points="319.60,1300.00 313.21,1302.85 313.21,1297.15" fill="#205fb5"/>
+<path d="M460.00,1300.00L613.95,1300.00" fill="none" stroke="#205fb5" stroke-width="1.8" stroke-dasharray="7 5"/>
+<path d="M460.00,1300.00L152.11,1444.00" fill="none" stroke="#b64048" stroke-width="1.8" stroke-dasharray="7 5"/>
+<path d="M460.00,1300.00L588.29,1240.00" fill="none" stroke="#205fb5" stroke-width="1.8"/>
+<polygon points="542.11,1261.60 537.52,1266.89 535.11,1261.72" fill="#205fb5"/>
+<path d="M116.83,1455.00L460.00,1348.00" fill="none" stroke="#19805d" stroke-width="1.8"/>
+<polygon points="336.46,1386.52 331.20,1391.15 329.51,1385.70" fill="#19805d"/>
+<path d="M460.00,1348.00L613.95,1300.00" fill="none" stroke="#19805d" stroke-width="1.8" stroke-dasharray="7 5"/>
+<path d="M460.00,1348.00L152.11,1444.00" fill="none" stroke="#b64048" stroke-width="1.8" stroke-dasharray="7 5"/>
+<path d="M460.00,1348.00L806.38,1240.00" fill="none" stroke="#19805d" stroke-width="1.8"/>
+<polygon points="681.68,1278.88 676.43,1283.51 674.73,1278.06" fill="#19805d"/>
+<path d="M613.95,1348.00L613.95,1300.00" fill="none" stroke="#23344a" stroke-width="2" stroke-dasharray="7 5"/>
+<circle cx="613.9473684210526" cy="1300.0" r="3" fill="#23344a"/>
+<text x="595.95" y="1288.00" class="small">P（虚物）</text>
+<circle cx="152.10526315789474" cy="1444.0" r="4" fill="#b64048"/>
+<text x="144.11" y="1468.00" class="small" style="fill:#b64048">P′</text>
+<text x="35.00" y="1488.00" class="small">f′ = −10（示意单位）；s = 15</text>
+<text x="35.00" y="1513.00" class="small">左半段为入射束，向右延长到P的虚线只表示未被截住时的会聚趋势。</text>
+</svg>

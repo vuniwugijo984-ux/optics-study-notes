@@ -1,0 +1,42 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="920" height="760" viewBox="0 0 920 760">
+<rect width="920" height="760" fill="white"/>
+<style>text{font:18px "Microsoft YaHei",sans-serif;fill:#23344a}.small{font-size:15px}.title{font-weight:700;font-size:21px}</style>
+<text x="25.00" y="32.00" class="title">3.23 先沿传播方向展开，再分别追踪纵向物的两端</text>
+<path d="M170 190 L300 320 L300 190 Z" stroke="#23344a" fill="#edf4fb" stroke-width="2"/>
+<path d="M235.00,190.00L235.00,255.00" fill="none" stroke="#205fb5" stroke-width="2"/>
+<polygon points="235.00,231.60 232.15,225.21 237.85,225.21" fill="#205fb5"/>
+<path d="M235.00,255.00L355.00,255.00" fill="none" stroke="#205fb5" stroke-width="2"/>
+<polygon points="311.80,255.00 305.41,257.85 305.41,252.15" fill="#205fb5"/>
+<path d="M235.00,105.00L235.00,130.00" fill="none" stroke="#b64048" stroke-width="4"/>
+<text x="247.00" y="110.00" class="small">B（远）</text>
+<text x="247.00" y="139.00" class="small">A（近）</text>
+<path d="M235.00,130.00L235.00,190.00" fill="none" stroke="#205fb5" stroke-width="2"/>
+<polygon points="235.00,168.40 232.15,162.01 237.85,162.01" fill="#205fb5"/>
+<text x="172.00" y="163.00" class="small">A到上面6 cm</text>
+<text x="165.00" y="300.00" class="small">内部合计6 cm</text>
+<path d="M550.00,195.00L550.00,315.00" fill="none" stroke="#23344a" stroke-width="2"/>
+<text x="495.00" y="350.00" class="small">L₁：+20 cm</text>
+<path d="M700.00,195.00L700.00,315.00" fill="none" stroke="#23344a" stroke-width="2"/>
+<text x="645.00" y="350.00" class="small">L₂：−10 cm</text>
+<path d="M355.00,255.00L550.00,255.00" fill="none" stroke="#205fb5" stroke-width="2"/>
+<polygon points="479.80,255.00 473.41,257.85 473.41,252.15" fill="#205fb5"/>
+<path d="M550.00,255.00L700.00,255.00" fill="none" stroke="#205fb5" stroke-width="2"/>
+<polygon points="646.00,255.00 639.61,257.85 639.61,252.15" fill="#205fb5"/>
+<text x="377.00" y="230.00" class="small">出面到L₁ 10 cm</text>
+<text x="578.00" y="285.00" class="small">镜距5 cm</text>
+<text x="35.00" y="390.00" class="small">展开距离：近端A → 第一透镜 = 6 + 6 + 10 = 22 cm。</text>
+<text x="35.00" y="420.00" class="small">棱镜等效6 cm、n=1.5的平板，像移2 cm；故等效物距大小20、21 cm。</text>
+<path d="M40.00,550.00L875.00,550.00" fill="none" stroke="#7b8799" stroke-width="2"/>
+<path d="M100.00,510.00L100.00,590.00" fill="none" stroke="#23344a" stroke-width="2"/>
+<text x="60.00" y="620.00" class="small">B 等效−21</text>
+<path d="M132.00,510.00L132.00,590.00" fill="none" stroke="#23344a" stroke-width="2"/>
+<text x="92.00" y="650.00" class="small">A 等效−20</text>
+<path d="M620.00,510.00L620.00,590.00" fill="none" stroke="#23344a" stroke-width="2"/>
+<text x="580.00" y="620.00" class="small">L₁ = 0</text>
+<path d="M740.00,510.00L740.00,590.00" fill="none" stroke="#23344a" stroke-width="2"/>
+<text x="700.00" y="620.00" class="small">L₂ = 5</text>
+<path d="M100.00,550.00L132.00,550.00" fill="none" stroke="#b64048" stroke-width="5"/>
+<text x="35.00" y="472.00" class="small">等效计算轴（cm）：物长沿轴，图上的A、B不是横向物高。</text>
+<text x="35.00" y="676.00" class="small">最终虚像：从L₂量，A′ = −10；B′ = −830/81 cm；轴向像长20/81 cm。</text>
+<text x="35.00" y="712.00" class="small">上图实线只示轴向转折次序；非轴光线逐端按正文两次成像计算，不能按图量距。</text>
+</svg>

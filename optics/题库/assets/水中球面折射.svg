@@ -1,0 +1,31 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="920" height="470" viewBox="0 0 920 470">
+<rect width="920" height="470" fill="white"/>
+<style>text{font:18px "Microsoft YaHei",sans-serif;fill:#23344a}.small{font-size:15px}.title{font-weight:700;font-size:21px}</style>
+<text x="25.00" y="32.00" class="title">3.14 水中玻璃棒的半球端：示例取n₉ = 1.50</text>
+<rect x="460" y="65" width="430" height="305" fill="#edf4fb"/>
+<path d="M25.00,220.00L890.00,220.00" fill="none" stroke="#7b8799" stroke-width="2"/>
+<path d="M460.00,65.00L460.00,370.00" fill="none" stroke="#23344a" stroke-width="2"/>
+<text x="475.00" y="90.00" class="small">水1.33 → 玻璃1.50</text>
+<path d="M308.00,170.00L460.00,170.00" fill="none" stroke="#205fb5" stroke-width="2"/>
+<polygon points="405.28,170.00 398.89,172.85 398.89,167.15" fill="#205fb5"/>
+<path d="M460.00,170.00L840.00,226.67" fill="none" stroke="#205fb5" stroke-width="2"/>
+<polygon points="703.20,206.27 696.46,208.15 697.30,202.50" fill="#205fb5"/>
+<path d="M460.00,170.00L109.23,117.69" fill="none" stroke="#b64048" stroke-width="2" stroke-dasharray="7 5"/>
+<path d="M308.00,170.00L460.00,210.00" fill="none" stroke="#19805d" stroke-width="2"/>
+<polygon points="405.28,195.60 398.37,196.73 399.83,191.21" fill="#19805d"/>
+<path d="M460.00,210.00L840.00,310.00" fill="none" stroke="#19805d" stroke-width="2"/>
+<polygon points="703.20,274.00 696.29,275.13 697.75,269.61" fill="#19805d"/>
+<path d="M460.00,210.00L109.23,117.69" fill="none" stroke="#b64048" stroke-width="2" stroke-dasharray="7 5"/>
+<path d="M308.00,220.00L308.00,170.00" fill="none" stroke="#23344a" stroke-width="2"/>
+<text x="288.00" y="156.00" class="small">物P</text>
+<path d="M109.23,220.00L109.23,117.69" fill="none" stroke="#23344a" stroke-width="2"/>
+<text x="89.23" y="103.69" class="small">虚像P′</text>
+<circle cx="162.70510000000002" cy="220" r="3" fill="#23344a"/>
+<text x="154.71" y="243.00" class="small">F</text>
+<circle cx="460" cy="220" r="3" fill="#23344a"/>
+<text x="452.00" y="243.00" class="small">O</text>
+<circle cx="795.2949" cy="220" r="3" fill="#23344a"/>
+<text x="787.29" y="243.00" class="small">F′</text>
+<text x="25.00" y="412.00" class="small">s = −8 cm；s′ = −18.4615 cm；β = +2.04615。图示为标明折射率的数值分支。</text>
+<text x="25.00" y="443.00" class="small">界面按顶点平面表示、高度显示放大；若n₉未给，应使用正文参数解。</text>
+</svg>

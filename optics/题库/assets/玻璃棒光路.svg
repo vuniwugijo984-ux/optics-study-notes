@@ -1,0 +1,37 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="920" height="510" viewBox="0 0 920 510">
+<rect width="920" height="510" fill="white"/>
+<style>text{font:18px "Microsoft YaHei",sans-serif;fill:#23344a}.small{font-size:15px}.title{font-weight:700;font-size:21px}</style>
+<text x="25.00" y="32.00" class="title">G05 玻璃棒：两次折射与第二面的虚物</text>
+<rect x="275" y="80" width="456" height="300" fill="#edf4fb"/>
+<path d="M35.00,230.00L890.00,230.00" fill="none" stroke="#7b8799" stroke-width="2"/>
+<path d="M275.00,80.00L275.00,380.00" fill="none" stroke="#23344a" stroke-width="2"/>
+<text x="249.00" y="405.00" class="small">O₁ = 0</text>
+<path d="M731.00,80.00L731.00,380.00" fill="none" stroke="#23344a" stroke-width="2"/>
+<text x="705.00" y="405.00" class="small">O₂ = 12</text>
+<path d="M85.00,203.00L275.00,194.00" fill="none" stroke="#205fb5" stroke-width="2"/>
+<polygon points="206.60,197.24 200.35,200.39 200.08,194.69" fill="#205fb5"/>
+<path d="M275.00,194.00L731.00,261.50" fill="none" stroke="#205fb5" stroke-width="2"/>
+<polygon points="566.84,237.20 560.10,239.09 560.94,233.44" fill="#205fb5"/>
+<path d="M731.00,261.50L785.29,260.86" fill="none" stroke="#205fb5" stroke-width="2"/>
+<polygon points="765.74,261.09 759.39,264.02 759.32,258.31" fill="#205fb5"/>
+<path d="M731.00,261.50L883.00,284.00" fill="none" stroke="#7b8799" stroke-width="2" stroke-dasharray="7 5"/>
+<path d="M85.00,203.00L275.00,243.50" fill="none" stroke="#19805d" stroke-width="2"/>
+<polygon points="206.60,228.92 199.75,230.38 200.94,224.80" fill="#19805d"/>
+<path d="M275.00,243.50L731.00,273.88" fill="none" stroke="#19805d" stroke-width="2"/>
+<polygon points="566.84,262.94 560.27,265.36 560.65,259.67" fill="#19805d"/>
+<path d="M731.00,273.88L785.29,260.86" fill="none" stroke="#19805d" stroke-width="2"/>
+<polygon points="765.74,265.54 760.19,269.81 758.86,264.26" fill="#19805d"/>
+<path d="M731.00,273.88L883.00,284.00" fill="none" stroke="#7b8799" stroke-width="2" stroke-dasharray="7 5"/>
+<path d="M85.00,230.00L85.00,203.00" fill="none" stroke="#23344a" stroke-width="2"/>
+<circle cx="85" cy="203.0" r="3" fill="#b64048"/>
+<text x="49.00" y="188.00" class="small">P：原物</text>
+<path d="M883.00,230.00L883.00,284.00" fill="none" stroke="#23344a" stroke-width="2"/>
+<circle cx="883" cy="284.0" r="3" fill="#b64048"/>
+<text x="828.00" y="312.00" class="small">P₁′：中间像</text>
+<path d="M785.29,230.00L785.29,260.86" fill="none" stroke="#23344a" stroke-width="2"/>
+<circle cx="785.2857142857143" cy="260.85714285714283" r="3" fill="#b64048"/>
+<text x="720.29" y="242.86" class="small">P′：最终像</text>
+<text x="30.00" y="442.00" class="small">O₁→P₁′ = 16 cm；O₂→P₁′ = +4 cm：到第二面时尚未会聚。</text>
+<text x="30.00" y="468.00" class="small">最终O₂→P′ = 10/7 cm；总β = −8/7。高度显示放大，界面按顶点平面表示。</text>
+<text x="30.00" y="494.00" class="small">蓝/绿为不同实际光线；灰虚段是假设没有第二面时的继续方向。</text>
+</svg>

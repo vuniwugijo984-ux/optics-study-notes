@@ -59,20 +59,20 @@
 <text x="554.63" y="982.00" class="small">F</text>
 <circle cx="357.36842105263156" cy="958" r="3" fill="#23344a"/>
 <text x="349.37" y="982.00" class="small">F′</text>
-<path d="M70.00,862.00L460.00,862.00" fill="none" stroke="#205fb5" stroke-width="1.8"/>
-<polygon points="319.60,862.00 313.21,864.85 313.21,859.15" fill="#205fb5"/>
-<path d="M460.00,862.00L562.63,862.00" fill="none" stroke="#205fb5" stroke-width="1.8" stroke-dasharray="7 5"/>
-<path d="M460.00,862.00L472.83,850.00" fill="none" stroke="#205fb5" stroke-width="1.8"/>
-<polygon points="468.21,854.32 465.49,860.77 461.59,856.60" fill="#205fb5"/>
-<path d="M345.61,1065.00L460.00,958.00" fill="none" stroke="#19805d" stroke-width="1.8"/>
-<polygon points="418.82,996.52 416.10,1002.97 412.20,998.80" fill="#19805d"/>
-<path d="M460.00,958.00L562.63,862.00" fill="none" stroke="#19805d" stroke-width="1.8" stroke-dasharray="7 5"/>
-<path d="M460.00,958.00L575.46,850.00" fill="none" stroke="#19805d" stroke-width="1.8"/>
-<polygon points="533.89,888.88 531.18,895.33 527.28,891.16" fill="#19805d"/>
-<path d="M562.63,958.00L562.63,862.00" fill="none" stroke="#23344a" stroke-width="2" stroke-dasharray="7 5"/>
-<circle cx="562.6315789473684" cy="862.0" r="3" fill="#23344a"/>
-<text x="544.63" y="850.00" class="small">P（虚物）</text>
-<text x="665.00" y="875.00" class="small" style="fill:#b64048">出射平行 → ∞</text>
+<path d="M70.00,919.60L460.00,919.60" fill="none" stroke="#205fb5" stroke-width="1.8"/>
+<polygon points="319.60,919.60 313.21,922.45 313.21,916.75" fill="#205fb5"/>
+<path d="M460.00,919.60L562.63,919.60" fill="none" stroke="#205fb5" stroke-width="1.8" stroke-dasharray="7 5"/>
+<path d="M460.00,919.60L646.02,850.00" fill="none" stroke="#205fb5" stroke-width="1.8"/>
+<polygon points="579.05,875.06 574.07,879.97 572.07,874.62" fill="#205fb5"/>
+<path d="M174.02,1065.00L460.00,958.00" fill="none" stroke="#19805d" stroke-width="1.8"/>
+<polygon points="357.05,996.52 352.06,1001.43 350.06,996.09" fill="#19805d"/>
+<path d="M460.00,958.00L562.63,919.60" fill="none" stroke="#19805d" stroke-width="1.8" stroke-dasharray="7 5"/>
+<path d="M460.00,958.00L748.65,850.00" fill="none" stroke="#19805d" stroke-width="1.8"/>
+<polygon points="644.74,888.88 639.75,893.79 637.75,888.45" fill="#19805d"/>
+<path d="M562.63,958.00L562.63,919.60" fill="none" stroke="#23344a" stroke-width="2" stroke-dasharray="7 5"/>
+<circle cx="562.6315789473684" cy="919.6" r="3" fill="#23344a"/>
+<text x="544.63" y="907.60" class="small">P（虚物）</text>
+<text x="35.00" y="875.00" class="small" style="fill:#b64048">出射平行 → ∞</text>
 <text x="35.00" y="1098.00" class="small">f′ = −10（示意单位）；s = 10</text>
 <text x="35.00" y="1123.00" class="small">左半段为入射束，向右延长到P的虚线只表示未被截住时的会聚趋势。</text>
 <text x="28.00" y="1200.00" class="title">L07 负镜：远虚物，成虚像</text>

@@ -5,7 +5,7 @@
 <path d="M80.00,330.00L800.00,330.00" fill="none" stroke="#23344a" stroke-width="2"/>
 <path d="M280.00,330.00L530.00,85.00" fill="none" stroke="#205fb5" stroke-width="4"/>
 <path d="M530.00,85.00L530.00,330.00" fill="none" stroke="#7b8799" stroke-width="2" stroke-dasharray="7 5"/>
-<text x="340.00" y="205.00" class="small" style="fill:#205fb5">片面内高 ℓ ≈ 3.5 cm</text>
+<text x="75.00" y="175.00" class="small" style="fill:#205fb5">片面内高 ℓ ≈ 3.5 cm</text>
 <text x="560.00" y="215.00" class="small">装配后竖直高度</text>
 <text x="560.00" y="243.00" class="small">√(ℓ²−2.5²)</text>
 <text x="340.00" y="358.00" class="small">水平投影(6−1)/2 = 2.5 cm</text>

@@ -51,18 +51,18 @@
 <text x="167.41" y="962.00" class="small">F</text>
 <circle cx="597.027027027027" cy="938" r="3" fill="#23344a"/>
 <text x="589.03" y="962.00" class="small">F′</text>
-<path d="M175.41,842.00L386.22,842.00" fill="none" stroke="#205fb5" stroke-width="1.8"/>
-<polygon points="310.32,842.00 303.93,844.85 303.93,839.15" fill="#205fb5"/>
-<path d="M386.22,842.00L831.99,1045.00" fill="none" stroke="#205fb5" stroke-width="1.8"/>
-<polygon points="671.51,971.92 664.51,971.87 666.88,966.67" fill="#205fb5"/>
-<path d="M175.41,842.00L386.22,938.00" fill="none" stroke="#19805d" stroke-width="1.8"/>
-<polygon points="310.32,903.44 303.32,903.39 305.69,898.19" fill="#19805d"/>
-<path d="M386.22,938.00L621.18,1045.00" fill="none" stroke="#19805d" stroke-width="1.8"/>
-<polygon points="536.59,1006.48 529.59,1006.43 531.96,1001.23" fill="#19805d"/>
-<path d="M175.41,938.00L175.41,842.00" fill="none" stroke="#23344a" stroke-width="2"/>
-<circle cx="175.4054054054054" cy="842.0" r="3" fill="#23344a"/>
-<text x="157.41" y="830.00" class="small">P</text>
-<text x="665.00" y="855.00" class="small" style="fill:#b64048">出射平行 → ∞</text>
+<path d="M175.41,899.60L386.22,899.60" fill="none" stroke="#205fb5" stroke-width="1.8"/>
+<polygon points="310.32,899.60 303.93,902.45 303.93,896.75" fill="#205fb5"/>
+<path d="M386.22,899.60L850.00,984.08" fill="none" stroke="#205fb5" stroke-width="1.8"/>
+<polygon points="683.04,953.67 676.24,955.33 677.26,949.71" fill="#205fb5"/>
+<path d="M175.41,899.60L386.22,938.00" fill="none" stroke="#19805d" stroke-width="1.8"/>
+<polygon points="310.32,924.18 303.52,925.84 304.55,920.22" fill="#19805d"/>
+<path d="M386.22,938.00L850.00,1022.48" fill="none" stroke="#19805d" stroke-width="1.8"/>
+<polygon points="683.04,992.07 676.24,993.73 677.26,988.11" fill="#19805d"/>
+<path d="M175.41,938.00L175.41,899.60" fill="none" stroke="#23344a" stroke-width="2"/>
+<circle cx="175.4054054054054" cy="899.6" r="3" fill="#23344a"/>
+<text x="157.41" y="887.60" class="small">P</text>
+<text x="35.00" y="855.00" class="small" style="fill:#b64048">出射平行 → ∞</text>
 <text x="35.00" y="1078.00" class="small">P在(−10,+1) cm；出射斜率−0.1，像在无穷远。</text>
 <text x="28.00" y="1170.00" class="title">3.18(2) 负镜：同一几何位置的点源</text>
 <path d="M35.00,1318.00L875.00,1318.00" fill="none" stroke="#7b8799" stroke-width="1"/>

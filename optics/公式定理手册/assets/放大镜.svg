@@ -1,0 +1,39 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="640" height="850" viewBox="0 0 640 850"><rect width="640" height="850" fill="white"/><style>text{font:22px "Microsoft YaHei",sans-serif;fill:#203149}.title{font-size:24px;font-weight:bold}.small{font-size:19px}</style><defs><marker id="arr" markerWidth="7" markerHeight="7" refX="6" refY="3" orient="auto"><path d="M0,0L6,3L0,6" fill="none" stroke="#2263b4"/></marker></defs>
+<text x="20.00" y="32.00" class="title">① 物在前焦面：出射平行</text>
+<path d="M25.00,205.00L615.00,205.00" fill="none" stroke="#7e8b9c" stroke-width="2"/>
+<path d="M300.00,65.00L300.00,315.00" fill="none" stroke="#203149" stroke-width="2"/>
+<text x="310.00" y="315.00" class="">正透镜</text>
+<path d="M120.00,205.00L120.00,181.00" fill="none" stroke="#14745e" stroke-width="3"/>
+<text x="108.00" y="166.00" class="">物 y</text>
+<path d="M120.00,199.00L120.00,211.00" fill="none" stroke="#7e8b9c" stroke-width="2"/>
+<path d="M480.00,199.00L480.00,211.00" fill="none" stroke="#7e8b9c" stroke-width="2"/>
+<text x="110.00" y="240.00" class="">F</text>
+<text x="472.00" y="240.00" class="">F′</text>
+<path d="M120.00,181.00L300.00,181.00" fill="none" stroke="#2263b4" stroke-width="2.4"/>
+<path d="M300.00,181.00L610.00,222.33" fill="none" stroke="#2263b4" stroke-width="2.4"/>
+<path d="M120.00,181.00L300.00,205.00" fill="none" stroke="#b54b3d" stroke-width="2.4"/>
+<path d="M300.00,205.00L610.00,246.33" fill="none" stroke="#b54b3d" stroke-width="2.4"/>
+<circle cx="300" cy="205" r="3" stroke="#203149" fill="#203149"/>
+<text x="28.00" y="355.00" class="small">眼在右侧接收平行束，最终像在无穷远。</text>
+<text x="20.00" y="427.00" class="title">② 物在焦内：反延成近点虚像</text>
+<path d="M25.00,600.00L615.00,600.00" fill="none" stroke="#7e8b9c" stroke-width="2"/>
+<path d="M460.00,460.00L460.00,710.00" fill="none" stroke="#203149" stroke-width="2"/>
+<text x="470.00" y="710.00" class="">正透镜</text>
+<path d="M396.00,600.00L396.00,576.00" fill="none" stroke="#14745e" stroke-width="3"/>
+<text x="384.00" y="561.00" class="">物 y</text>
+<path d="M380.00,594.00L380.00,606.00" fill="none" stroke="#7e8b9c" stroke-width="2"/>
+<path d="M540.00,594.00L540.00,606.00" fill="none" stroke="#7e8b9c" stroke-width="2"/>
+<text x="370.00" y="635.00" class="">F</text>
+<text x="532.00" y="635.00" class="">F′</text>
+<path d="M396.00,576.00L460.00,576.00" fill="none" stroke="#2263b4" stroke-width="2.4"/>
+<path d="M460.00,576.00L610.00,621.00" fill="none" stroke="#2263b4" stroke-width="2.4"/>
+<path d="M460.00,576.00L140.00,480.00" fill="none" stroke="#2263b4" stroke-width="2" stroke-dasharray="7 6"/>
+<path d="M396.00,576.00L460.00,600.00" fill="none" stroke="#b54b3d" stroke-width="2.4"/>
+<path d="M460.00,600.00L610.00,656.25" fill="none" stroke="#b54b3d" stroke-width="2.4"/>
+<path d="M460.00,600.00L140.00,480.00" fill="none" stroke="#b54b3d" stroke-width="2" stroke-dasharray="7 6"/>
+<circle cx="460" cy="600" r="3" stroke="#203149" fill="#203149"/>
+<path d="M140.00,600.00L140.00,480.00" fill="none" stroke="#14745e" stroke-width="2" stroke-dasharray="7 6"/>
+<text x="120.00" y="464.00" class="">虚像 y′</text>
+<text x="28.00" y="750.00" class="small">出射束实际向右；左侧虚线是反延。</text>
+<text x="20.00" y="825.00" class="small">示意取眼近镜；D 从眼到近点虚像量。</text>
+</svg>

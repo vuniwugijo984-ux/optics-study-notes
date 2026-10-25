@@ -1,0 +1,26 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="640" height="715" viewBox="0 0 640 715"><rect width="640" height="715" fill="white"/><style>text{font:22px "Microsoft YaHei",sans-serif;fill:#203149}.title{font-size:24px;font-weight:bold}.small{font-size:19px}</style><defs><marker id="arr" markerWidth="7" markerHeight="7" refX="6" refY="3" orient="auto"><path d="M0,0L6,3L0,6" fill="none" stroke="#2263b4"/></marker></defs>
+<text x="20.00" y="34.00" class="title">投影面积决定立体角，角从法线量</text>
+<text x="20.00" y="77.00" class="small">① 接收点源的照明</text>
+<circle cx="65" cy="220" r="5" stroke="#2263b4" fill="#2263b4"/>
+<text x="25.00" y="266.00" class="">点源</text>
+<path d="M65.00,220.00L470.00,220.00" fill="none" stroke="#2263b4" stroke-width="3" marker-end="url(#arr)"/>
+<text x="210.00" y="199.00" class="">距离 R</text>
+<path d="M405.00,107.00L535.00,333.00" fill="none" stroke="#203149" stroke-width="5"/>
+<text x="475.00" y="105.00" class="">接收面 dA</text>
+<path d="M470.00,220.00L338.00,296.00" fill="none" stroke="#7e8b9c" stroke-width="2" stroke-dasharray="7 6"/>
+<text x="275.00" y="317.00" class="">面法线</text>
+<path d="M422.00,220.00L422.01,220.84L422.03,221.68L422.07,222.51L422.12,223.35L422.18,224.18L422.26,225.02L422.36,225.85L422.47,226.68L422.59,227.51L422.73,228.34L422.88,229.16L423.05,229.98L423.23,230.80L423.43,231.61L423.64,232.42L423.86,233.23L424.10,234.03L424.35,234.83L424.62,235.63L424.89,236.42L425.19,237.20L425.50,237.98L425.82,238.76L426.15,239.52L426.50,240.29L426.86,241.04L427.23,241.79L427.62,242.53L428.02,243.27L428.43,244.00" fill="none" stroke="#14745e" stroke-width="2"/>
+<text x="395.00" y="207.00" class="" style="fill:#14745e">α</text>
+<path d="M20.00,345.00L615.00,345.00" fill="none" stroke="#7e8b9c" stroke-width="1"/>
+<text x="20.00" y="379.00" class="small">② 发光面沿某方向发出光</text>
+<path d="M150.00,475.00L480.00,475.00" fill="none" stroke="#203149" stroke-width="4"/>
+<path d="M315.00,475.00L315.00,395.00" fill="none" stroke="#7e8b9c" stroke-width="2" stroke-dasharray="7 6"/>
+<path d="M315.00,475.00L425.00,412.00" fill="none" stroke="#2263b4" stroke-width="3" marker-end="url(#arr)"/>
+<text x="428.00" y="420.00" class="">出射 dΩ</text>
+<path d="M315.00,435.00L316.40,435.02L317.79,435.10L319.18,435.22L320.57,435.39L321.95,435.61L323.32,435.87L324.68,436.19L326.03,436.55L327.36,436.96L328.68,437.41L329.98,437.91L331.27,438.46L332.53,439.05L333.78,439.68L335.00,440.36L336.20,441.08L337.37,441.84L338.51,442.64L339.63,443.48L340.71,444.36L341.77,445.27L342.79,446.23L343.77,447.21L344.73,448.23L345.64,449.29L346.52,450.37L347.36,451.49L348.16,452.63L348.92,453.80L349.64,455.00" fill="none" stroke="#14745e" stroke-width="2"/>
+<text x="337.00" y="448.00" class="" style="fill:#14745e">θ</text>
+<text x="200.00" y="527.00" class="">发光面 dA；投影 dA cosθ</text>
+<text x="20.00" y="578.00" class="">照度：接收面法线用 α。</text>
+<text x="20.00" y="623.00" class="">亮度：发光面法线用 θ。</text>
+<text x="20.00" y="668.00" class="">二者不能当同一个表面或同一个角。</text>
+</svg>

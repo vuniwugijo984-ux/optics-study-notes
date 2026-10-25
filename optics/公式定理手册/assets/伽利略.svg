@@ -1,0 +1,18 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="640" height="445" viewBox="0 0 640 445"><rect width="640" height="445" fill="white"/><style>text{font:22px "Microsoft YaHei",sans-serif;fill:#203149}.title{font-size:24px;font-weight:bold}.small{font-size:19px}</style><defs><marker id="arr" markerWidth="7" markerHeight="7" refX="6" refY="3" orient="auto"><path d="M0,0L6,3L0,6" fill="none" stroke="#2263b4"/></marker></defs>
+<text x="20.00" y="34.00" class="title">伽利略：负目镜拦在会聚前</text>
+<path d="M20.00,235.00L620.00,235.00" fill="none" stroke="#7e8b9c" stroke-width="2"/>
+<path d="M70.00,75.00L70.00,320.00" fill="none" stroke="#203149" stroke-width="3"/>
+<path d="M238.00,75.00L238.00,320.00" fill="none" stroke="#203149" stroke-width="3"/>
+<text x="35.00" y="70.00" class="">物镜</text>
+<text x="248.00" y="70.00" class="">目镜</text>
+<path d="M28.00,241.00L70.00,235.00L238.00,211.00L574.00,67.00" fill="none" stroke="#2263b4" stroke-width="2.5"/>
+<path d="M238.00,211.00L322.00,199.00" fill="none" stroke="#7e8b9c" stroke-width="2" stroke-dasharray="7 6"/>
+<path d="M28.00,221.80L70.00,215.80L238.00,204.60L574.00,60.60" fill="none" stroke="#b54b3d" stroke-width="2.5"/>
+<path d="M238.00,204.60L322.00,199.00" fill="none" stroke="#7e8b9c" stroke-width="2" stroke-dasharray="7 6"/>
+<path d="M322.00,150.00L322.00,285.00" fill="none" stroke="#7e8b9c" stroke-width="1" stroke-dasharray="7 6"/>
+<circle cx="322" cy="199.0" r="3" stroke="#14745e" fill="#14745e"/>
+<text x="330.00" y="187.00" class="">P</text>
+<text x="287.00" y="290.00" class="">Fₒ′ = Fₑ</text>
+<text x="20.00" y="365.00" class="small">实际出射为平行束；倾角按近轴关系。</text>
+<text x="20.00" y="408.00" class="small">正像，目镜负焦距；灰虚线不是真实光路。</text>
+</svg>

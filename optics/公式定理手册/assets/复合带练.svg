@@ -1,0 +1,30 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="640" height="790" viewBox="0 0 640 790"><rect width="640" height="790" fill="white"/><style>text{font:22px "Microsoft YaHei",sans-serif;fill:#203149}.title{font-size:24px;font-weight:bold}.small{font-size:19px}</style><defs><marker id="arr" markerWidth="7" markerHeight="7" refX="6" refY="3" orient="auto"><path d="M0,0L6,3L0,6" fill="none" stroke="#2263b4"/></marker></defs>
+<text x="20.00" y="34.00" class="title">正镜后接负镜：实际光束与虚物分开</text>
+<path d="M20.00,245.00L620.00,245.00" fill="none" stroke="#7e8b9c" stroke-width="2"/>
+<path d="M215.00,75.00L215.00,340.00" fill="none" stroke="#203149" stroke-width="2.5"/>
+<path d="M245.00,75.00L245.00,340.00" fill="none" stroke="#203149" stroke-width="2.5"/>
+<path d="M35.00,245.00L35.00,205.00" fill="none" stroke="#14745e" stroke-width="3"/>
+<text x="20.00" y="294.00" class="">物 −30</text>
+<text x="165.00" y="67.00" class="">L₁：0</text>
+<text x="253.00" y="99.00" class="">L₂：+5</text>
+<path d="M35.00,205.00L215.00,185.00L245.00,196.67L395.00,134.17" fill="none" stroke="#2263b4" stroke-width="2.5"/>
+<path d="M245.00,196.67L575.00,325.00" fill="none" stroke="#7e8b9c" stroke-width="1.7" stroke-dasharray="7 6"/>
+<path d="M245.00,196.67L171.67,227.22" fill="none" stroke="#2263b4" stroke-width="2" stroke-dasharray="7 6"/>
+<path d="M35.00,205.00L215.00,213.00L245.00,222.33L395.00,212.33" fill="none" stroke="#b54b3d" stroke-width="2.5"/>
+<path d="M245.00,222.33L575.00,325.00" fill="none" stroke="#7e8b9c" stroke-width="1.7" stroke-dasharray="7 6"/>
+<path d="M245.00,222.33L171.67,227.22" fill="none" stroke="#b54b3d" stroke-width="2" stroke-dasharray="7 6"/>
+<path d="M171.67,245.00L171.67,227.22" fill="none" stroke="#14745e" stroke-width="3" stroke-dasharray="7 6"/>
+<path d="M575.00,245.00L575.00,325.00" fill="none" stroke="#7e8b9c" stroke-width="2" stroke-dasharray="7 6"/>
+<text x="75.00" y="148.00" class="" style="fill:#14745e">最终虚像</text>
+<path d="M140.00,155.00L171.67,227.22" fill="none" stroke="#14745e" stroke-width="2"/>
+<text x="460.00" y="364.00" class="small">原会聚目标 +60</text>
+<text x="20.00" y="413.00" class="title">小间隔放大：两镜之间仍为会聚光束</text>
+<path d="M90.00,455.00L90.00,710.00" fill="none" stroke="#203149" stroke-width="3"/>
+<path d="M415.00,455.00L415.00,710.00" fill="none" stroke="#203149" stroke-width="3"/>
+<text x="55.00" y="458.00" class="">L₁</text>
+<text x="400.00" y="458.00" class="">L₂</text>
+<path d="M40.00,538.46L90.00,537.50L415.00,559.38L590.00,546.75" fill="none" stroke="#2263b4" stroke-width="2.5"/>
+<path d="M40.00,589.62L90.00,590.00L415.00,607.50L590.00,605.48" fill="none" stroke="#b54b3d" stroke-width="2.5"/>
+<text x="170.00" y="717.00" class="small">镜间距 5 cm；局部横向放大</text>
+<text x="20.00" y="761.00" class="small">虚线：反延或未放负镜的辅助光路。</text>
+</svg>

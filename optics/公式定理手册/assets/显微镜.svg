@@ -1,0 +1,33 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="640" height="760" viewBox="0 0 640 760"><rect width="640" height="760" fill="white"/><style>text{font:22px "Microsoft YaHei",sans-serif;fill:#203149}.title{font-size:24px;font-weight:bold}.small{font-size:19px}</style><defs><marker id="arr" markerWidth="7" markerHeight="7" refX="6" refY="3" orient="auto"><path d="M0,0L6,3L0,6" fill="none" stroke="#2263b4"/></marker></defs>
+<text x="20.00" y="34.00" class="title">显微镜：物镜实像 → 目镜平行输出</text>
+<path d="M22.00,225.00L615.00,225.00" fill="none" stroke="#7e8b9c" stroke-width="2"/>
+<path d="M90.00,65.00L90.00,370.00" fill="none" stroke="#203149" stroke-width="3"/>
+<path d="M378.00,65.00L378.00,370.00" fill="none" stroke="#203149" stroke-width="3"/>
+<text x="95.00" y="80.00" class="">物镜</text>
+<text x="388.00" y="80.00" class="">目镜</text>
+<path d="M66.00,219.00L66.00,231.00" fill="none" stroke="#7e8b9c" stroke-width="2"/>
+<text x="52.00" y="270.00" class="">Fₒ</text>
+<path d="M114.00,219.00L114.00,231.00" fill="none" stroke="#7e8b9c" stroke-width="2"/>
+<text x="100.00" y="270.00" class="">Fₒ′</text>
+<path d="M306.00,219.00L306.00,231.00" fill="none" stroke="#7e8b9c" stroke-width="2"/>
+<text x="292.00" y="270.00" class="">Fₑ</text>
+<path d="M450.00,219.00L450.00,231.00" fill="none" stroke="#7e8b9c" stroke-width="2"/>
+<text x="436.00" y="270.00" class="">Fₑ′</text>
+<path d="M63.00,225.00L63.00,215.00" fill="none" stroke="#14745e" stroke-width="3"/>
+<path d="M306.00,225.00L306.00,305.00" fill="none" stroke="#14745e" stroke-width="3"/>
+<text x="225.00" y="347.00" class="">中间实像</text>
+<path d="M63.00,215.00L90.00,210.00L378.00,336.67L570.00,123.33" fill="none" stroke="#2263b4" stroke-width="2.5"/>
+<path d="M63.00,215.00L90.00,221.00L378.00,333.00L570.00,119.67" fill="none" stroke="#b54b3d" stroke-width="2.5"/>
+<path d="M114.00,390.00L306.00,390.00" fill="none" stroke="#7e8b9c" stroke-width="2"/>
+<text x="192.00" y="423.00" class="">光学间隔 Δ</text>
+<text x="20.00" y="476.00" class="title">物镜前局部放大：物在 Fₒ 外侧</text>
+<path d="M40.00,635.00L605.00,635.00" fill="none" stroke="#7e8b9c" stroke-width="2"/>
+<path d="M560.00,510.00L560.00,690.00" fill="none" stroke="#203149" stroke-width="3"/>
+<path d="M200.00,629.00L200.00,641.00" fill="none" stroke="#7e8b9c" stroke-width="2"/>
+<text x="190.00" y="672.00" class="">Fₒ</text>
+<path d="M155.00,635.00L155.00,605.00" fill="none" stroke="#14745e" stroke-width="3"/>
+<text x="70.00" y="581.00" class="">小物</text>
+<path d="M155.00,605.00L560.00,590.00" fill="none" stroke="#2263b4" stroke-width="2.5"/>
+<path d="M155.00,605.00L560.00,623.00" fill="none" stroke="#b54b3d" stroke-width="2.5"/>
+<text x="20.00" y="729.00" class="small">下图仅放大物镜前间隔；高度不用于量角。</text>
+</svg>

@@ -1,0 +1,25 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="640" height="615" viewBox="0 0 640 615"><rect width="640" height="615" fill="white"/><style>text{font:22px "Microsoft YaHei",sans-serif;fill:#203149}.title{font-size:24px;font-weight:bold}.small{font-size:19px}</style><defs><marker id="arr" markerWidth="7" markerHeight="7" refX="6" refY="3" orient="auto"><path d="M0,0L6,3L0,6" fill="none" stroke="#2263b4"/></marker></defs>
+<text x="20.00" y="34.00" class="title">有效光阑与光瞳：不能只比实体孔径</text>
+<path d="M15.00,290.00L615.00,290.00" fill="none" stroke="#7e8b9c" stroke-width="2"/>
+<path d="M300.00,152.00L300.00,428.00" fill="none" stroke="#203149" stroke-width="4"/>
+<path d="M360.00,152.00L360.00,244.00" fill="none" stroke="#203149" stroke-width="4"/>
+<path d="M360.00,336.00L360.00,428.00" fill="none" stroke="#203149" stroke-width="4"/>
+<path d="M420.00,152.00L420.00,198.00" fill="none" stroke="#b54b3d" stroke-width="4" stroke-dasharray="7 6"/>
+<path d="M420.00,382.00L420.00,428.00" fill="none" stroke="#b54b3d" stroke-width="4" stroke-dasharray="7 6"/>
+<path d="M60.00,290.00L300.00,228.67" fill="none" stroke="#2263b4" stroke-width="2.5"/>
+<path d="M300.00,228.67L360.00,244.00L540.00,290.00" fill="none" stroke="#2263b4" stroke-width="2.5"/>
+<path d="M300.00,228.67L420.00,198.00" fill="none" stroke="#b54b3d" stroke-width="2" stroke-dasharray="7 6"/>
+<path d="M60.00,290.00L300.00,351.33" fill="none" stroke="#2263b4" stroke-width="2.5"/>
+<path d="M300.00,351.33L360.00,336.00L540.00,290.00" fill="none" stroke="#2263b4" stroke-width="2.5"/>
+<path d="M300.00,351.33L420.00,382.00" fill="none" stroke="#b54b3d" stroke-width="2" stroke-dasharray="7 6"/>
+<circle cx="60" cy="290" r="4" stroke="#203149" fill="#203149"/>
+<text x="15.00" y="332.00" class="">物点 −20</text>
+<text x="205.00" y="110.00" class="">透镜 0</text>
+<text x="325.00" y="110.00" class="">后孔 +5</text>
+<text x="402.00" y="142.00" class="" style="fill:#b54b3d">虚入瞳 +10</text>
+<text x="475.00" y="332.00" class="">实像 +20</text>
+<text x="35.00" y="460.00" class="">透镜半径 3；后孔半径 1（cm）。</text>
+<text x="35.00" y="501.00" class="">入瞳半径 2，是后孔经前方透镜的像。</text>
+<text x="35.00" y="542.00" class="">实际光在后孔处高 ±1；红虚线为辅助。</text>
+<text x="35.00" y="583.00" class="">后孔之后无元件，出瞳就是后孔。</text>
+</svg>

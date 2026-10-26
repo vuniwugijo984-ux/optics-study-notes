@@ -2,7 +2,7 @@
 
 **[直接在线阅读](https://vuniwugijo984-ux.github.io/optics-study-notes/)**，无需进入GitHub或下载文件。
 
-- **[公式与定理手册](https://vuniwugijo984-ux.github.io/optics-study-notes/optics/公式定理手册/光学公式与定理手册.html)**：71节，含公式含义、条件、关键推导、常用变式、带练和选法，覆盖波动、几何成像、仪器及像差。[来源覆盖表](optics/公式定理手册/来源与覆盖表.md)。
+- **[公式图解与解题路径](https://vuniwugijo984-ux.github.io/optics-study-notes/optics/公式定理手册/光学公式与定理手册.html)**：132节，统一公式、条件、推导与图示；按自由度、题干翻译和解题路径组织，含32组配套练习、六幅作图练习、20组保留原题原图的作图/图解训练，解析可折叠。[来源覆盖表](optics/公式定理手册/来源与覆盖表.md)。
 - **[PPT与作业完整题解](https://vuniwugijo984-ux.github.io/optics-study-notes/optics/题库/光学PPT与作业题解.html)**：13份课件411页逐页核对，93个归并题组（含整理题）、20道指定教材题，附思路、方法、完整答案、作图和勘误。[来源索引](optics/题库/来源与覆盖索引.md)。
 - [光学讲义](optics/自学讲义/光学自学讲义.md)：第01–08课，含推导、例题、自测与答案。
 - 离线阅读：点击 **Code → Download ZIP**，解压后打开 `optics/自学讲义/光学自学讲义.html`。保留同目录的 `assets/`；公式无需联网，笔记可导出。

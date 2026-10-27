@@ -8,3 +8,7 @@
 /tmp/
 .env
 .env.*
+
+# Authored practice and solution documents
+!/optics/往年题/光学往年题01-抄题练习版.pdf
+!/optics/往年题/光学往年题01-答案解析与考点方法.pdf

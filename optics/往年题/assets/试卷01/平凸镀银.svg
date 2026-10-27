@@ -1,0 +1,36 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="940" height="490" viewBox="0 0 940 490"><rect width="940" height="490" fill="white"/><style>text{font:18px "Microsoft YaHei",sans-serif;fill:#23344a}.small{font-size:16px}.title{font-size:21px;font-weight:bold}</style>
+<text x="24.00" y="30.00" class="title" text-anchor="start">平凸透镜：透射实验和镀膜实验给两个独立条件</text>
+<path d="M60.000,155.000 L900.000,155.000" fill="none" stroke="#8a94a3" stroke-width="2"/>
+<path d="M640.000,80.000 L640.000,230.000" fill="none" stroke="#23344a" stroke-width="3"/>
+<path d="M633.000,93.000 L640.000,80.000 L647.000,93.000" fill="none" stroke="#23344a" stroke-width="2"/>
+<path d="M633.000,217.000 L640.000,230.000 L647.000,217.000" fill="none" stroke="#23344a" stroke-width="2"/>
+<path d="M60.000,365.000 L900.000,365.000" fill="none" stroke="#8a94a3" stroke-width="2"/>
+<path d="M640.000,290.000 L640.000,440.000" fill="none" stroke="#23344a" stroke-width="3"/>
+<path d="M633.000,303.000 L640.000,290.000 L647.000,303.000" fill="none" stroke="#23344a" stroke-width="2"/>
+<path d="M633.000,427.000 L640.000,440.000 L647.000,427.000" fill="none" stroke="#23344a" stroke-width="2"/>
+<path d="M90.000,115.000 L640.000,115.000" fill="none" stroke="#2365ad" stroke-width="2"/>
+<path d="M631.896,118.915 L640.000,115.000 L631.896,111.085" fill="none" stroke="#2365ad" stroke-width="2"/>
+<path d="M640.000,115.000 L850.000,155.000" fill="none" stroke="#2365ad" stroke-width="2"/>
+<path d="M90.000,195.000 L640.000,195.000" fill="none" stroke="#2365ad" stroke-width="2"/>
+<path d="M631.896,198.915 L640.000,195.000 L631.896,191.085" fill="none" stroke="#2365ad" stroke-width="2"/>
+<path d="M640.000,195.000 L850.000,155.000" fill="none" stroke="#2365ad" stroke-width="2"/>
+<circle cx="850" cy="155" r="4" fill="#23344a"/>
+<text x="740.00" y="187.00" class="" text-anchor="start">f′ = 48 cm</text>
+<text x="90.00" y="65.00" class="" text-anchor="start">① 未镀膜：从平面进入，经过凸面折出</text>
+<path d="M90.000,325.000 L640.000,325.000" fill="none" stroke="#2365ad" stroke-width="2"/>
+<path d="M631.896,328.915 L640.000,325.000 L631.896,321.085" fill="none" stroke="#2365ad" stroke-width="2"/>
+<path d="M640.000,325.000 L340.000,365.000" fill="none" stroke="#8a94a3" stroke-width="2" stroke-dasharray="7 5"/>
+<path d="M640.000,325.000 L340.000,385.000" fill="none" stroke="#14836a" stroke-width="2"/>
+<path d="M347.179,379.572 L340.000,385.000 L348.714,387.249" fill="none" stroke="#14836a" stroke-width="2"/>
+<path d="M90.000,405.000 L640.000,405.000" fill="none" stroke="#2365ad" stroke-width="2"/>
+<path d="M631.896,408.915 L640.000,405.000 L631.896,401.085" fill="none" stroke="#2365ad" stroke-width="2"/>
+<path d="M640.000,405.000 L340.000,365.000" fill="none" stroke="#8a94a3" stroke-width="2" stroke-dasharray="7 5"/>
+<path d="M640.000,405.000 L340.000,345.000" fill="none" stroke="#14836a" stroke-width="2"/>
+<path d="M348.714,342.751 L340.000,345.000 L347.179,350.428" fill="none" stroke="#14836a" stroke-width="2"/>
+<circle cx="340" cy="365" r="4" fill="#8a94a3"/>
+<circle cx="440" cy="365" r="4" fill="#14836a"/>
+<text x="90.00" y="267.00" class="" text-anchor="start">② 凸面镀膜：玻璃内反射，再从平面返回空气</text>
+<text x="250.00" y="402.00" class="small" text-anchor="start">R/2：玻璃内预期焦点</text>
+<text x="450.00" y="340.00" class="small" text-anchor="start">R/(2n) = 8 cm</text>
+<text x="25.00" y="470.00" class="small" text-anchor="start">灰虚线只表示忽略出射平面时的预期会聚；绿线才是返回空气后的光。</text>
+</svg>

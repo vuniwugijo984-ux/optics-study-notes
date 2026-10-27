@@ -1,0 +1,17 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="940" height="355" viewBox="0 0 940 355"><rect width="940" height="355" fill="white"/><style>text{font:18px "Microsoft YaHei",sans-serif;fill:#23344a}.small{font-size:16px}.title{font-size:21px;font-weight:bold}</style>
+<text x="24.00" y="30.00" class="title" text-anchor="start">水面窗口：先用照片比例求 ρ，再用临界角求 h</text>
+<rect x="70" y="110" width="800" height="205" fill="#edf5fc" stroke="#8a94a3"/>
+<path d="M70.000,110.000 L870.000,110.000" fill="none" stroke="#23344a" stroke-width="2"/>
+<circle cx="470" cy="295" r="4" fill="#23344a"/>
+<text x="480.00" y="320.00" class="" text-anchor="start">相机 C</text>
+<path d="M270.000,110.000 L470.000,295.000 L670.000,110.000" fill="none" stroke="#2365ad" stroke-width="2"/>
+<path d="M470.000,295.000 L470.000,80.000" fill="none" stroke="#8a94a3" stroke-width="2" stroke-dasharray="7 5"/>
+<text x="480.00" y="190.00" class="" text-anchor="start">h</text>
+<text x="490.00" y="255.00" class="" text-anchor="start">i_c</text>
+<path d="M470.000,100.000 L670.000,100.000" fill="none" stroke="#14836a" stroke-width="2"/>
+<text x="560.00" y="88.00" class="" text-anchor="start">ρ</text>
+<text x="90.00" y="90.00" class="" text-anchor="start">空气 n₀ ≈ 1</text>
+<text x="90.00" y="285.00" class="" text-anchor="start">水 n = 1.33</text>
+<text x="670.00" y="150.00" class="" text-anchor="start">极限折射光</text>
+<text x="25.00" y="345.00" class="small" text-anchor="start">ρ 是实际水面圆的半径；照片的 11 cm 只用来确定比例。</text>
+</svg>

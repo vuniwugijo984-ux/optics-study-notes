@@ -1,0 +1,31 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="940" height="390" viewBox="0 0 940 390"><rect width="940" height="390" fill="white"/><style>text{font:18px "Microsoft YaHei",sans-serif;fill:#23344a}.small{font-size:16px}.title{font-size:21px;font-weight:bold}</style>
+<text x="24.00" y="30.00" class="title" text-anchor="start">由物、像和主轴反求薄透镜</text>
+<path d="M40.000,210.000 L900.000,210.000" fill="none" stroke="#8a94a3" stroke-width="2"/>
+<path d="M891.896,213.915 L900.000,210.000 L891.896,206.085" fill="none" stroke="#8a94a3" stroke-width="2"/>
+<path d="M510.000,60.000 L510.000,360.000" fill="none" stroke="#23344a" stroke-width="3"/>
+<path d="M503.000,73.000 L510.000,60.000 L517.000,73.000" fill="none" stroke="#23344a" stroke-width="2"/>
+<path d="M503.000,347.000 L510.000,360.000 L517.000,347.000" fill="none" stroke="#23344a" stroke-width="2"/>
+<path d="M110.000,90.000 L760.000,285.000" fill="none" stroke="#14836a" stroke-width="2"/>
+<path d="M110.000,90.000 L330.000,156.000" fill="none" stroke="#14836a" stroke-width="2"/>
+<path d="M321.113,157.421 L330.000,156.000 L323.363,149.922" fill="none" stroke="#14836a" stroke-width="2"/>
+<path d="M110.000,90.000 L510.000,90.000 L760.000,285.000" fill="none" stroke="#2365ad" stroke-width="2"/>
+<path d="M200.000,90.000 L360.000,90.000" fill="none" stroke="#2365ad" stroke-width="2"/>
+<path d="M351.896,93.915 L360.000,90.000 L351.896,86.085" fill="none" stroke="#2365ad" stroke-width="2"/>
+<path d="M510.000,90.000 L635.000,187.500" fill="none" stroke="#2365ad" stroke-width="2"/>
+<path d="M626.202,185.603 L635.000,187.500 L631.018,179.429" fill="none" stroke="#2365ad" stroke-width="2"/>
+<circle cx="110" cy="90" r="4" fill="#23344a"/>
+<text x="82.00" y="80.00" class="" text-anchor="start">S</text>
+<circle cx="510" cy="210" r="4" fill="#23344a"/>
+<text x="518.00" y="237.00" class="" text-anchor="start">O</text>
+<circle cx="760" cy="285" r="4" fill="#23344a"/>
+<text x="773.00" y="290.00" class="" text-anchor="start">S′</text>
+<circle cx="510" cy="90" r="4" fill="#23344a"/>
+<text x="520.00" y="80.00" class="" text-anchor="start">A</text>
+<circle cx="664" cy="210" r="4" fill="#23344a"/>
+<text x="659.00" y="240.00" class="" text-anchor="start">F′</text>
+<circle cx="356" cy="210" r="4" fill="#23344a"/>
+<text x="351.00" y="240.00" class="" text-anchor="start">F</text>
+<text x="40.00" y="242.00" class="" text-anchor="start">M</text>
+<text x="870.00" y="242.00" class="" text-anchor="start">M′</text>
+<text x="25.00" y="378.00" class="small" text-anchor="start">绿线确定光心；蓝线由“平行入射 → 过像方焦点”确定 F′。</text>
+</svg>

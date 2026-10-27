@@ -1,0 +1,23 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="940" height="335" viewBox="0 0 940 335"><rect width="940" height="335" fill="white"/><style>text{font:18px "Microsoft YaHei",sans-serif;fill:#23344a}.small{font-size:16px}.title{font-size:21px;font-weight:bold}</style>
+<text x="24.00" y="30.00" class="title" text-anchor="start">简化眼：空气角 α 经节点 C 带入，像高用 (f′−r)α</text>
+<path d="M30.000,175.000 L900.000,175.000" fill="none" stroke="#8a94a3" stroke-width="2"/>
+<path d="M350.000,60.000 L350.000,285.000" fill="none" stroke="#23344a" stroke-width="3"/>
+<rect x="350" y="65" width="444.0" height="215" fill="#f0f7fc" stroke="#8a94a3"/>
+<path d="M30.000,175.000 L900.000,175.000" fill="none" stroke="#8a94a3" stroke-width="2"/>
+<path d="M794.000,65.000 L794.000,280.000" fill="none" stroke="#b14d39" stroke-width="2"/>
+<path d="M110.000,119.865 L794.000,227.308" fill="none" stroke="#2365ad" stroke-width="2"/>
+<path d="M785.387,229.917 L794.000,227.308 L786.602,222.183" fill="none" stroke="#2365ad" stroke-width="2"/>
+<path d="M110.000,137.301 L350.000,175.000 L794.000,227.308" fill="none" stroke="#14836a" stroke-width="2"/>
+<circle cx="17.0" cy="175" r="4" fill="#23344a"/>
+<text x="17.00" y="214.00" class="small" text-anchor="middle">F</text>
+<circle cx="350" cy="175" r="4" fill="#23344a"/>
+<text x="350.00" y="214.00" class="small" text-anchor="middle">O</text>
+<circle cx="461.0" cy="175" r="4" fill="#23344a"/>
+<text x="461.00" y="214.00" class="small" text-anchor="middle">C = K = K′</text>
+<circle cx="794.0" cy="175" r="4" fill="#23344a"/>
+<text x="794.00" y="214.00" class="small" text-anchor="middle">F′</text>
+<text x="30.00" y="74.00" class="" text-anchor="start">空气 n = 1</text>
+<text x="560.00" y="74.00" class="" text-anchor="start">液体 n′ = 4/3</text>
+<text x="805.00" y="256.00" class="small" text-anchor="start">视网膜</text>
+<text x="25.00" y="318.00" class="small" text-anchor="start">近轴球面按顶点面表示，纵向角度放大；所有焦距从顶点 O 量起。</text>
+</svg>

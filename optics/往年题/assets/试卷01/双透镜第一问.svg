@@ -1,0 +1,32 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="940" height="365" viewBox="0 0 940 365"><rect width="940" height="365" fill="white"/><style>text{font:18px "Microsoft YaHei",sans-serif;fill:#23344a}.small{font-size:16px}.title{font-size:21px;font-weight:bold}</style>
+<text x="24.00" y="30.00" class="title" text-anchor="start">两透镜近轴追迹：第一片 x = 0，第二片 x = 2a</text>
+<path d="M45.000,190.000 L910.000,190.000" fill="none" stroke="#8a94a3" stroke-width="2"/>
+<path d="M500.000,90.000 L500.000,290.000" fill="none" stroke="#23344a" stroke-width="3"/>
+<path d="M493.000,103.000 L500.000,90.000 L507.000,103.000" fill="none" stroke="#23344a" stroke-width="2"/>
+<path d="M493.000,277.000 L500.000,290.000 L507.000,277.000" fill="none" stroke="#23344a" stroke-width="2"/>
+<path d="M590.000,90.000 L590.000,290.000" fill="none" stroke="#23344a" stroke-width="3"/>
+<path d="M583.000,77.000 L590.000,90.000 L597.000,77.000" fill="none" stroke="#23344a" stroke-width="2"/>
+<path d="M583.000,303.000 L590.000,290.000 L597.000,303.000" fill="none" stroke="#23344a" stroke-width="2"/>
+<path d="M590.000,161.500 L860.000,247.000" fill="none" stroke="#8a94a3" stroke-width="2" stroke-dasharray="7 5"/>
+<path d="M140.000,133.000 L500.000,133.000 L590.000,161.500" fill="none" stroke="#2365ad" stroke-width="2"/>
+<path d="M590.000,161.500 L837.500,187.625" fill="none" stroke="#2365ad" stroke-width="2"/>
+<path d="M829.030,190.667 L837.500,187.625 L829.852,182.881" fill="none" stroke="#2365ad" stroke-width="2"/>
+<path d="M320.000,133.000 L590.000,161.500" fill="none" stroke="#2365ad" stroke-width="2" stroke-dasharray="7 5"/>
+<path d="M590.000,204.250 L860.000,247.000" fill="none" stroke="#8a94a3" stroke-width="2" stroke-dasharray="7 5"/>
+<path d="M140.000,133.000 L500.000,190.000 L590.000,204.250" fill="none" stroke="#14836a" stroke-width="2"/>
+<path d="M590.000,204.250 L837.500,269.562" fill="none" stroke="#14836a" stroke-width="2"/>
+<path d="M828.665,271.280 L837.500,269.562 L830.663,263.710" fill="none" stroke="#14836a" stroke-width="2"/>
+<path d="M320.000,133.000 L590.000,204.250" fill="none" stroke="#14836a" stroke-width="2" stroke-dasharray="7 5"/>
+<path d="M140.000,190.000 L140.000,133.000" fill="none" stroke="#23344a" stroke-width="3"/>
+<path d="M143.915,141.104 L140.000,133.000 L136.085,141.104" fill="none" stroke="#23344a" stroke-width="3"/>
+<path d="M320.000,190.000 L320.000,133.000" fill="none" stroke="#b14d39" stroke-width="3"/>
+<path d="M323.915,141.104 L320.000,133.000 L316.085,141.104" fill="none" stroke="#b14d39" stroke-width="3"/>
+<text x="120.00" y="221.00" class="" text-anchor="start">物</text>
+<text x="300.00" y="248.00" class="" text-anchor="start">最终虚像</text>
+<text x="490.00" y="320.00" class="" text-anchor="start">L₁</text>
+<text x="580.00" y="320.00" class="" text-anchor="start">L₂</text>
+<text x="25.00" y="348.00" class="small" text-anchor="start">实线：实际传播；彩虚线：反延；灰虚线：第一片单独作用的预期线。</text>
+<circle cx="860" cy="247" r="4" fill="#8a94a3"/>
+<text x="680.00" y="279.00" class="small" text-anchor="start">第一片单独作用的像 Q₁</text>
+<text x="680.00" y="302.00" class="small" text-anchor="start">x = 8a（被第二片提前截断）</text>
+</svg>

@@ -1,0 +1,33 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="940" height="370" viewBox="0 0 940 370"><rect width="940" height="370" fill="white"/><style>text{font:18px "Microsoft YaHei",sans-serif;fill:#23344a}.small{font-size:16px}.title{font-size:21px;font-weight:bold}</style>
+<text x="24.00" y="30.00" class="title" text-anchor="start">切割拼合：两片分别保留原光心，图按补充条件 f′ = 9 cm</text>
+<path d="M40.000,195.000 L900.000,195.000" fill="none" stroke="#8a94a3" stroke-width="2"/>
+<path d="M425.000,195.000 L650.000,129.000" fill="none" stroke="#2365ad" stroke-width="2"/>
+<path d="M650.000,129.000 L830.000,125.089" fill="none" stroke="#2365ad" stroke-width="2"/>
+<path d="M821.983,129.179 L830.000,125.089 L821.813,121.351" fill="none" stroke="#2365ad" stroke-width="2"/>
+<path d="M650.000,129.000 L143.750,140.000" fill="none" stroke="#2365ad" stroke-width="2" stroke-dasharray="7 5"/>
+<path d="M425.000,195.000 L650.000,85.000" fill="none" stroke="#2365ad" stroke-width="2"/>
+<path d="M650.000,85.000 L830.000,65.444" fill="none" stroke="#2365ad" stroke-width="2"/>
+<path d="M822.366,70.212 L830.000,65.444 L821.521,62.428" fill="none" stroke="#2365ad" stroke-width="2"/>
+<path d="M650.000,85.000 L143.750,140.000" fill="none" stroke="#2365ad" stroke-width="2" stroke-dasharray="7 5"/>
+<circle cx="650" cy="239.0" r="4" fill="#2365ad"/>
+<text x="662.00" y="245.00" class="small" text-anchor="start">c=-0.4</text>
+<path d="M425.000,195.000 L650.000,261.000" fill="none" stroke="#14836a" stroke-width="2"/>
+<path d="M650.000,261.000 L830.000,264.911" fill="none" stroke="#14836a" stroke-width="2"/>
+<path d="M821.813,268.649 L830.000,264.911 L821.983,260.821" fill="none" stroke="#14836a" stroke-width="2"/>
+<path d="M650.000,261.000 L143.750,250.000" fill="none" stroke="#14836a" stroke-width="2" stroke-dasharray="7 5"/>
+<path d="M425.000,195.000 L650.000,305.000" fill="none" stroke="#14836a" stroke-width="2"/>
+<path d="M650.000,305.000 L830.000,324.556" fill="none" stroke="#14836a" stroke-width="2"/>
+<path d="M821.521,327.572 L830.000,324.556 L822.366,319.788" fill="none" stroke="#14836a" stroke-width="2"/>
+<path d="M650.000,305.000 L143.750,250.000" fill="none" stroke="#14836a" stroke-width="2" stroke-dasharray="7 5"/>
+<circle cx="650" cy="151.0" r="4" fill="#14836a"/>
+<text x="662.00" y="157.00" class="small" text-anchor="start">c=0.4</text>
+<path d="M650.000,45.000 L650.000,185.000" fill="none" stroke="#23344a" stroke-width="5"/>
+<path d="M650.000,205.000 L650.000,335.000" fill="none" stroke="#23344a" stroke-width="5"/>
+<circle cx="143.75" cy="140.0" r="4" fill="#2365ad"/>
+<text x="30.00" y="122.00" class="small" text-anchor="start">上片虚像：y′ = +0.50 cm</text>
+<circle cx="143.75" cy="250.0" r="4" fill="#14836a"/>
+<text x="30.00" y="282.00" class="small" text-anchor="start">下片虚像：y′ = −0.50 cm</text>
+<circle cx="425" cy="195" r="4" fill="#23344a"/>
+<text x="409.00" y="225.00" class="" text-anchor="start">物 S</text>
+<text x="95.00" y="350.00" class="small" text-anchor="start">两虚像 x′ = −11.25 cm；虚线只向物侧反延。</text>
+</svg>
